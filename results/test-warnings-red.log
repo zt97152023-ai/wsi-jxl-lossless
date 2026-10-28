@@ -1,0 +1,43 @@
+.F.                                                                      [100%]
+=================================== FAILURES ===================================
+__________ ReversibleLiftTests.test_extreme_and_random_rgb_round_trip __________
+
+self = <test_transforms.ReversibleLiftTests testMethod=test_extreme_and_random_rgb_round_trip>
+
+    def test_extreme_and_random_rgb_round_trip(self):
+        rng = np.random.default_rng(84027)
+        cases = [rng.integers(0, 256, (31, 47, 3), dtype=np.uint8),
+                 np.zeros((5, 7, 3), dtype=np.uint8),
+                 np.full((7, 3, 3), 255, dtype=np.uint8),
+                 np.array([[[0, 255, 0], [255, 0, 255]]], dtype=np.uint8)]
+        for original in cases:
+            with self.subTest(shape=original.shape, first=original.flat[0]):
+>               params = unpack_params(pack_params(fit_lift(original)))
+
+tests/test_transforms.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/wsi_jxl/transforms.py:29: in fit_lift
+    return fit(np.column_stack((g, np.ones_like(g))), r) + fit(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array([[153.,  64.,   1.],
+       [ 95., 152.,   1.],
+       [ 64., 219.,   1.],
+       ...,
+       [188.,  47.,   1.],
+       [230., 129.,   1.],
+       [ 83., 188.,   1.]], shape=(1457, 3))
+y = array([226.,   5., 155., ..., 246., 138., 182.], shape=(1457,))
+
+    def fit(a, y):
+        penalty = np.eye(a.shape[1]) * 1e-3
+        penalty[-1, -1] = 0
+        beta = np.linalg.solve(a.T @ a + penalty, a.T @ y)
+        beta[:-1] = np.clip(beta[:-1], -8, 8)
+>       beta[-1] = np.mean(y - a[:, :-1] @ beta[:-1])
+E       RuntimeWarning: divide by zero encountered in matmul
+
+src/wsi_jxl/transforms.py:27: RuntimeWarning
+=========================== short test summary info ============================
+FAILED tests/test_transforms.py::ReversibleLiftTests::test_extreme_and_random_rgb_round_trip
+1 failed, 2 passed in 0.12s

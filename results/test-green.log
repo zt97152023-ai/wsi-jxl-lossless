@@ -1,0 +1,8 @@
+test_arbitrary_predictors_and_overflow_remain_reversible (test_transforms.ReversibleLiftTests.test_arbitrary_predictors_and_overflow_remain_reversible) ... ok
+test_extreme_and_random_rgb_round_trip (test_transforms.ReversibleLiftTests.test_extreme_and_random_rgb_round_trip) ... ok
+test_rejects_silent_dtype_conversion (test_transforms.ReversibleLiftTests.test_rejects_silent_dtype_conversion) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.113s
+
+OK

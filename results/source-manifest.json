@@ -1,0 +1,289 @@
+[
+  {
+    "file": "CMU-1-Small-Region.svs",
+    "bytes": 1938955,
+    "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+    "dimensions": [
+      2220,
+      2967
+    ],
+    "levels": [
+      [
+        2220,
+        2967
+      ]
+    ],
+    "properties": {
+      "aperio.AppMag": "20",
+      "aperio.Date": "12/29/09",
+      "aperio.Filename": "CMU-1",
+      "aperio.Filtered": "5",
+      "aperio.Focus Offset": "0.000000",
+      "aperio.ImageID": "1004486",
+      "aperio.Left": "25.691574",
+      "aperio.LineAreaXOffset": "0.019265",
+      "aperio.LineAreaYOffset": "-0.000313",
+      "aperio.LineCameraSkew": "-0.000424",
+      "aperio.MPP": "0.4990",
+      "aperio.OriginalHeight": "32914",
+      "aperio.OriginalWidth": "46000",
+      "aperio.Originalheight": "33014",
+      "aperio.Parmset": "USM Filter",
+      "aperio.ScanScope ID": "CPAPERIOCS",
+      "aperio.StripeWidth": "2040",
+      "aperio.Time": "09:59:15",
+      "aperio.Top": "23.449873",
+      "aperio.User": "b414003d-95c6-48b0-9369-8010ed517ba7",
+      "openslide.associated.label.height": "463",
+      "openslide.associated.label.width": "387",
+      "openslide.associated.macro.height": "431",
+      "openslide.associated.macro.width": "1280",
+      "openslide.associated.thumbnail.height": "768",
+      "openslide.associated.thumbnail.width": "574",
+      "openslide.comment": "Aperio Image Library v11.2.1 \r\n46000x32914 [42673,5576 2220x2967] (240x240) JPEG/RGB Q=30;Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30|AppMag = 20|StripeWidth = 2040|ScanScope ID = CPAPERIOCS|Filename = CMU-1|Date = 12/29/09|Time = 09:59:15|User = b414003d-95c6-48b0-9369-8010ed517ba7|Parmset = USM Filter|MPP = 0.4990|Left = 25.691574|Top = 23.449873|LineCameraSkew = -0.000424|LineAreaXOffset = 0.019265|LineAreaYOffset = -0.000313|Focus Offset = 0.000000|ImageID = 1004486|OriginalWidth = 46920|Originalheight = 33014|Filtered = 5|OriginalWidth = 46000|OriginalHeight = 32914",
+      "openslide.level-count": "1",
+      "openslide.level[0].downsample": "1",
+      "openslide.level[0].height": "2967",
+      "openslide.level[0].tile-height": "240",
+      "openslide.level[0].tile-width": "240",
+      "openslide.level[0].width": "2220",
+      "openslide.mpp-x": "0.499",
+      "openslide.mpp-y": "0.499",
+      "openslide.objective-power": "20",
+      "openslide.quickhash-1": "6335ea0e6cc54c2cba64bb265d3c713a50cd84484924e3a9c109558c13521d5c",
+      "openslide.vendor": "aperio",
+      "tiff.ImageDescription": "Aperio Image Library v11.2.1 \r\n46000x32914 [42673,5576 2220x2967] (240x240) JPEG/RGB Q=30;Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30|AppMag = 20|StripeWidth = 2040|ScanScope ID = CPAPERIOCS|Filename = CMU-1|Date = 12/29/09|Time = 09:59:15|User = b414003d-95c6-48b0-9369-8010ed517ba7|Parmset = USM Filter|MPP = 0.4990|Left = 25.691574|Top = 23.449873|LineCameraSkew = -0.000424|LineAreaXOffset = 0.019265|LineAreaYOffset = -0.000313|Focus Offset = 0.000000|ImageID = 1004486|OriginalWidth = 46920|Originalheight = 33014|Filtered = 5|OriginalWidth = 46000|OriginalHeight = 32914",
+      "tiff.ResolutionUnit": "inch"
+    },
+    "associated_images": [
+      "label",
+      "macro",
+      "thumbnail"
+    ],
+    "pages": [
+      {
+        "index": 0,
+        "shape": [
+          2967,
+          2220,
+          3
+        ],
+        "compression": 7,
+        "tiled": true,
+        "segments": 130,
+        "tile_shape": [
+          240,
+          240
+        ]
+      },
+      {
+        "index": 1,
+        "shape": [
+          768,
+          574,
+          3
+        ],
+        "compression": 7,
+        "tiled": false,
+        "segments": 48,
+        "tile_shape": null
+      },
+      {
+        "index": 2,
+        "shape": [
+          463,
+          387,
+          3
+        ],
+        "compression": 5,
+        "tiled": false,
+        "segments": 67,
+        "tile_shape": null
+      },
+      {
+        "index": 3,
+        "shape": [
+          431,
+          1280,
+          3
+        ],
+        "compression": 7,
+        "tiled": false,
+        "segments": 27,
+        "tile_shape": null
+      }
+    ],
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-Small-Region.svs",
+    "download_url": "https://raw.githubusercontent.com/libvips/libvips/master/test/test-suite/images/CMU-1-Small-Region.svs",
+    "license": "CC0-1.0",
+    "role": "smoke-test crop; not a complete slide"
+  },
+  {
+    "file": "CMU-1.svs",
+    "bytes": 177552579,
+    "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+    "dimensions": [
+      46000,
+      32914
+    ],
+    "levels": [
+      [
+        46000,
+        32914
+      ],
+      [
+        11500,
+        8228
+      ],
+      [
+        2875,
+        2057
+      ]
+    ],
+    "properties": {
+      "aperio.AppMag": "20",
+      "aperio.Date": "12/29/09",
+      "aperio.Filename": "CMU-1",
+      "aperio.Filtered": "5",
+      "aperio.Focus Offset": "0.000000",
+      "aperio.ICC Profile": "ScanScope v1",
+      "aperio.ImageID": "1004486",
+      "aperio.Left": "25.691574",
+      "aperio.LineAreaXOffset": "0.019265",
+      "aperio.LineAreaYOffset": "-0.000313",
+      "aperio.LineCameraSkew": "-0.000424",
+      "aperio.MPP": "0.4990",
+      "aperio.OriginalWidth": "46920",
+      "aperio.Originalheight": "33014",
+      "aperio.Parmset": "USM Filter",
+      "aperio.ScanScope ID": "CPAPERIOCS",
+      "aperio.StripeWidth": "2040",
+      "aperio.Time": "09:59:15",
+      "aperio.Top": "23.449873",
+      "aperio.User": "b414003d-95c6-48b0-9369-8010ed517ba7",
+      "openslide.associated.label.height": "463",
+      "openslide.associated.label.width": "387",
+      "openslide.associated.macro.height": "431",
+      "openslide.associated.macro.width": "1280",
+      "openslide.associated.thumbnail.height": "732",
+      "openslide.associated.thumbnail.width": "1024",
+      "openslide.comment": "Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30|AppMag = 20|StripeWidth = 2040|ScanScope ID = CPAPERIOCS|Filename = CMU-1|Date = 12/29/09|Time = 09:59:15|User = b414003d-95c6-48b0-9369-8010ed517ba7|Parmset = USM Filter|MPP = 0.4990|Left = 25.691574|Top = 23.449873|LineCameraSkew = -0.000424|LineAreaXOffset = 0.019265|LineAreaYOffset = -0.000313|Focus Offset = 0.000000|ImageID = 1004486|OriginalWidth = 46920|Originalheight = 33014|Filtered = 5|ICC Profile = ScanScope v1",
+      "openslide.icc-size": "141992",
+      "openslide.level-count": "3",
+      "openslide.level[0].downsample": "1",
+      "openslide.level[0].height": "32914",
+      "openslide.level[0].tile-height": "256",
+      "openslide.level[0].tile-width": "256",
+      "openslide.level[0].width": "46000",
+      "openslide.level[1].downsample": "4.0001215362177929",
+      "openslide.level[1].height": "8228",
+      "openslide.level[1].tile-height": "256",
+      "openslide.level[1].tile-width": "256",
+      "openslide.level[1].width": "11500",
+      "openslide.level[2].downsample": "16.000486144871171",
+      "openslide.level[2].height": "2057",
+      "openslide.level[2].tile-height": "256",
+      "openslide.level[2].tile-width": "256",
+      "openslide.level[2].width": "2875",
+      "openslide.mpp-x": "0.499",
+      "openslide.mpp-y": "0.499",
+      "openslide.objective-power": "20",
+      "openslide.quickhash-1": "30f1a38031fc0e21d81f9d01435ac4af848f6fe2bbf8f7768184336ee5d7e796",
+      "openslide.vendor": "aperio",
+      "tiff.ImageDescription": "Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30|AppMag = 20|StripeWidth = 2040|ScanScope ID = CPAPERIOCS|Filename = CMU-1|Date = 12/29/09|Time = 09:59:15|User = b414003d-95c6-48b0-9369-8010ed517ba7|Parmset = USM Filter|MPP = 0.4990|Left = 25.691574|Top = 23.449873|LineCameraSkew = -0.000424|LineAreaXOffset = 0.019265|LineAreaYOffset = -0.000313|Focus Offset = 0.000000|ImageID = 1004486|OriginalWidth = 46920|Originalheight = 33014|Filtered = 5|ICC Profile = ScanScope v1",
+      "tiff.ResolutionUnit": "inch"
+    },
+    "associated_images": [
+      "label",
+      "macro",
+      "thumbnail"
+    ],
+    "pages": [
+      {
+        "index": 0,
+        "shape": [
+          32914,
+          46000,
+          3
+        ],
+        "compression": 7,
+        "tiled": true,
+        "segments": 23220,
+        "tile_shape": [
+          256,
+          256
+        ]
+      },
+      {
+        "index": 1,
+        "shape": [
+          732,
+          1024,
+          3
+        ],
+        "compression": 7,
+        "tiled": false,
+        "segments": 46,
+        "tile_shape": null
+      },
+      {
+        "index": 2,
+        "shape": [
+          8228,
+          11500,
+          3
+        ],
+        "compression": 7,
+        "tiled": true,
+        "segments": 1485,
+        "tile_shape": [
+          256,
+          256
+        ]
+      },
+      {
+        "index": 3,
+        "shape": [
+          2057,
+          2875,
+          3
+        ],
+        "compression": 7,
+        "tiled": true,
+        "segments": 108,
+        "tile_shape": [
+          256,
+          256
+        ]
+      },
+      {
+        "index": 4,
+        "shape": [
+          463,
+          387,
+          3
+        ],
+        "compression": 5,
+        "tiled": false,
+        "segments": 67,
+        "tile_shape": null
+      },
+      {
+        "index": 5,
+        "shape": [
+          431,
+          1280,
+          3
+        ],
+        "compression": 7,
+        "tiled": false,
+        "segments": 27,
+        "tile_shape": null
+      }
+    ],
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1.svs",
+    "download_url": "https://storage.googleapis.com/imagebox_test/openslide-testdata/Aperio/CMU-1.svs",
+    "license": "CC0-1.0",
+    "role": "complete pilot WSI"
+  }
+]
