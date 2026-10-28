@@ -16,10 +16,20 @@ import imagecodecs
 from .archive import MAGIC, GROUP, MAX_BLOCK, source_spans, _read, _record, _publish
 from .coeffpacket import encode_svs_batch, decode_svs_batch
 
+COEFFICIENT_MODES = {
+    'dc4': {'layout': 'mosaic', 'color_context': 'dc4'},
+    'entropy': {'layout': 'mosaic', 'color_context': 'dc4', 'color_objective': 'entropy'},
+    'mc_none_bias': {'layout': 'mosaic3', 'value_map': 'bias'},
+    'weak_ridge': {'layout': 'mosaic', 'color_context': 'dc4', 'color_objective': 'weak_ridge'},
+}
 
-def encode_joint_archive(source, output, *, group_tiles=16, policy='adaptive', effort=10, progress=None):
+
+def encode_joint_archive(source, output, *, group_tiles=16, policy='adaptive', effort=10,
+                         coefficient_mode='dc4', progress=None):
     if policy not in ('native', 'adaptive', 'coefficient') or not 1 <= group_tiles <= 16:
         raise ValueError('Invalid joint archive policy/group size')
+    if coefficient_mode not in COEFFICIENT_MODES:
+        raise ValueError('Unknown coefficient mode')
     source, output = Path(source), Path(output)
     temporary = output.with_name(output.name + '.partial')
     if output.exists() or temporary.exists():
@@ -49,10 +59,10 @@ def encode_joint_archive(source, output, *, group_tiles=16, policy='adaptive', e
                     jpegs = [s.prefix + data[2:] if s.prefix else data for data, s in items]
                     try:
                         packet = encode_svs_batch(jpegs, [len(s.prefix) for _, s in items],
-                                                  layout='mosaic', color_context='dc4', effort=effort)
+                                                  effort=effort, **COEFFICIENT_MODES[coefficient_mode])
                         if decode_svs_batch(packet) != [data for data, _ in items]:
                             raise RuntimeError('Coefficient candidate failed exact reconstruction')
-                        candidate = ('dc4', 5, packet, len(packet))
+                        candidate = (coefficient_mode, 5, packet, len(packet))
                         candidates = [candidate] if policy == 'coefficient' else candidates + [candidate]
                     except (ValueError, imagecodecs.JpegxlError) as exc:
                         if policy == 'coefficient':
@@ -90,5 +100,6 @@ def encode_joint_archive(source, output, *, group_tiles=16, policy='adaptive', e
             temporary.unlink(missing_ok=True)
         raise
     return {**metadata, 'policy': policy, 'group_tiles': group_tiles, 'effort': effort,
+            'coefficient_mode': coefficient_mode,
             'archive_bytes': output.stat().st_size, 'groups': len(rows),
             'selected_modes': dict(modes), 'rows': rows, 'seconds': time.perf_counter() - start}

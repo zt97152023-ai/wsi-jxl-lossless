@@ -7,7 +7,8 @@ from wsi_jxl.joint_archive import encode_joint_archive
 from wsi_jxl.reader import ArchiveReader
 
 
-def test_new_operator_archive_restores_whole_tiff_and_random_access_without_source(tmp_path):
+@pytest.mark.parametrize('coefficient_mode', ['dc4', 'entropy', 'mc_none_bias', 'weak_ridge'])
+def test_new_operator_archive_restores_whole_tiff_and_random_access_without_source(tmp_path, coefficient_mode):
     source = tmp_path / 'source.tif'
     rgb = np.random.default_rng(71).integers(0, 256, (57, 71, 3), dtype=np.uint8)
     with tifffile.TiffWriter(source) as t:
@@ -18,8 +19,9 @@ def test_new_operator_archive_restores_whole_tiff_and_random_access_without_sour
         f.write(b'EXACT ARBITRARY TRAILER\x00\xff')
     expected = source.read_bytes()
     archive = tmp_path / 'new.wjxl'
-    report = encode_joint_archive(source, archive, policy='coefficient', group_tiles=3, effort=3)
-    assert report['selected_modes'].get('dc4', 0) > 0
+    report = encode_joint_archive(source, archive, policy='coefficient', group_tiles=3, effort=3,
+                                  coefficient_mode=coefficient_mode)
+    assert report['selected_modes'].get(coefficient_mode, 0) > 0
     source.unlink()
     restored = tmp_path / 'restored.tif'
     assert decode_archive(archive, restored)['verified']

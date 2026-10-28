@@ -1,0 +1,73 @@
+FFF.............                                                         [100%]
+=================================== FAILURES ===================================
+_ test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[dc4] _
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-23/test_new_operator_archive_rest0')
+coefficient_mode = 'dc4'
+
+    @pytest.mark.parametrize('coefficient_mode', ['dc4', 'entropy', 'mc_none_bias'])
+    def test_new_operator_archive_restores_whole_tiff_and_random_access_without_source(tmp_path, coefficient_mode):
+        source = tmp_path / 'source.tif'
+        rgb = np.random.default_rng(71).integers(0, 256, (57, 71, 3), dtype=np.uint8)
+        with tifffile.TiffWriter(source) as t:
+            t.write(rgb, photometric='rgb', tile=(32, 32), compression='jpeg', subsampling=(1, 1),
+                    compressionargs={'outcolorspace': 'RGB'}, description='Preserve original metadata')
+            t.write(rgb[:9, :17], photometric='rgb', compression='deflate')
+        with source.open('ab') as f:
+            f.write(b'EXACT ARBITRARY TRAILER\x00\xff')
+        expected = source.read_bytes()
+        archive = tmp_path / 'new.wjxl'
+>       report = encode_joint_archive(source, archive, policy='coefficient', group_tiles=3, effort=3,
+                                      coefficient_mode=coefficient_mode)
+E       TypeError: encode_joint_archive() got an unexpected keyword argument 'coefficient_mode'
+
+tests/test_joint_archive.py:22: TypeError
+_ test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[entropy] _
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-23/test_new_operator_archive_rest1')
+coefficient_mode = 'entropy'
+
+    @pytest.mark.parametrize('coefficient_mode', ['dc4', 'entropy', 'mc_none_bias'])
+    def test_new_operator_archive_restores_whole_tiff_and_random_access_without_source(tmp_path, coefficient_mode):
+        source = tmp_path / 'source.tif'
+        rgb = np.random.default_rng(71).integers(0, 256, (57, 71, 3), dtype=np.uint8)
+        with tifffile.TiffWriter(source) as t:
+            t.write(rgb, photometric='rgb', tile=(32, 32), compression='jpeg', subsampling=(1, 1),
+                    compressionargs={'outcolorspace': 'RGB'}, description='Preserve original metadata')
+            t.write(rgb[:9, :17], photometric='rgb', compression='deflate')
+        with source.open('ab') as f:
+            f.write(b'EXACT ARBITRARY TRAILER\x00\xff')
+        expected = source.read_bytes()
+        archive = tmp_path / 'new.wjxl'
+>       report = encode_joint_archive(source, archive, policy='coefficient', group_tiles=3, effort=3,
+                                      coefficient_mode=coefficient_mode)
+E       TypeError: encode_joint_archive() got an unexpected keyword argument 'coefficient_mode'
+
+tests/test_joint_archive.py:22: TypeError
+_ test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[mc_none_bias] _
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-23/test_new_operator_archive_rest2')
+coefficient_mode = 'mc_none_bias'
+
+    @pytest.mark.parametrize('coefficient_mode', ['dc4', 'entropy', 'mc_none_bias'])
+    def test_new_operator_archive_restores_whole_tiff_and_random_access_without_source(tmp_path, coefficient_mode):
+        source = tmp_path / 'source.tif'
+        rgb = np.random.default_rng(71).integers(0, 256, (57, 71, 3), dtype=np.uint8)
+        with tifffile.TiffWriter(source) as t:
+            t.write(rgb, photometric='rgb', tile=(32, 32), compression='jpeg', subsampling=(1, 1),
+                    compressionargs={'outcolorspace': 'RGB'}, description='Preserve original metadata')
+            t.write(rgb[:9, :17], photometric='rgb', compression='deflate')
+        with source.open('ab') as f:
+            f.write(b'EXACT ARBITRARY TRAILER\x00\xff')
+        expected = source.read_bytes()
+        archive = tmp_path / 'new.wjxl'
+>       report = encode_joint_archive(source, archive, policy='coefficient', group_tiles=3, effort=3,
+                                      coefficient_mode=coefficient_mode)
+E       TypeError: encode_joint_archive() got an unexpected keyword argument 'coefficient_mode'
+
+tests/test_joint_archive.py:22: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_joint_archive.py::test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[dc4]
+FAILED tests/test_joint_archive.py::test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[entropy]
+FAILED tests/test_joint_archive.py::test_new_operator_archive_restores_whole_tiff_and_random_access_without_source[mc_none_bias]
+3 failed, 13 passed in 1.00s

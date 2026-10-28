@@ -23,7 +23,7 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
     if not jpegs or layout not in ('frequency','mosaic','planes','zigzag','mosaic3'):raise ValueError('Invalid batch/layout')
     if value_map not in ('zigzag','bias') or sum(map(bool,(color_delta,color_fit,color_context)))>1:
         raise ValueError('Invalid coefficient transform')
-    if color_objective not in ('variance','entropy') or (color_objective!='variance' and not color_context):
+    if color_objective not in ('variance','entropy','weak_ridge') or (color_objective!='variance' and not color_context):
         raise ValueError('Color objective requires a context model')
     arrays=[];heads=[];tails=[];reference=None
     for jpeg in jpegs:

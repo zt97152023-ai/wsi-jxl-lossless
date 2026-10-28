@@ -2,14 +2,14 @@
 import numpy as np
 
 
-def _fit_color(cube):
+def _fit_color(cube, *, regularizer=1.0):
     # Per-frequency adaptive coefficients; this is not stain separation. The
     # fixed-point parameters are stored, so decoder results never depend on
     # reproducing this floating-point fit or on having the source image.
     r,g,b=[cube[:,i].reshape(-1,64).astype(np.float64) for i in range(3)]
     mr,mg,mb=[v.mean(0) for v in (r,g,b)]
     r-=mr;g-=mg;b-=mb
-    vr=(r*r).mean(0)+1;vg=(g*g).mean(0)+1;rg=(r*g).mean(0)
+    vr=(r*r).mean(0)+regularizer;vg=(g*g).mean(0)+regularizer;rg=(r*g).mean(0)
     gb=(g*b).mean(0);rb=(r*b).mean(0)
     alpha=np.clip(rg/vg,-8,8)
     det=vg*vr-rg*rg
@@ -94,7 +94,7 @@ def fit_context_color(cube, mode, *, objective='variance'):
     dc, energy = _signals(cube)
     if mode not in ('dc2', 'dc4', 'texture2', 'dc_texture4'):
         raise ValueError('Unknown context color operator')
-    if objective not in ('variance', 'entropy'):
+    if objective not in ('variance', 'entropy', 'weak_ridge'):
         raise ValueError('Unknown color fitting objective')
     def thresholds(values, quantiles):
         return np.unique(np.floor(np.quantile(values, quantiles)).astype(np.int64)).tolist()
@@ -105,13 +105,14 @@ def fit_context_color(cube, mode, *, objective='variance'):
         model['energy_thresholds'] = thresholds(energy, [.5])
     labels = _labels(cube, model)
     blocks = cube.transpose(0, 2, 3, 1, 4).reshape(-1, 3, 1, 1, 64)
-    fallback = _fit_color(cube).tolist()
+    regularizer = 1e-6 if objective == 'weak_ridge' else 1.0
+    fallback = _fit_color(cube, regularizer=regularizer).tolist()
     model['params'] = []
     count = (len(model['dc_thresholds']) + 1) * (len(model['energy_thresholds']) + 1)
     for label in range(count):
         selected = blocks[labels == label]
         if len(selected) >= 32:
-            params = _fit_color(selected)
+            params = _fit_color(selected, regularizer=regularizer)
             if objective == 'entropy':
                 params = _rate_refine(selected, params)
             model['params'].append(params.tolist())
@@ -119,6 +120,8 @@ def fit_context_color(cube, mode, *, objective='variance'):
             model['params'].append(fallback)
     if objective == 'entropy':
         model['fit_objective'] = 'entropy_proxy'
+    elif objective == 'weak_ridge':
+        model['fit_objective'] = 'weak_ridge_1e-6'
     return model
 
 
