@@ -1,0 +1,431 @@
+{
+  "feature_provenance": {
+    "overview_page": 3,
+    "overview_shape": [
+      2057,
+      2875,
+      3
+    ],
+    "foreground_fraction": 0.1841489716979138,
+    "diagnostic_segmentation": false,
+    "foreground_rule": "(min<220 and max-min>20) or max<180",
+    "background_max_fraction": 0.05,
+    "tissue_min_fraction": 0.8,
+    "assumption": "tiled RGB pages share the same aligned field of view"
+  },
+  "level0_tile_counts": {
+    "background": 18403,
+    "mixed": 769,
+    "tissue": 4048
+  },
+  "panel": {
+    "selection": "24 geometry-spread tile indices per foreground class; seed=7 query order",
+    "unique_tiles": 72,
+    "repeats": 3,
+    "cache": "decoded-group cache cleared per query; OS file cache uncontrolled",
+    "timing": "group read, exact JPEG reconstruction, then RGB decode; metadata setup excluded"
+  },
+  "archives": {
+    "adaptive": {
+      "archive_bytes": 101424554,
+      "region_group_sums": {
+        "background": {
+          "groups": 170,
+          "source_bytes": 29537777,
+          "jxl_bytes": 12364147,
+          "selected_bytes": 6646645,
+          "selected_modes": {
+            "2": 155,
+            "3": 15
+          }
+        },
+        "mixed": {
+          "groups": 216,
+          "source_bytes": 143660178,
+          "jxl_bytes": 98199758,
+          "selected_bytes": 91695526,
+          "selected_modes": {
+            "2": 216
+          }
+        },
+        "tissue": {
+          "groups": 3,
+          "source_bytes": 4354624,
+          "jxl_bytes": 3139996,
+          "selected_bytes": 3060052,
+          "selected_modes": {
+            "2": 3
+          }
+        }
+      },
+      "index_seconds": 0.0637372500004858,
+      "index_bytes_read": 22331,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 45.06764600046154,
+          "p95_ms": 74.57544749922818,
+          "mean_reconstructed_source_bytes": 594158.3611111111,
+          "mean_payload_bytes_read": 370943.18055555556
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 29.927479500656773,
+          "p95_ms": 64.44187775059618,
+          "mean_reconstructed_source_bytes": 379129.875,
+          "mean_payload_bytes_read": 200863.875
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 46.90764600036346,
+          "p95_ms": 73.27197500026159,
+          "mean_reconstructed_source_bytes": 575963.6666666666,
+          "mean_payload_bytes_read": 358470.75
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 58.99131200021657,
+          "p95_ms": 80.9367161496084,
+          "mean_reconstructed_source_bytes": 827381.5416666666,
+          "mean_payload_bytes_read": 553494.9166666666
+        }
+      }
+    },
+    "tissue": {
+      "archive_bytes": 101843130,
+      "region_group_sums": {
+        "background": {
+          "groups": 353,
+          "source_bytes": 51168791,
+          "jxl_bytes": 20126072,
+          "selected_bytes": 9797645,
+          "selected_modes": {
+            "2": 230,
+            "3": 120,
+            "1": 3
+          }
+        },
+        "mixed": {
+          "groups": 613,
+          "source_bytes": 12628704,
+          "jxl_bytes": 9468826,
+          "selected_bytes": 9362647,
+          "selected_modes": {
+            "3": 64,
+            "1": 412,
+            "2": 137
+          }
+        },
+        "tissue": {
+          "groups": 297,
+          "source_bytes": 113521788,
+          "jxl_bytes": 83885613,
+          "selected_bytes": 82423561,
+          "selected_modes": {
+            "2": 203,
+            "1": 94
+          }
+        },
+        "associated": {
+          "groups": 2,
+          "source_bytes": 233296,
+          "jxl_bytes": 223390,
+          "selected_bytes": 187014,
+          "selected_modes": {
+            "2": 2
+          }
+        }
+      },
+      "index_seconds": 0.1358271250010148,
+      "index_bytes_read": 72263,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 30.446916499386134,
+          "p95_ms": 100.43173975054742,
+          "mean_reconstructed_source_bytes": 329438.8333333333,
+          "mean_payload_bytes_read": 183824.84722222222
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 42.43556249912217,
+          "p95_ms": 107.07182500054842,
+          "mean_reconstructed_source_bytes": 315917.7083333333,
+          "mean_payload_bytes_read": 63224.0
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 1.5061039994179737,
+          "p95_ms": 3.948795799078653,
+          "mean_reconstructed_source_bytes": 24257.208333333332,
+          "mean_payload_bytes_read": 18371.75
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 36.691582999992534,
+          "p95_ms": 71.896018899497,
+          "mean_reconstructed_source_bytes": 648141.5833333334,
+          "mean_payload_bytes_read": 469878.7916666667
+        }
+      }
+    },
+    "fixed16": {
+      "archive_bytes": 102625313,
+      "region_group_sums": {
+        "background": {
+          "groups": 1079,
+          "source_bytes": 45403108,
+          "jxl_bytes": 18050853,
+          "selected_bytes": 9745689,
+          "selected_modes": {
+            "3": 618,
+            "2": 461
+          }
+        },
+        "mixed": {
+          "groups": 296,
+          "source_bytes": 62591583,
+          "jxl_bytes": 44336478,
+          "selected_bytes": 42505594,
+          "selected_modes": {
+            "2": 296
+          }
+        },
+        "tissue": {
+          "groups": 177,
+          "source_bytes": 69404460,
+          "jxl_bytes": 51164402,
+          "selected_bytes": 50158524,
+          "selected_modes": {
+            "2": 177
+          }
+        },
+        "associated": {
+          "groups": 4,
+          "source_bytes": 153428,
+          "jxl_bytes": 152168,
+          "selected_bytes": 126656,
+          "selected_modes": {
+            "2": 4
+          }
+        }
+      },
+      "index_seconds": 0.07500024999899324,
+      "index_bytes_read": 88850,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 12.297874999603664,
+          "p95_ms": 23.6099689996081,
+          "mean_reconstructed_source_bytes": 195200.56944444444,
+          "mean_payload_bytes_read": 131505.73611111112
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 3.1703955010016216,
+          "p95_ms": 8.02475625068837,
+          "mean_reconstructed_source_bytes": 62374.125,
+          "mean_payload_bytes_read": 26055.25
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 15.473645500605926,
+          "p95_ms": 22.29522499974337,
+          "mean_reconstructed_source_bytes": 210085.25,
+          "mean_payload_bytes_read": 144590.5
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 21.729958500145585,
+          "p95_ms": 23.73940800089258,
+          "mean_reconstructed_source_bytes": 313142.3333333333,
+          "mean_payload_bytes_read": 223871.45833333334
+        }
+      }
+    },
+    "fixed32": {
+      "archive_bytes": 101947229,
+      "region_group_sums": {
+        "background": {
+          "groups": 447,
+          "source_bytes": 38062935,
+          "jxl_bytes": 15297901,
+          "selected_bytes": 8045484,
+          "selected_modes": {
+            "2": 317,
+            "3": 130
+          }
+        },
+        "mixed": {
+          "groups": 275,
+          "source_bytes": 97653496,
+          "jxl_bytes": 67759341,
+          "selected_bytes": 63909294,
+          "selected_modes": {
+            "2": 275
+          }
+        },
+        "tissue": {
+          "groups": 54,
+          "source_bytes": 41682720,
+          "jxl_bytes": 30494491,
+          "selected_bytes": 29822420,
+          "selected_modes": {
+            "2": 54
+          }
+        },
+        "associated": {
+          "groups": 2,
+          "source_bytes": 153428,
+          "jxl_bytes": 152168,
+          "selected_bytes": 125527,
+          "selected_modes": {
+            "2": 2
+          }
+        }
+      },
+      "index_seconds": 0.058419041999513865,
+      "index_bytes_read": 44504,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 21.953125000436557,
+          "p95_ms": 43.74886474897721,
+          "mean_reconstructed_source_bytes": 341379.0138888889,
+          "mean_payload_bytes_read": 221945.94444444444
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 14.093438000600145,
+          "p95_ms": 26.971969050464395,
+          "mean_reconstructed_source_bytes": 160834.91666666666,
+          "mean_payload_bytes_read": 79942.04166666667
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 25.56081249986164,
+          "p95_ms": 42.4011643994163,
+          "mean_reconstructed_source_bytes": 360130.1666666667,
+          "mean_payload_bytes_read": 238150.0
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 33.137041999907524,
+          "p95_ms": 45.999733149801614,
+          "mean_reconstructed_source_bytes": 503171.9583333333,
+          "mean_payload_bytes_read": 347745.7916666667
+        }
+      }
+    },
+    "fixed128": {
+      "archive_bytes": 101070717,
+      "region_group_sums": {
+        "background": {
+          "groups": 46,
+          "source_bytes": 16658849,
+          "jxl_bytes": 7426744,
+          "selected_bytes": 4257010,
+          "selected_modes": {
+            "2": 46
+          }
+        },
+        "mixed": {
+          "groups": 149,
+          "source_bytes": 160893730,
+          "jxl_bytes": 106277157,
+          "selected_bytes": 96802434,
+          "selected_modes": {
+            "2": 149
+          }
+        }
+      },
+      "index_seconds": 0.019001624999873457,
+      "index_bytes_read": 11273,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 81.51218749935651,
+          "p95_ms": 106.5247499996076,
+          "mean_reconstructed_source_bytes": 930638.3611111111,
+          "mean_payload_bytes_read": 538653.6111111111
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 76.32879150060035,
+          "p95_ms": 95.10776715069369,
+          "mean_reconstructed_source_bytes": 789756.9583333334,
+          "mean_payload_bytes_read": 429064.1666666667
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 80.2840414999082,
+          "p95_ms": 101.72917499976393,
+          "mean_reconstructed_source_bytes": 912078.9583333334,
+          "mean_payload_bytes_read": 525307.7916666666
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 89.5952920009222,
+          "p95_ms": 107.92890900038401,
+          "mean_reconstructed_source_bytes": 1090079.1666666667,
+          "mean_payload_bytes_read": 661588.875
+        }
+      }
+    },
+    "fixed256": {
+      "archive_bytes": 100848801,
+      "region_group_sums": {
+        "background": {
+          "groups": 22,
+          "source_bytes": 15043795,
+          "jxl_bytes": 6549878,
+          "selected_bytes": 3527308,
+          "selected_modes": {
+            "2": 22
+          }
+        },
+        "mixed": {
+          "groups": 76,
+          "source_bytes": 162508784,
+          "jxl_bytes": 107154023,
+          "selected_bytes": 97315749,
+          "selected_modes": {
+            "2": 76
+          }
+        }
+      },
+      "index_seconds": 0.01014870800099743,
+      "index_bytes_read": 5744,
+      "query_summaries": {
+        "all": {
+          "queries": 216,
+          "median_ms": 162.81993749998946,
+          "p95_ms": 210.46792675088,
+          "mean_reconstructed_source_bytes": 1859267.4027777778,
+          "mean_payload_bytes_read": 1071346.0
+        },
+        "background": {
+          "queries": 72,
+          "median_ms": 149.6426044996042,
+          "p95_ms": 189.058072950138,
+          "mean_reconstructed_source_bytes": 1557982.75,
+          "mean_payload_bytes_read": 834740.4166666666
+        },
+        "mixed": {
+          "queries": 72,
+          "median_ms": 161.37987549973332,
+          "p95_ms": 208.96685869938665,
+          "mean_reconstructed_source_bytes": 1837809.4583333333,
+          "mean_payload_bytes_read": 1058557.625
+        },
+        "tissue": {
+          "queries": 72,
+          "median_ms": 180.24979149959108,
+          "p95_ms": 213.2585001498228,
+          "mean_reconstructed_source_bytes": 2182010.0,
+          "mean_payload_bytes_read": 1320739.9583333333
+        }
+      }
+    }
+  }
+}

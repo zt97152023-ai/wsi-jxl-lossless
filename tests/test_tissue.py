@@ -10,7 +10,8 @@ def test_foreground_proxy_keeps_pale_glass_separate_from_colored_or_dark_pixels(
     assert foreground_mask(rgb).tolist() == [[False, True, True]]
 
 
-def test_spatial_features_and_adaptive_grouping_do_not_change_source(tmp_path):
+@pytest.mark.parametrize('grouping',['tissue','tissue-local'])
+def test_spatial_features_and_adaptive_grouping_do_not_change_source(tmp_path,grouping):
     rgb = np.full((64, 128, 3), 245, dtype=np.uint8)
     rgb[:, 64:] = [180, 90, 160]
     source = tmp_path / 'two-regions.tif'
@@ -19,10 +20,10 @@ def test_spatial_features_and_adaptive_grouping_do_not_change_source(tmp_path):
     features, provenance = tile_features(source)
     assert sorted(x['class'] for x in features.values()) == ['background'] * 4 + ['tissue'] * 4
     archive = tmp_path / 'regions.wjxl'
-    report = encode_archive(source, archive, grouping='tissue')
+    report = encode_archive(source, archive, grouping=grouping)
     source.unlink()
     restored = tmp_path / 'restored.tif'
     decode_archive(archive, restored)
     assert restored.read_bytes() == expected
-    assert report['grouping'] == 'tissue'
+    assert report['grouping'] == grouping
     assert provenance['diagnostic_segmentation'] is False

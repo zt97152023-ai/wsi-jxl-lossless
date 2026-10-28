@@ -1,0 +1,10 @@
+{
+  "source_bytes": 177552579,
+  "zstd_frame_bytes": 136237081,
+  "encode_seconds": 0.919058208000024,
+  "decode_seconds": 0.03806016699945758,
+  "level": 9,
+  "verified_byte_equality": true,
+  "stored_on_disk": false,
+  "version": "zstd 1.5.7"
+}

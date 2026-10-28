@@ -1,0 +1,76 @@
+{
+  "note": "Fresh decoder process per file. Two concurrent verifications; these timings are not speed benchmarks.",
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "archives": {
+    "adaptive": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 389,
+      "seconds": 15.823755916000664,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "eb235a3821e928b5ee2c57d8f98865f694563e0f79f554d55cb7f308bde2a8a4",
+      "archive_bytes": 101424554
+    },
+    "jxl-baseline": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 389,
+      "seconds": 16.735425749999195,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "3aca49522d75aeff6d9b5e25c630eb8f976c9f31e5f8edf29bc5b40ccedb6857",
+      "archive_bytes": 113726232
+    },
+    "tissue": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 1265,
+      "seconds": 27.37827287500113,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "21aceb69d8d34e13e15f0250ea03fb654c591693d13125681ba44f27c59807d0",
+      "archive_bytes": 101843130
+    },
+    "fixed16": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 1556,
+      "seconds": 21.85570316600024,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "1d76b100ae370c42fbb9437bc58a59c8c5f2bd0d94e70a57f4c36853464077b3",
+      "archive_bytes": 102625313
+    },
+    "fixed32": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 778,
+      "seconds": 32.561470041000575,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "70ef94dc9689b21ce3c9434c8e411071e1fe754bb1dd9f3d230aea9ba7874662",
+      "archive_bytes": 101947229
+    },
+    "fixed128": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 195,
+      "seconds": 38.19919533400025,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "42b74c083eb7d6128b2cf5b9efa1b5edc78c463ed2c843a84225f23025120f6f",
+      "archive_bytes": 101070717
+    },
+    "fixed256": {
+      "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+      "bytes": 177552579,
+      "groups": 98,
+      "seconds": 39.454722624999704,
+      "verified": true,
+      "saved_output": null,
+      "archive_sha256": "7c0013b76319129be446bf0f0b5928efb3c3a619273434790fca625fe2e6c568",
+      "archive_bytes": 100848801
+    }
+  }
+}

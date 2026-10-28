@@ -24,7 +24,7 @@ with openslide.OpenSlide(str(source)) as slide:
                 'pixel_sha256':hashlib.sha256(rgb.tobytes()).hexdigest()})
             if len(records)%7==0:print('pixel tiles',len(records),flush=True)
 with (out/'pixel-probe.csv').open('w') as f:
-    writer=csv.DictWriter(f,fieldnames=records[0]);writer.writeheader();writer.writerows(records)
+    writer=csv.DictWriter(f,fieldnames=records[0],lineterminator='\n');writer.writeheader();writer.writerows(records)
 print('PIXEL_SUMMARY',json.dumps({'baseline_bytes':sum(r['rgb_bytes'] for r in records),
     'adaptive_bytes':sum(r['selected_bytes'] for r in records),
     'lift_wins':sum(r['mode']=='lift' for r in records)}),flush=True)

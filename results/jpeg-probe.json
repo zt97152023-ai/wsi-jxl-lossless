@@ -1,0 +1,10 @@
+{
+  "source_bytes": 177552579,
+  "segments": 24953,
+  "exact_duplicate_bytes": 11724,
+  "unique_segments": 24948,
+  "jpeg_probe": [],
+  "batches": [],
+  "libjxl": "libjxl 0.12.0",
+  "imagecodecs": "2026.10.10"
+}

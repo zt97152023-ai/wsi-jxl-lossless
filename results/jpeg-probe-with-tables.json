@@ -1,0 +1,718 @@
+{
+  "libjxl": "libjxl 0.12.0",
+  "n": 96,
+  "jpeg_bytes": 816838,
+  "jxl_bytes": 537419,
+  "records": [
+    {
+      "page": 0,
+      "segment": 0,
+      "jpeg_bytes": 2383,
+      "jxl_bytes": 702,
+      "encode_seconds": 0.027866958000231534
+    },
+    {
+      "page": 0,
+      "segment": 542,
+      "jpeg_bytes": 2678,
+      "jxl_bytes": 1133,
+      "encode_seconds": 0.001832250000006752
+    },
+    {
+      "page": 0,
+      "segment": 1264,
+      "jpeg_bytes": 2725,
+      "jxl_bytes": 1197,
+      "encode_seconds": 0.0015279999997801497
+    },
+    {
+      "page": 0,
+      "segment": 1986,
+      "jpeg_bytes": 2614,
+      "jxl_bytes": 1114,
+      "encode_seconds": 0.0017319589996986906
+    },
+    {
+      "page": 0,
+      "segment": 2708,
+      "jpeg_bytes": 2476,
+      "jxl_bytes": 867,
+      "encode_seconds": 0.0014843330000076094
+    },
+    {
+      "page": 0,
+      "segment": 3430,
+      "jpeg_bytes": 2470,
+      "jxl_bytes": 827,
+      "encode_seconds": 0.0016691670007276116
+    },
+    {
+      "page": 0,
+      "segment": 4152,
+      "jpeg_bytes": 2640,
+      "jxl_bytes": 1083,
+      "encode_seconds": 0.0015821659999346593
+    },
+    {
+      "page": 0,
+      "segment": 4874,
+      "jpeg_bytes": 2531,
+      "jxl_bytes": 981,
+      "encode_seconds": 0.0014375000000654836
+    },
+    {
+      "page": 0,
+      "segment": 5596,
+      "jpeg_bytes": 2505,
+      "jxl_bytes": 922,
+      "encode_seconds": 0.001353582999399805
+    },
+    {
+      "page": 0,
+      "segment": 6318,
+      "jpeg_bytes": 2435,
+      "jxl_bytes": 781,
+      "encode_seconds": 0.0012907499994980753
+    },
+    {
+      "page": 0,
+      "segment": 7040,
+      "jpeg_bytes": 2686,
+      "jxl_bytes": 1180,
+      "encode_seconds": 0.0014004589993419359
+    },
+    {
+      "page": 0,
+      "segment": 7762,
+      "jpeg_bytes": 2456,
+      "jxl_bytes": 833,
+      "encode_seconds": 0.0013069999995423132
+    },
+    {
+      "page": 0,
+      "segment": 8484,
+      "jpeg_bytes": 2554,
+      "jxl_bytes": 1001,
+      "encode_seconds": 0.001472416000069643
+    },
+    {
+      "page": 0,
+      "segment": 9206,
+      "jpeg_bytes": 2605,
+      "jxl_bytes": 1088,
+      "encode_seconds": 0.0012958749994140817
+    },
+    {
+      "page": 0,
+      "segment": 9928,
+      "jpeg_bytes": 2602,
+      "jxl_bytes": 1081,
+      "encode_seconds": 0.0013925420007581124
+    },
+    {
+      "page": 0,
+      "segment": 10650,
+      "jpeg_bytes": 2582,
+      "jxl_bytes": 989,
+      "encode_seconds": 0.0013607500004582107
+    },
+    {
+      "page": 0,
+      "segment": 11372,
+      "jpeg_bytes": 24442,
+      "jxl_bytes": 18304,
+      "encode_seconds": 0.003198750000592554
+    },
+    {
+      "page": 0,
+      "segment": 12094,
+      "jpeg_bytes": 25647,
+      "jxl_bytes": 18341,
+      "encode_seconds": 0.0030832499996904517
+    },
+    {
+      "page": 0,
+      "segment": 12816,
+      "jpeg_bytes": 24214,
+      "jxl_bytes": 18540,
+      "encode_seconds": 0.003216457999769773
+    },
+    {
+      "page": 0,
+      "segment": 13538,
+      "jpeg_bytes": 24545,
+      "jxl_bytes": 17069,
+      "encode_seconds": 0.0032254580000881106
+    },
+    {
+      "page": 0,
+      "segment": 14080,
+      "jpeg_bytes": 27608,
+      "jxl_bytes": 20266,
+      "encode_seconds": 0.003291457999694103
+    },
+    {
+      "page": 0,
+      "segment": 14802,
+      "jpeg_bytes": 3167,
+      "jxl_bytes": 1700,
+      "encode_seconds": 0.0016641249994790996
+    },
+    {
+      "page": 0,
+      "segment": 15524,
+      "jpeg_bytes": 2668,
+      "jxl_bytes": 1134,
+      "encode_seconds": 0.0014671670005554915
+    },
+    {
+      "page": 0,
+      "segment": 16246,
+      "jpeg_bytes": 2526,
+      "jxl_bytes": 1018,
+      "encode_seconds": 0.0013348749998840503
+    },
+    {
+      "page": 0,
+      "segment": 16968,
+      "jpeg_bytes": 2656,
+      "jxl_bytes": 1138,
+      "encode_seconds": 0.0013405420004346524
+    },
+    {
+      "page": 0,
+      "segment": 17690,
+      "jpeg_bytes": 21719,
+      "jxl_bytes": 16619,
+      "encode_seconds": 0.0028977079991818755
+    },
+    {
+      "page": 0,
+      "segment": 18412,
+      "jpeg_bytes": 28297,
+      "jxl_bytes": 21007,
+      "encode_seconds": 0.0032348329996239045
+    },
+    {
+      "page": 0,
+      "segment": 19134,
+      "jpeg_bytes": 23953,
+      "jxl_bytes": 17949,
+      "encode_seconds": 0.00316083300003811
+    },
+    {
+      "page": 0,
+      "segment": 19856,
+      "jpeg_bytes": 26961,
+      "jxl_bytes": 19448,
+      "encode_seconds": 0.003123874999801046
+    },
+    {
+      "page": 0,
+      "segment": 20578,
+      "jpeg_bytes": 26123,
+      "jxl_bytes": 19483,
+      "encode_seconds": 0.0030842919995848206
+    },
+    {
+      "page": 0,
+      "segment": 21300,
+      "jpeg_bytes": 25886,
+      "jxl_bytes": 18798,
+      "encode_seconds": 0.0031697919994257973
+    },
+    {
+      "page": 0,
+      "segment": 22022,
+      "jpeg_bytes": 2416,
+      "jxl_bytes": 782,
+      "encode_seconds": 0.0013703329996133107
+    },
+    {
+      "page": 0,
+      "segment": 22744,
+      "jpeg_bytes": 2616,
+      "jxl_bytes": 1087,
+      "encode_seconds": 0.0012701250007012277
+    },
+    {
+      "page": 0,
+      "segment": 247,
+      "jpeg_bytes": 3108,
+      "jxl_bytes": 1745,
+      "encode_seconds": 0.0015678339996156865
+    },
+    {
+      "page": 0,
+      "segment": 969,
+      "jpeg_bytes": 2435,
+      "jxl_bytes": 781,
+      "encode_seconds": 0.0012307500001043081
+    },
+    {
+      "page": 0,
+      "segment": 1691,
+      "jpeg_bytes": 2581,
+      "jxl_bytes": 986,
+      "encode_seconds": 0.001330082999629667
+    },
+    {
+      "page": 0,
+      "segment": 2413,
+      "jpeg_bytes": 2669,
+      "jxl_bytes": 1141,
+      "encode_seconds": 0.0015143750006245682
+    },
+    {
+      "page": 0,
+      "segment": 3135,
+      "jpeg_bytes": 2381,
+      "jxl_bytes": 704,
+      "encode_seconds": 0.0012793329997293768
+    },
+    {
+      "page": 0,
+      "segment": 3857,
+      "jpeg_bytes": 2983,
+      "jxl_bytes": 1588,
+      "encode_seconds": 0.0015212090002023615
+    },
+    {
+      "page": 0,
+      "segment": 4399,
+      "jpeg_bytes": 2747,
+      "jxl_bytes": 1288,
+      "encode_seconds": 0.0014956670001993189
+    },
+    {
+      "page": 0,
+      "segment": 5121,
+      "jpeg_bytes": 2535,
+      "jxl_bytes": 963,
+      "encode_seconds": 0.0014271669997469871
+    },
+    {
+      "page": 0,
+      "segment": 5843,
+      "jpeg_bytes": 2496,
+      "jxl_bytes": 907,
+      "encode_seconds": 0.001261999999769614
+    },
+    {
+      "page": 0,
+      "segment": 6565,
+      "jpeg_bytes": 2400,
+      "jxl_bytes": 700,
+      "encode_seconds": 0.0012120000001232256
+    },
+    {
+      "page": 0,
+      "segment": 7287,
+      "jpeg_bytes": 2357,
+      "jxl_bytes": 618,
+      "encode_seconds": 0.001177208000626706
+    },
+    {
+      "page": 0,
+      "segment": 8009,
+      "jpeg_bytes": 2355,
+      "jxl_bytes": 607,
+      "encode_seconds": 0.0011764170003516483
+    },
+    {
+      "page": 0,
+      "segment": 8731,
+      "jpeg_bytes": 2355,
+      "jxl_bytes": 606,
+      "encode_seconds": 0.0011929160000363481
+    },
+    {
+      "page": 0,
+      "segment": 9453,
+      "jpeg_bytes": 2349,
+      "jxl_bytes": 598,
+      "encode_seconds": 0.0011755000004995964
+    },
+    {
+      "page": 0,
+      "segment": 10175,
+      "jpeg_bytes": 2455,
+      "jxl_bytes": 858,
+      "encode_seconds": 0.0011938329998884
+    },
+    {
+      "page": 0,
+      "segment": 10897,
+      "jpeg_bytes": 2374,
+      "jxl_bytes": 661,
+      "encode_seconds": 0.0012049999995724647
+    },
+    {
+      "page": 0,
+      "segment": 11619,
+      "jpeg_bytes": 2397,
+      "jxl_bytes": 713,
+      "encode_seconds": 0.0012568749998536077
+    },
+    {
+      "page": 0,
+      "segment": 12341,
+      "jpeg_bytes": 2514,
+      "jxl_bytes": 938,
+      "encode_seconds": 0.001269542000045476
+    },
+    {
+      "page": 0,
+      "segment": 13063,
+      "jpeg_bytes": 2435,
+      "jxl_bytes": 782,
+      "encode_seconds": 0.0012162499997430132
+    },
+    {
+      "page": 0,
+      "segment": 13785,
+      "jpeg_bytes": 2380,
+      "jxl_bytes": 673,
+      "encode_seconds": 0.0011894579993168009
+    },
+    {
+      "page": 0,
+      "segment": 14507,
+      "jpeg_bytes": 2540,
+      "jxl_bytes": 953,
+      "encode_seconds": 0.0013509999998859712
+    },
+    {
+      "page": 0,
+      "segment": 15229,
+      "jpeg_bytes": 2441,
+      "jxl_bytes": 819,
+      "encode_seconds": 0.0013052080003035371
+    },
+    {
+      "page": 0,
+      "segment": 15951,
+      "jpeg_bytes": 2720,
+      "jxl_bytes": 1242,
+      "encode_seconds": 0.0013045420000707963
+    },
+    {
+      "page": 0,
+      "segment": 16673,
+      "jpeg_bytes": 2541,
+      "jxl_bytes": 979,
+      "encode_seconds": 0.0012472910002543358
+    },
+    {
+      "page": 0,
+      "segment": 17395,
+      "jpeg_bytes": 2461,
+      "jxl_bytes": 838,
+      "encode_seconds": 0.0012227919996803394
+    },
+    {
+      "page": 0,
+      "segment": 17937,
+      "jpeg_bytes": 2466,
+      "jxl_bytes": 840,
+      "encode_seconds": 0.0013221660001363489
+    },
+    {
+      "page": 0,
+      "segment": 18659,
+      "jpeg_bytes": 2524,
+      "jxl_bytes": 980,
+      "encode_seconds": 0.0012967500006197952
+    },
+    {
+      "page": 0,
+      "segment": 19381,
+      "jpeg_bytes": 2463,
+      "jxl_bytes": 847,
+      "encode_seconds": 0.0012280000000828295
+    },
+    {
+      "page": 0,
+      "segment": 20103,
+      "jpeg_bytes": 2457,
+      "jxl_bytes": 832,
+      "encode_seconds": 0.0012051659996359376
+    },
+    {
+      "page": 0,
+      "segment": 20825,
+      "jpeg_bytes": 2577,
+      "jxl_bytes": 1036,
+      "encode_seconds": 0.0012397499995131511
+    },
+    {
+      "page": 0,
+      "segment": 21547,
+      "jpeg_bytes": 2470,
+      "jxl_bytes": 838,
+      "encode_seconds": 0.0012042910002492135
+    },
+    {
+      "page": 0,
+      "segment": 22269,
+      "jpeg_bytes": 2518,
+      "jxl_bytes": 933,
+      "encode_seconds": 0.0012294159996599774
+    },
+    {
+      "page": 0,
+      "segment": 22991,
+      "jpeg_bytes": 2466,
+      "jxl_bytes": 840,
+      "encode_seconds": 0.0012190000006739865
+    },
+    {
+      "page": 0,
+      "segment": 494,
+      "jpeg_bytes": 2353,
+      "jxl_bytes": 601,
+      "encode_seconds": 0.0011969999995926628
+    },
+    {
+      "page": 0,
+      "segment": 1216,
+      "jpeg_bytes": 2481,
+      "jxl_bytes": 878,
+      "encode_seconds": 0.0013177920000089216
+    },
+    {
+      "page": 0,
+      "segment": 1938,
+      "jpeg_bytes": 2586,
+      "jxl_bytes": 1078,
+      "encode_seconds": 0.0012476250003601308
+    },
+    {
+      "page": 0,
+      "segment": 2660,
+      "jpeg_bytes": 18885,
+      "jxl_bytes": 14180,
+      "encode_seconds": 0.0027549579999686102
+    },
+    {
+      "page": 0,
+      "segment": 3382,
+      "jpeg_bytes": 15767,
+      "jxl_bytes": 12936,
+      "encode_seconds": 0.00260733400045865
+    },
+    {
+      "page": 0,
+      "segment": 4104,
+      "jpeg_bytes": 15470,
+      "jxl_bytes": 11863,
+      "encode_seconds": 0.0025185419999615988
+    },
+    {
+      "page": 0,
+      "segment": 4826,
+      "jpeg_bytes": 27790,
+      "jxl_bytes": 22204,
+      "encode_seconds": 0.003425625000090804
+    },
+    {
+      "page": 0,
+      "segment": 5548,
+      "jpeg_bytes": 26418,
+      "jxl_bytes": 19998,
+      "encode_seconds": 0.003252458000133629
+    },
+    {
+      "page": 0,
+      "segment": 6270,
+      "jpeg_bytes": 25983,
+      "jxl_bytes": 19228,
+      "encode_seconds": 0.00312412499988568
+    },
+    {
+      "page": 0,
+      "segment": 6992,
+      "jpeg_bytes": 26659,
+      "jxl_bytes": 19765,
+      "encode_seconds": 0.0032241250000879518
+    },
+    {
+      "page": 0,
+      "segment": 7714,
+      "jpeg_bytes": 22700,
+      "jxl_bytes": 17251,
+      "encode_seconds": 0.0030292920000647428
+    },
+    {
+      "page": 0,
+      "segment": 8256,
+      "jpeg_bytes": 14155,
+      "jxl_bytes": 10967,
+      "encode_seconds": 0.0025592499996491824
+    },
+    {
+      "page": 0,
+      "segment": 8978,
+      "jpeg_bytes": 2454,
+      "jxl_bytes": 887,
+      "encode_seconds": 0.0013688330000150017
+    },
+    {
+      "page": 0,
+      "segment": 9700,
+      "jpeg_bytes": 2557,
+      "jxl_bytes": 987,
+      "encode_seconds": 0.001291459000640316
+    },
+    {
+      "page": 0,
+      "segment": 10422,
+      "jpeg_bytes": 2415,
+      "jxl_bytes": 746,
+      "encode_seconds": 0.0012294589996599825
+    },
+    {
+      "page": 0,
+      "segment": 11144,
+      "jpeg_bytes": 2411,
+      "jxl_bytes": 750,
+      "encode_seconds": 0.0012820419997296995
+    },
+    {
+      "page": 0,
+      "segment": 11866,
+      "jpeg_bytes": 2565,
+      "jxl_bytes": 1009,
+      "encode_seconds": 0.001245958000254177
+    },
+    {
+      "page": 0,
+      "segment": 12588,
+      "jpeg_bytes": 2595,
+      "jxl_bytes": 1089,
+      "encode_seconds": 0.0012976250000065193
+    },
+    {
+      "page": 0,
+      "segment": 13310,
+      "jpeg_bytes": 2492,
+      "jxl_bytes": 889,
+      "encode_seconds": 0.001200333000269893
+    },
+    {
+      "page": 0,
+      "segment": 14032,
+      "jpeg_bytes": 2368,
+      "jxl_bytes": 650,
+      "encode_seconds": 0.0012192080002932926
+    },
+    {
+      "page": 0,
+      "segment": 14754,
+      "jpeg_bytes": 2482,
+      "jxl_bytes": 877,
+      "encode_seconds": 0.001203582999551145
+    },
+    {
+      "page": 0,
+      "segment": 15476,
+      "jpeg_bytes": 2436,
+      "jxl_bytes": 787,
+      "encode_seconds": 0.001188749999528227
+    },
+    {
+      "page": 0,
+      "segment": 16198,
+      "jpeg_bytes": 2486,
+      "jxl_bytes": 884,
+      "encode_seconds": 0.001225624999278807
+    },
+    {
+      "page": 2,
+      "segment": 47,
+      "jpeg_bytes": 2774,
+      "jxl_bytes": 1268,
+      "encode_seconds": 0.0012706659999821568
+    },
+    {
+      "page": 2,
+      "segment": 309,
+      "jpeg_bytes": 55096,
+      "jxl_bytes": 38807,
+      "encode_seconds": 0.004825458000595972
+    },
+    {
+      "page": 2,
+      "segment": 571,
+      "jpeg_bytes": 49048,
+      "jxl_bytes": 35111,
+      "encode_seconds": 0.004332665999754681
+    },
+    {
+      "page": 2,
+      "segment": 833,
+      "jpeg_bytes": 2457,
+      "jxl_bytes": 798,
+      "encode_seconds": 0.001082791999579058
+    },
+    {
+      "page": 2,
+      "segment": 1095,
+      "jpeg_bytes": 53679,
+      "jxl_bytes": 38468,
+      "encode_seconds": 0.004728874999273103
+    },
+    {
+      "page": 2,
+      "segment": 1357,
+      "jpeg_bytes": 2640,
+      "jxl_bytes": 942,
+      "encode_seconds": 0.0011817499998869607
+    },
+    {
+      "page": 5,
+      "segment": 26,
+      "jpeg_bytes": 3300,
+      "jxl_bytes": 3225,
+      "encode_seconds": 0.0015028749994598911
+    }
+  ],
+  "batches": [
+    {
+      "jpeg": 41006,
+      "jxl": 15843,
+      "jpeg_zstd": 9595,
+      "jxl_zstd": 8899
+    },
+    {
+      "jpeg": 292892,
+      "jxl": 211660,
+      "jpeg_zstd": 282976,
+      "jxl_zstd": 205639
+    },
+    {
+      "jpeg": 40886,
+      "jxl": 15241,
+      "jpeg_zstd": 8197,
+      "jxl_zstd": 8439
+    },
+    {
+      "jpeg": 39824,
+      "jxl": 14035,
+      "jpeg_zstd": 6781,
+      "jxl_zstd": 7132
+    },
+    {
+      "jpeg": 211306,
+      "jxl": 154660,
+      "jpeg_zstd": 197279,
+      "jxl_zstd": 148356
+    },
+    {
+      "jpeg": 191308,
+      "jxl": 126364,
+      "jpeg_zstd": 167080,
+      "jxl_zstd": 120679
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{"group_size": 16, "groups": 100, "seconds": 1.1251567079998495}
+{"group_size": 16, "groups": 200, "seconds": 2.0717901659991185}
+{"group_size": 16, "groups": 300, "seconds": 3.01014983299865}
+{"group_size": 16, "groups": 400, "seconds": 3.8742886659983924}
+{"group_size": 16, "groups": 500, "seconds": 4.837051999998948}
+{"group_size": 16, "groups": 600, "seconds": 5.74244570799965}
+{"group_size": 16, "groups": 700, "seconds": 6.521218582998699}
+{"group_size": 16, "groups": 800, "seconds": 7.225084165998851}
+{"group_size": 16, "groups": 900, "seconds": 8.024494790999597}
+{"group_size": 16, "groups": 1000, "seconds": 9.114097457999378}
+{"group_size": 16, "groups": 1100, "seconds": 10.041441624998697}
+{"group_size": 16, "groups": 1200, "seconds": 10.891491582999151}
+{"group_size": 16, "groups": 1300, "seconds": 11.767392415998984}
+{"group_size": 16, "groups": 1400, "seconds": 12.611087332999887}
+{"group_size": 16, "groups": 1500, "seconds": 13.506226915998923}
+{"format": 1, "source_name": "CMU-1.svs", "source_bytes": 177552579, "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30", "policy": "adaptive", "group_tiles": 16, "workers": 4, "grouping": "fixed", "feature_provenance": null, "archive_bytes": 102625313, "candidate_archive_bytes": {"jxl": 113792751, "jxl-zstd": 103128755, "raw-zstd": 136778396, "adaptive": 102625313}, "selected_modes": {"3": 618, "2": 938}, "fallback_errors": {}, "groups": 1556, "seconds": 14.073823165999784, "libjxl": "libjxl 0.12.0", "imagecodecs": "2026.10.10", "baseline_path": null}
+{"group_size": 32, "groups": 100, "seconds": 1.8327398750006978}
+{"group_size": 32, "groups": 200, "seconds": 3.733892915999604}
+{"group_size": 32, "groups": 300, "seconds": 5.617408665999392}
+{"group_size": 32, "groups": 400, "seconds": 7.126175957999294}
+{"group_size": 32, "groups": 500, "seconds": 9.012468916000216}
+{"group_size": 32, "groups": 600, "seconds": 10.784853125000154}
+{"group_size": 32, "groups": 700, "seconds": 12.925980957999855}
+{"format": 1, "source_name": "CMU-1.svs", "source_bytes": 177552579, "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30", "policy": "adaptive", "group_tiles": 32, "workers": 4, "grouping": "fixed", "feature_provenance": null, "archive_bytes": 101947229, "candidate_archive_bytes": {"jxl": 113748405, "jxl-zstd": 102093929, "raw-zstd": 136560868, "adaptive": 101947229}, "selected_modes": {"2": 648, "3": 130}, "fallback_errors": {}, "groups": 778, "seconds": 14.498291665999204, "libjxl": "libjxl 0.12.0", "imagecodecs": "2026.10.10", "baseline_path": null}
+{"group_size": 128, "groups": 100, "seconds": 7.176999499999511}
+{"format": 1, "source_name": "CMU-1.svs", "source_bytes": 177552579, "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30", "policy": "adaptive", "group_tiles": 128, "workers": 4, "grouping": "fixed", "feature_provenance": null, "archive_bytes": 101070717, "candidate_archive_bytes": {"jxl": 113715174, "jxl-zstd": 101070717, "raw-zstd": 136392463, "adaptive": 101070717}, "selected_modes": {"2": 195}, "fallback_errors": {}, "groups": 195, "seconds": 14.615213125000082, "libjxl": "libjxl 0.12.0", "imagecodecs": "2026.10.10", "baseline_path": null}
+{"format": 1, "source_name": "CMU-1.svs", "source_bytes": 177552579, "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30", "policy": "adaptive", "group_tiles": 256, "workers": 4, "grouping": "fixed", "feature_provenance": null, "archive_bytes": 100848801, "candidate_archive_bytes": {"jxl": 113709645, "jxl-zstd": 100848801, "raw-zstd": 136322734, "adaptive": 100848801}, "selected_modes": {"2": 98}, "fallback_errors": {}, "groups": 98, "seconds": 13.595833874998789, "libjxl": "libjxl 0.12.0", "imagecodecs": "2026.10.10", "baseline_path": null}

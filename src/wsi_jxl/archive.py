@@ -21,6 +21,10 @@ MAGIC = b'WJXL001\n'
 GROUP = struct.Struct('<BQQQ32s')  # mode, source size, inner size, stored size, hash
 RECORD = struct.Struct('<BQII')  # mode, source size, injected prefix size, payload size
 MAX_BLOCK = 128 * 1024 * 1024
+TISSUE_LIMITS = {
+    'tissue': {'background': 256, 'mixed': 32, 'tissue': 64, 'associated': 64},
+    'tissue-local': {'background': 64, 'mixed': 8, 'tissue': 32, 'associated': 32},
+}
 
 
 @dataclass(frozen=True)
@@ -169,7 +173,7 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
         raise ValueError('Unknown encoding policy')
     if group_tiles < 1 or workers < 1:
         raise ValueError('Positive group size and worker count required')
-    if grouping not in ('fixed', 'tissue'):
+    if grouping != 'fixed' and grouping not in TISSUE_LIMITS:
         raise ValueError('Unknown grouping strategy')
     source, output = Path(source), Path(output)
     destinations = [output] + ([Path(baseline_path)] if baseline_path else [])
@@ -181,7 +185,7 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
             raise FileExistsError(p)
     start = time.perf_counter()
     features, feature_provenance = {}, None
-    if grouping == 'tissue':
+    if grouping in TISSUE_LIMITS:
         from .tissue import tile_features
         features, feature_provenance = tile_features(source)
     with source.open('rb') as stream:
@@ -239,7 +243,7 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
             for span in source_spans(source):
                 feature = features.get(span.offset)
                 key = (span.page, feature['class'] if feature else 'associated')
-                if grouping == 'tissue' and span.prefix is not None and batch and tile_count and key != group_key:
+                if grouping in TISSUE_LIMITS and span.prefix is not None and batch and tile_count and key != group_key:
                     emit(batch)
                     batch, tile_count, byte_count = [], 0, 0
                 if span.prefix is not None:
@@ -251,9 +255,9 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
                 tile_count += span.prefix is not None
                 byte_count += span.length
                 limit = group_tiles
-                if grouping == 'tissue':
+                if grouping in TISSUE_LIMITS:
                     category = group_key[1] if group_key else 'associated'
-                    limit = {'background': 256, 'mixed': 32, 'tissue': 64, 'associated': 64}[category]
+                    limit = TISSUE_LIMITS[grouping][category]
                 if tile_count >= limit or byte_count >= MAX_BLOCK // 4:
                     emit(batch)
                     batch, tile_count, byte_count = [], 0, 0
@@ -274,6 +278,7 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
         raise
     return {**metadata, 'policy': policy, 'group_tiles': group_tiles, 'workers': workers,
             'grouping': grouping, 'feature_provenance': feature_provenance,
+            'tissue_group_limits': TISSUE_LIMITS.get(grouping),
             'archive_bytes': output.stat().st_size, 'candidate_archive_bytes': alternatives,
             'selected_modes': dict(modes), 'fallback_errors': dict(errors),
             'groups': len(rows), 'group_records': rows, 'seconds': time.perf_counter() - start,

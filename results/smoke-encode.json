@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "source_name": "CMU-1-Small-Region.svs",
+  "source_bytes": 1938955,
+  "source_sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+  "policy": "adaptive",
+  "group_tiles": 64,
+  "workers": 4,
+  "archive_bytes": 1493183,
+  "candidate_archive_bytes": {
+    "jxl": 1595604,
+    "jxl-zstd": 1493183,
+    "raw-zstd": 1776929,
+    "adaptive": 1493183
+  },
+  "selected_modes": {
+    "2": 4
+  },
+  "fallback_errors": {},
+  "groups": 4,
+  "group_records": [
+    {
+      "group": 0,
+      "source_offset": 0,
+      "source_bytes": 514075,
+      "jpeg_tiles": 64,
+      "pages": [
+        0
+      ],
+      "jxl": 383275,
+      "jxl_zstd": 353112,
+      "raw_zstd": 437878,
+      "selected_mode": 2,
+      "selected_bytes": 353112
+    },
+    {
+      "group": 1,
+      "source_offset": 514075,
+      "source_bytes": 757402,
+      "jpeg_tiles": 64,
+      "pages": [
+        0
+      ],
+      "jxl": 570086,
+      "jxl_zstd": 541571,
+      "raw_zstd": 694706,
+      "selected_mode": 2,
+      "selected_bytes": 541571
+    },
+    {
+      "group": 2,
+      "source_offset": 1271477,
+      "source_bytes": 638780,
+      "jpeg_tiles": 64,
+      "pages": [
+        0,
+        1,
+        3
+      ],
+      "jxl": 613176,
+      "jxl_zstd": 575734,
+      "raw_zstd": 620572,
+      "selected_mode": 2,
+      "selected_bytes": 575734
+    },
+    {
+      "group": 3,
+      "source_offset": 1910257,
+      "source_bytes": 28698,
+      "jpeg_tiles": 13,
+      "pages": [
+        3
+      ],
+      "jxl": 28670,
+      "jxl_zstd": 22369,
+      "raw_zstd": 23376,
+      "selected_mode": 2,
+      "selected_bytes": 22369
+    }
+  ],
+  "seconds": 0.13820579099956376,
+  "libjxl": "libjxl 0.12.0",
+  "imagecodecs": "2026.10.10",
+  "baseline_path": "results/smoke-baseline.wjxl"
+}

@@ -26,3 +26,6 @@ Test round trips on extremes, random inputs, grayscale and odd sizes before real
 
 ## Evidence boundaries
 WISE (CVPR 2025), JPEG XL Modular, and reversible predictive coding are prior art. No first/SOTA claim. All optimization and verification here use public images locally. A full original-file hash is required before claiming byte-exact SVS recovery.
+
+## 2026-10-28 experimental refinement
+The complete CMU-1 SVS and all original bytes are now the recovery unit. The pixel-lift candidate stays a recorded negative pilot. JPEG reconstruction plus grouped coding is the archive path; classifiers only choose group boundaries and cannot discard any bytes. The initial tissue profile and fixed group sizes are compared before proposing a local-access refinement. The latter is explicitly development on the same slide, not held-out validation. A seekable reader checks every accessed group; full decoding is independently audited in fresh processes. The output is a custom WJXL archive, not a changed JPEG XL standard or a native OpenSlide plugin.

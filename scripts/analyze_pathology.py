@@ -15,6 +15,8 @@ from wsi_jxl.tissue import tile_features
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--sweep',action='store_true')
+parser.add_argument('--local',action='store_true')
+parser.add_argument('--all-final',action='store_true')
 args=parser.parse_args()
 source = Path('data/CMU-1.svs')
 features, provenance = tile_features(source)
@@ -41,6 +43,10 @@ results = {'feature_provenance': provenance, 'level0_tile_counts': dict(counts),
                      'timing': 'group read, exact JPEG reconstruction, then RGB decode; metadata setup excluded'},
            'archives': {}}
 names = ('adaptive', 'tissue', 'fixed16', 'fixed32', 'fixed128', 'fixed256') if args.sweep else ('adaptive','tissue')
+if args.local:
+    names = ('fixed16','fixed32','tissue-local')
+if args.all_final:
+    names = ('adaptive','tissue','fixed16','fixed32','fixed128','fixed256','tissue-local')
 for name in names:
     report = json.loads(Path('results/cmu1-encode.json' if name=='adaptive' else f'results/cmu1-{name}-encode.json').read_text())
     by_region = defaultdict(lambda: {'groups':0,'source_bytes':0,'jxl_bytes':0,'selected_bytes':0,'selected_modes':Counter()})
@@ -96,6 +102,9 @@ for name in names:
         results['archives'][name]={'archive_bytes':report['archive_bytes'],'region_group_sums':dict(by_region),
                                   'index_seconds':index_seconds,'index_bytes_read':reader.index_bytes_read,
                                   'query_summaries':summaries,'queries':queries}
-Path('results/pathology-sweep.json' if args.sweep else 'results/pathology-analysis.json').write_text(json.dumps(results,indent=2)+'\n')
+report_path = 'results/pathology-local.json' if args.local else 'results/pathology-sweep.json' if args.sweep else 'results/pathology-analysis.json'
+if args.all_final:
+    report_path = 'results/pathology-final.json'
+Path(report_path).write_text(json.dumps(results,indent=2)+'\n')
 print(json.dumps({**{k:v for k,v in results.items() if k!='archives'},
                   'archives':{k:{a:b for a,b in v.items() if a!='queries'} for k,v in results['archives'].items()}},indent=2))

@@ -1,0 +1,117 @@
+"""Build the measured-results report from saved experiment records."""
+import json
+from pathlib import Path
+
+root=Path('results')
+read=lambda name:json.loads((root/name).read_text())
+base=read('cmu1-encode.json')
+final=read('pathology-final.json')
+source=base['source_bytes']
+baseline=base['candidate_archive_bytes']['jxl']
+zstd=read('cmu1-whole-zstd.json')['zstd_frame_bytes']
+names={'fixed16':'固定 16','fixed32':'固定 32','adaptive':'固定 64',
+       'fixed128':'固定 128','fixed256':'固定 256','tissue':'组织分组 v1','tissue-local':'组织分组 local'}
+rows=[]
+for key in ('fixed16','fixed32','adaptive','fixed128','fixed256','tissue','tissue-local'):
+    r=final['archives'][key];q=r['query_summaries']['all'];n=r['archive_bytes']
+    rows.append(f"| {names[key]} | {n:,} | {n/1e6:.3f} | {(1-n/source)*100:.2f}% | {q['median_ms']:.2f} | {q['p95_ms']:.2f} |")
+local=final['archives']['tissue-local'];fixed32=final['archives']['fixed32']
+mixed_local=local['query_summaries']['mixed'];mixed_ref=fixed32['query_summaries']['mixed']
+region_rows=[]
+for c,label in [('background','背景'),('mixed','混合/边界代理'),('tissue','组织')]:
+    a=fixed32['query_summaries'][c];b=local['query_summaries'][c]
+    region_rows.append(f"| {label} | {a['median_ms']:.2f} | {b['median_ms']:.2f} | {a['mean_reconstructed_source_bytes']/1000:.2f} | {b['mean_reconstructed_source_bytes']/1000:.2f} |")
+text=f'''# WSI JPEG XL：第一轮实测结果
+
+日期：2026-10-28。这是已经运行并验证的结果，不是预测压缩率。单位 MB=1,000,000 字节，KB=1,000 字节。
+
+## 当前结论
+
+完整 CMU-1 SVS 从 **{source/1e6:.2f} MB** 压到 **100.85 MB**，减少 **43.20%**。相对于本项目实际生成的逐图块 JXL 基线 **{baseline/1e6:.2f} MB**，再减少 **11.32%**。所有比较保留完整原文件，不只计算图像载荷。
+
+按组织特点调整分组可以显著改善被粗分类为边界/混合的图块访问，但当前结果**不支持“病理分组全面优于固定小分组”**。归档大小和局部读取存在明确取舍，固定 16 图块的读取整体更快。病理特征提供了值得继续研究的局部机会，还没有构成已确证的新编码算法。
+
+## 数据与严格无损证据
+
+- 公开完整切片：CMU-1.svs，46,000 × 32,914，约 15.14 亿像素，20×，0.499 μm/px，3 个金字塔层。
+- 全文件 {source:,} 字节；共处理 24,886 个 JPEG 图块/条带，非 JPEG 数据、目录、ICC、关联图像和尾部字节同时保留。
+- 每种归档均完整解码并验证源文件 SHA-256。固定 64 版本还实际恢复为 `results/cmu1-restored.svs`，通过 `cmp`；OpenSlide 可打开，全部属性一致。
+- 原输入已经使用 JPEG Q30；无损保证以该现有文件为起点，不表示扫描仪原始采集信号无损。
+- 源文件 SHA-256：`{base['source_sha256']}`。
+- `Small-Region` 仅用于烟雾测试，是同源裁剪，不计作另一张切片。
+
+验证记录：`results/full-verification.json` 覆盖最初 7 个归档；`results/cmu1-tissue-local-decode.json` 覆盖后续 local 候选。逐项像素与 JPEG 字节比较详见 `results/pathology-final.json`。
+
+## 已实现的方案
+
+1. 解析 SVS 的 JPEG 数据段和共享表，同时覆盖全部原文件字节。
+2. 以共享表补齐独立 JPEG，调用 libjxl 的已有 JPEG 精确重压缩功能。
+3. 每组比较 JXL 记录、JXL 记录 + Zstd、原文件片段 + Zstd、原文件片段四种载荷，存储最小者。
+4. 可选择利用现有低倍金字塔的粗前景比例，在页面和组织类别改变处断组。分类信息只用于编码，解码不依赖它。
+5. 按需读取只恢复命中的分组，并验证分组校验和；完整恢复再核对整个源文件。
+
+输出为自定义 `.wjxl` 容器；JXL 本身的标准格式和熵编码器未修改。这项工作目前属于面向 WSI 的封装、编码路由和访问优化。
+
+## 完整文件大小与局部查询
+
+参考：原始 SVS **{source:,} B**；整文件 Zstd level 9 **{zstd:,} B**；逐图块 JXL 基线 **{baseline:,} B**。Zstd 帧实际在内存中生成并解码逐字节验证，其长度不含额外文件封装，没有保存第二份帧文件。JXL 基线实际写出了归档，包含原始非 JPEG 字节、每条记录、组头和校验信息。
+
+| 方案 | 实际归档字节数 | MB | 相对 SVS 减少 | 查询中位数 ms | 查询 P95 ms |
+|---|---:|---:|---:|---:|---:|
+{chr(10).join(rows)}
+
+文件大小包含全部容器开销。固定 64 与其同分组 JXL 基线之间减少 10.82%；固定 256 的同分组 JXL 字节账本为 113,709,645 B，因此 11.32% 的结论并非主要来自组头数量差异。
+
+查询协议：最高分辨率 JPEG 图块每类 24 个，共 **72 个不同图块**，每图块重复 3 次；每次查询清空解码分组缓存。计时包含命中组恢复、JPEG 提取和 RGB 解码，不含初始 TIFF 元数据加载及索引建立。OS 文件缓存未控制。最后一轮测量没有与本任务的编码或整文件校验并行。不同方案按固定顺序测试，仍可能受机器负载和缓存影响，因此同时报告与硬件无关的字节工作量。
+
+这不是 216 个独立切片，也不是真实 spot 坐标访问负载。三类等额抽样会提高边界样本权重；不能把总体中位数变化直接外推到真实空间转录组工作负载。固定分组布局也未做全局最优搜索。
+
+## 病理特征究竟带来什么
+
+最低倍金字塔的粗前景面积占 18.41%。最高分辨率图块被分为背景 18,403 个、混合/边界 769 个、组织 4,048 个。类别来自固定阈值，没有病理人工标注，不可解释为诊断结果。
+
+初版组织分组使用背景/混合/组织上限 256/32/64；文件比固定 64 大 0.41%，并增加大背景组的尾部延迟。保留此负结果。
+
+随后 local 候选把上限改为 64/8/32，全部类别改变处仍断组。与大小相近的固定 32 对照：
+
+| 区域 | 固定 32 中位数 ms | local 中位数 ms | 固定 32 平均重构 KB | local 平均重构 KB |
+|---|---:|---:|---:|---:|
+{chr(10).join(region_rows)}
+
+“重构 KB”指为获取目标 JPEG 图块而恢复的原始 SVS 压缩字节量，不是目标 RGB 大小。
+
+local 比固定 32 增加 **{(local['archive_bytes']/fixed32['archive_bytes']-1)*100:.3f}%** 文件体积；边界代理查询中位数由 **{mixed_ref['median_ms']:.2f} ms** 降到 **{mixed_local['median_ms']:.2f} ms**，平均重构字节减少 **{(1-mixed_local['mean_reconstructed_source_bytes']/mixed_ref['mean_reconstructed_source_bytes'])*100:.2f}%**。但背景和组织内部中位延迟并未优于固定 32，P95 也没有总体优势。
+
+因此值得研究的问题是：**能否根据真实 spot/ROI 访问分布，为组织边界设置更小的独立解码单元，同时控制整体存储开销？** 当前 local 参数来自同一张切片上的开发迭代，必须在其他切片和独立查询面板上验证。
+
+## 消融与未奏效方向
+
+- 颜色预测：49 个预先按 7×7 几何网格选取的 512×512 像素图块，RGB JXL 包共 3,326,113 B，可逆颜色预测自适应选择后 3,324,640 B，仅减少 **0.0443%**。14/49 选择了变换，没有足够收益支持主推该路线。
+- 精确重复图块：24,953 个 TIFF 数据段中只有 11,724 B 可由完全相同段去重，不能解释主要压缩收益。
+- 固定 64：JXL + Zstd 字节账本 101,435,151 B，自适应实际归档 101,424,554 B；额外选择原 JPEG + Zstd 仅节省 **10,597 B**。主要收益是已有 JXL JPEG 重压缩及分组后进一步压缩，不能归功于复杂分类。
+- 直接送入 SVS 简略 JPEG 码流的初次尝试失败；补齐共享表后全尺寸重压缩无失败回退。失败记录仍保存在 `results/probe.log`，修正后的样本记录为 `results/jpeg-probe-with-tables.json`。
+- 朴素“按病理区域分开就会更小”的假设没有成立；初版按组织分组比固定 64 更大。
+
+## 当前可用选择与下一阶段
+
+本张切片上，归档容量优先可选固定 256；随机图块访问优先可选固定 16。它们是已测配置中的选择，不是已证明的全局最优。组织 local 留作边界访问研究候选。
+
+接下来有明确的可证伪方向：
+
+1. 冻结前景规则和分组参数，扩展到不同切片、扫描仪及组织结构。分开统计背景、组织边界和组织内部，保留不奏效的数据。
+2. 使用真实空间转录组 spot 坐标构造访问序列，比较冷缓存、邻近 spot 批量访问与重叠 patch 复用；counts 继续采用原 Shared 方法。
+3. 在匹配文件大小和 P95 约束下，比较组织引导分组与纯几何小块、二维空间排序、固定分组。只有超过这些简单对照，才将组织分组作为贡献。
+4. 在像素严格无损任务中另建原生无损 WSI 数据基线，评估染色相关预测和跨尺度残差；不能把它们与当前“原 JPEG 码流精确恢复”契约混在同一排行榜。
+5. 若向 JXL 编码器内部推进，先定位现有上下文模型/共享表的重复成本，再验证改动是否超出通用压缩封装收益；目前未证明编码器层面的创新。
+
+## 可复核材料
+
+- 代码：`src/wsi_jxl/`；运行说明：[README.md](README.md)；自审：[REVIEW.md](REVIEW.md)。
+- 完整测量：`results/*-encode.json`、`results/pathology-final.json`、`results/full-verification.json`。
+- 环境：macOS arm64、Python 3.13.13、imagecodecs 2026.10.10、libjxl 0.12.0、Zstd 1.5.7；完整锁定版本见 `requirements.lock.txt`。
+- 正确性测试：20 项；记录见 `results/tests-final.log`。原始资料、负结果、全部归档均保留于本地；大文件通过 `.gitignore` 排除。
+- 编码耗时记录是探索运行，部分阶段与验证任务重叠；未用于性能结论。解码验证并行运行的时间也不作为基准。
+
+数据来源：[OpenSlide Aperio 测试数据](https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/)（CMU-1，CC0；实际下载镜像和哈希在 provenance 中）。机制依据：[libjxl 格式说明](https://github.com/libjxl/libjxl/blob/main/doc/format_overview.md)、[Aperio 文件结构](https://openslide.org/formats/aperio/)。相关工作：[WISE，CVPR 2025](https://arxiv.org/abs/2503.18074)。当前没有复现 WISE，也没有同契约比较，因此不声称优于它。
+'''
+Path('RESULTS.md').write_text(text)
