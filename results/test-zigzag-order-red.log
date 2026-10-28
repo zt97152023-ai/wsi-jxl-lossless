@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_zigzag_layout_follows_jpeg_diagonal_frequency_order ___________
+
+    def test_zigzag_layout_follows_jpeg_diagonal_frequency_order():
+        from wsi_jxl.coeffpacket import ZIGZAG
+>       assert ZIGZAG[:10].tolist() == [0, 1, 8, 16, 9, 2, 3, 10, 17, 24]
+E       assert [0, 1, 8, 9, 16, 2, ...] == [0, 1, 8, 16, 9, 2, ...]
+E
+E         At index 3 diff: 9 != 16
+E         Use -v to get more diff
+
+tests/test_coeffpacket.py:71: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_coeffpacket.py::test_zigzag_layout_follows_jpeg_diagonal_frequency_order
+1 failed in 0.07s

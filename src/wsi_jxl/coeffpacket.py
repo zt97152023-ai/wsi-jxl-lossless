@@ -13,41 +13,16 @@ from .coefficients import read_coefficients,write_coefficients,jpeg_parts
 HEADER=struct.Struct('<4sIIII')
 
 
-def _fit_color(cube):
-    # Per-frequency adaptive coefficients; this is not stain separation. The
-    # fixed-point parameters are stored, so decoder results never depend on
-    # reproducing this floating-point fit or on having the source image.
-    r,g,b=[cube[:,i].reshape(-1,64).astype(np.float64) for i in range(3)]
-    mr,mg,mb=[v.mean(0) for v in (r,g,b)]
-    r-=mr;g-=mg;b-=mb
-    vr=(r*r).mean(0)+1;vg=(g*g).mean(0)+1;rg=(r*g).mean(0)
-    gb=(g*b).mean(0);rb=(r*b).mean(0)
-    alpha=np.clip(rg/vg,-8,8)
-    det=vg*vr-rg*rg
-    beta=np.clip((gb*vr-rb*rg)/det,-8,8)
-    gamma=np.clip((rb*vg-gb*rg)/det,-8,8)
-    return np.rint(np.stack([alpha,mr-alpha*mg,beta,gamma,mb-beta*mg-gamma*mr],axis=1)*256).astype(np.int64)
+from .operators import _fit_color, _color_prediction, fit_context_color, context_color, spatial_predict
+
+ZIGZAG = np.array(sorted(range(64), key=lambda k: (k//8+k%8, k//8 if (k//8+k%8)%2 else -(k//8))))
 
 
-def _color_prediction(cube,params,inverse=False):
-    # Arithmetic is modulo 2**16. Recover the wrapped original first channel
-    # before predicting the third, including at signed integer boundaries.
-    x=cube.astype(np.int64);p=np.asarray(params,dtype=np.int64)
-    if p.shape!=(64,5):raise ValueError('Invalid color prediction parameters')
-    pred_r=(x[:,1]*p[:,0]+p[:,1]+128)//256
-    if inverse:
-        x[:,0]=((x[:,0]+pred_r+32768)&65535)-32768
-        pred_b=(x[:,1]*p[:,2]+x[:,0]*p[:,3]+p[:,4]+128)//256
-        x[:,2]=((x[:,2]+pred_b+32768)&65535)-32768
-    else:
-        pred_b=(x[:,1]*p[:,2]+x[:,0]*p[:,3]+p[:,4]+128)//256
-        x[:,0]-=pred_r;x[:,2]-=pred_b
-    return x.astype(np.int16)
-
-
-def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag'):
-    if not jpegs or layout not in ('frequency','mosaic'):raise ValueError('Invalid batch/layout')
-    if value_map not in ('zigzag','bias') or (color_delta and color_fit):raise ValueError('Invalid coefficient transform')
+def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                 color_context=None,spatial=None):
+    if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+    if value_map not in ('zigzag','bias') or sum(map(bool,(color_delta,color_fit,color_context)))>1:
+        raise ValueError('Invalid coefficient transform')
     arrays=[];heads=[];tails=[];reference=None
     for jpeg in jpegs:
         coefficients,shape=read_coefficients(jpeg)
@@ -62,8 +37,10 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
     for jpeg,coef in zip(jpegs,arrays):
         if jpeg_parts(write_coefficients(template,coef))[1]!=jpeg_parts(jpeg)[1]:
             raise ValueError('JPEG entropy bytes are not reproducible from shared template')
-    params=None
-    if color_fit:
+    params=None;context=None
+    if color_context:
+        context=fit_context_color(cube,color_context);cube=context_color(cube,context)
+    elif color_fit:
         if channels!=3:raise ValueError('Color prediction requires three channels')
         params=_fit_color(cube);cube=_color_prediction(cube,params)
     elif color_delta:
@@ -71,25 +48,33 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
         cube=cube.astype(np.int32)
         cube[:,0]-=cube[:,1];cube[:,2]-=cube[:,1]
         cube=cube.astype(np.int16)
+    if spatial:cube=spatial_predict(cube,spatial)
     integers=cube.astype(np.int32)
     values=(((integers<<1)^(integers>>15)) if value_map=='zigzag' else integers+32768).astype(np.uint16)
     if layout=='frequency':matrix=values.transpose(1,4,0,2,3).reshape(channels*64,n*height*width)
-    else:matrix=values.reshape(n,channels,height,width,8,8).transpose(1,4,2,5,0,3).reshape(channels*8*height,8*n*width)
+    elif layout=='planes':matrix=values.transpose(1,4,2,0,3).reshape(channels*64*height,n*width)
+    else:
+        if layout=='zigzag':values=values[...,ZIGZAG]
+        matrix=values.reshape(n,channels,height,width,8,8).transpose(1,4,2,5,0,3).reshape(channels*8*height,8*n*width)
     encoded=imagecodecs.jpegxl_encode(np.ascontiguousarray(matrix),lossless=True,distance=0,effort=effort,numthreads=1)
-    info=json.dumps({'n':n,'channels':channels,'width':width,'height':height,'layout':layout,
+    info={'n':n,'channels':channels,'width':width,'height':height,'layout':layout,
                      'color_delta':color_delta,'color_params':params.tolist() if params is not None else None,
                      'value_map':value_map,'heads':heads,'tails':tails,
-                     'template_bytes':len(template)},separators=(',',':')).encode()
+                     'template_bytes':len(template)}
+    extended=bool(context or spatial or layout in ('planes','zigzag'))
+    if extended:info['operators']={'context_color':context,'spatial':spatial}
+    info=json.dumps(info,separators=(',',':')).encode()
     side=imagecodecs.zstd_encode(info,level=9)
     stored_template=imagecodecs.zstd_encode(template,level=9)
-    return HEADER.pack(b'CJT1',len(side),len(info),len(stored_template),len(encoded))+side+stored_template+encoded
+    return HEADER.pack(b'CJT2' if extended else b'CJT1',len(side),len(info),len(stored_template),len(encoded))+side+stored_template+encoded
 
 
 def decode_batch(packet):
     with io.BytesIO(packet) as f:
         magic,ns,plain_size,nt,nc=HEADER.unpack(_read(f,HEADER.size))
-        if magic!=b'CJT1' or max(ns,plain_size,nt,nc)>MAX_BLOCK:raise ValueError('Invalid coefficient packet')
+        if magic not in (b'CJT1',b'CJT2') or max(ns,plain_size,nt,nc)>MAX_BLOCK:raise ValueError('Invalid coefficient packet')
         info=json.loads(imagecodecs.zstd_decode(_read(f,ns),out=plain_size))
+        if (magic==b'CJT2')!=('operators' in info):raise ValueError('Coefficient operator version mismatch')
         if not 0<info['template_bytes']<=MAX_BLOCK:raise ValueError('Invalid template size')
         template=imagecodecs.zstd_decode(_read(f,nt),out=info['template_bytes']);encoded=_read(f,nc)
         if f.read(1):raise ValueError('Trailing coefficient packet data')
@@ -98,12 +83,19 @@ def decode_batch(packet):
     matrix=imagecodecs.jpegxl_decode(encoded,numthreads=1)
     if matrix.dtype!=np.uint16 or matrix.size!=n*channels*h*w*64:raise ValueError('Coefficient JXL shape mismatch')
     if info['layout']=='frequency':values=matrix.reshape(channels,64,n,h,w).transpose(2,0,3,4,1)
-    elif info['layout']=='mosaic':values=matrix.reshape(channels,8,h,8,n,w).transpose(4,0,2,5,1,3).reshape(n,channels,h,w,64)
+    elif info['layout']=='planes':values=matrix.reshape(channels,64,h,n,w).transpose(3,0,2,4,1)
+    elif info['layout'] in ('mosaic','zigzag'):
+        values=matrix.reshape(channels,8,h,8,n,w).transpose(4,0,2,5,1,3).reshape(n,channels,h,w,64)
+        if info['layout']=='zigzag':values=values[...,np.argsort(ZIGZAG)]
     else:raise ValueError('Unknown coefficient layout')
     if info.get('value_map','zigzag')=='zigzag':signed=((values.astype(np.int32)>>1)^-(values.astype(np.int32)&1))
     elif info['value_map']=='bias':signed=values.astype(np.int32)-32768
     else:raise ValueError('Unknown coefficient integer map')
-    if info.get('color_params') is not None:
+    operators=info.get('operators',{})
+    if operators.get('spatial'):signed=spatial_predict(signed.astype(np.int16),operators['spatial'],inverse=True)
+    if operators.get('context_color'):
+        signed=context_color(signed.astype(np.int16),operators['context_color'],inverse=True)
+    elif info.get('color_params') is not None:
         signed=_color_prediction(signed,info['color_params'],inverse=True)
     elif info['color_delta']:
         signed[:,0]+=signed[:,1];signed[:,2]+=signed[:,1]

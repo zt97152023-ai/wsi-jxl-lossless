@@ -45,3 +45,27 @@ def test_fixed_point_prediction_is_reversible_at_int16_boundaries():
     params=rng.integers(-2048,2049,(64,5),dtype=np.int64)
     residual=_color_prediction(cube,params)
     assert np.array_equal(_color_prediction(residual,params,inverse=True),cube)
+
+
+@pytest.mark.parametrize('options', [
+    {'color_context': 'dc2'}, {'color_context': 'dc4'},
+    {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+    {'color_fit': True, 'spatial': 'dc_med'},
+    {'color_context': 'dc2', 'spatial': 'low_med'},
+    {'color_fit': True, 'layout': 'planes'},
+    {'color_fit': True, 'layout': 'zigzag'},
+])
+def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+    rng = np.random.default_rng(102)
+    jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                    level=45, subsampling='444') for _ in range(2)]
+    packet = encode_batch(jpegs, effort=3, **options)
+    assert packet[:4] == b'CJT2'
+    assert decode_batch(packet) == jpegs
+    with pytest.raises(ValueError):
+        decode_batch(b'CJT1' + packet[4:])
+
+
+def test_zigzag_layout_follows_jpeg_diagonal_frequency_order():
+    from wsi_jxl.coeffpacket import ZIGZAG
+    assert ZIGZAG[:10].tolist() == [0, 1, 8, 16, 9, 2, 3, 10, 17, 24]

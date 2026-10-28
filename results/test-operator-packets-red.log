@@ -1,0 +1,188 @@
+.....FFFFFFFF                                                            [100%]
+=================================== FAILURES ===================================
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options0] ___
+
+options = {'color_context': 'dc2'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'color_context'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options1] ___
+
+options = {'color_context': 'dc4'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'color_context'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options2] ___
+
+options = {'color_context': 'texture2'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'color_context'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options3] ___
+
+options = {'color_context': 'dc_texture4'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'color_context'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options4] ___
+
+options = {'color_fit': True, 'spatial': 'dc_med'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'spatial'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options5] ___
+
+options = {'color_context': 'dc2', 'spatial': 'low_med'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+E       TypeError: encode_batch() got an unexpected keyword argument 'color_context'
+
+tests/test_coeffpacket.py:62: TypeError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options6] ___
+
+options = {'color_fit': True, 'layout': 'planes'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+
+tests/test_coeffpacket.py:62:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...f\x15\xa4\x97\xb4\x93Sw\xff\x00\x86\xb3[\xe9\xd9>\xb7j\xe9\x8d8\xc1\xdb\xa2}\xbc\x9a\xb6\xfa\xdb\xe7\xae\xabC\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag'):
+>       if not jpegs or layout not in ('frequency','mosaic'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:20: ValueError
+__ test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options7] ___
+
+options = {'color_fit': True, 'layout': 'zigzag'}
+
+    @pytest.mark.parametrize('options', [
+        {'color_context': 'dc2'}, {'color_context': 'dc4'},
+        {'color_context': 'texture2'}, {'color_context': 'dc_texture4'},
+        {'color_fit': True, 'spatial': 'dc_med'},
+        {'color_context': 'dc2', 'spatial': 'low_med'},
+        {'color_fit': True, 'layout': 'planes'},
+        {'color_fit': True, 'layout': 'zigzag'},
+    ])
+    def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
+        rng = np.random.default_rng(102)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, effort=3, **options)
+
+tests/test_coeffpacket.py:62:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...f\x15\xa4\x97\xb4\x93Sw\xff\x00\x86\xb3[\xe9\xd9>\xb7j\xe9\x8d8\xc1\xdb\xa2}\xbc\x9a\xb6\xfa\xdb\xe7\xae\xabC\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag'):
+>       if not jpegs or layout not in ('frequency','mosaic'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:20: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options0]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options1]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options2]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options3]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options4]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options5]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options6]
+FAILED tests/test_coeffpacket.py::test_new_operators_restore_jpeg_bytes_and_use_versioned_packets[options7]
+8 failed, 5 passed in 0.15s
