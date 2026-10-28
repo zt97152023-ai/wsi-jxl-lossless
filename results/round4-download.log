@@ -1,0 +1,6 @@
+{"downloaded_bytes": 67108864}
+{"downloaded_bytes": 134217728}
+{"downloaded_bytes": 201326592}
+{"downloaded_bytes": 268435456}
+{"downloaded_bytes": 335544320}
+{"file": "data/CMU-2.svs", "bytes": 390750635, "sha256": "fb6df83bfd91a252185c9652aebeb00deff84e49329f7ff8f75744f31f475b08", "md5": "4e00a3e05b57d85e37d19a78c4824eca", "original_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-2.svs", "download_url": "https://storage.googleapis.com/imagebox_test/openslide-testdata/Aperio/CMU-2.svs", "license": "CC0-1.0", "license_evidence": "https://qupath.readthedocs.io/en/0.3/docs/intro/acknowledgements.html", "note": "Separate public slide, not a crop of CMU-1. Same source/vendor, not multi-center validation."}

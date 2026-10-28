@@ -1,0 +1,17 @@
+{
+  "random_byte_ranges": 50,
+  "seed": 202610296,
+  "exact": true,
+  "openslide_dimensions": [
+    2220,
+    2967
+  ],
+  "openslide_levels": [
+    [
+      2220,
+      2967
+    ]
+  ],
+  "source_sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+  "note": "Complete crop file, not an additional independent whole slide. Decode+cmp reports stored separately."
+}

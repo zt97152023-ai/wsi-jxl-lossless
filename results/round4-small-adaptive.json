@@ -1,0 +1,233 @@
+{
+  "format": 1,
+  "source_bytes": 1938955,
+  "source_sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+  "source_name": "CMU-1-Small-Region.svs",
+  "joint_coefficient_groups": true,
+  "policy": "adaptive",
+  "group_tiles": 16,
+  "effort": 10,
+  "archive_bytes": 1444074,
+  "groups": 18,
+  "selected_modes": {
+    "raw": 1,
+    "dc4": 10,
+    "native-brotli": 5,
+    "raw-zstd": 2
+  },
+  "rows": [
+    {
+      "source_bytes": 16,
+      "stored_bytes": 16,
+      "selected": "raw",
+      "candidates": {
+        "raw": 16,
+        "raw-zstd": 25,
+        "native-brotli": 31
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 99101,
+      "stored_bytes": 63575,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 99101,
+        "raw-zstd": 77114,
+        "native-brotli": 64919,
+        "dc4": 63575
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 84334,
+      "stored_bytes": 50905,
+      "selected": "native-brotli",
+      "candidates": {
+        "raw": 84334,
+        "raw-zstd": 61196,
+        "native-brotli": 50905,
+        "dc4": 51158
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 192086,
+      "stored_bytes": 137147,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 192086,
+        "raw-zstd": 180075,
+        "native-brotli": 141609,
+        "dc4": 137147
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 138538,
+      "stored_bytes": 92491,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 138538,
+        "raw-zstd": 118852,
+        "native-brotli": 94031,
+        "dc4": 92491
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 177322,
+      "stored_bytes": 120944,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 177322,
+        "raw-zstd": 161279,
+        "native-brotli": 124450,
+        "dc4": 120944
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 201336,
+      "stored_bytes": 137665,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 201336,
+        "raw-zstd": 186625,
+        "native-brotli": 144919,
+        "dc4": 137665
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 190480,
+      "stored_bytes": 129649,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 190480,
+        "raw-zstd": 174625,
+        "native-brotli": 135972,
+        "dc4": 129649
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 188264,
+      "stored_bytes": 127521,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 188264,
+        "raw-zstd": 170638,
+        "native-brotli": 133553,
+        "dc4": 127521
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 4473,
+      "stored_bytes": 509,
+      "selected": "raw-zstd",
+      "candidates": {
+        "raw": 4473,
+        "raw-zstd": 509,
+        "native-brotli": 1064,
+        "dc4": 1531
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 2155,
+      "stored_bytes": 1517,
+      "selected": "native-brotli",
+      "candidates": {
+        "raw": 2155,
+        "raw-zstd": 1606,
+        "native-brotli": 1517
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 41975,
+      "stored_bytes": 33330,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 41975,
+        "raw-zstd": 40509,
+        "native-brotli": 36000,
+        "dc4": 33330
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 73068,
+      "stored_bytes": 54402,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 73068,
+        "raw-zstd": 71637,
+        "native-brotli": 58500,
+        "dc4": 54402
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 81214,
+      "stored_bytes": 60404,
+      "selected": "dc4",
+      "candidates": {
+        "raw": 81214,
+        "raw-zstd": 79508,
+        "native-brotli": 66266,
+        "dc4": 60404
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 376592,
+      "stored_bytes": 364705,
+      "selected": "native-brotli",
+      "candidates": {
+        "raw": 376592,
+        "raw-zstd": 369670,
+        "native-brotli": 364705
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 63994,
+      "stored_bytes": 48949,
+      "selected": "native-brotli",
+      "candidates": {
+        "raw": 63994,
+        "raw-zstd": 57068,
+        "native-brotli": 48949,
+        "dc4": 54654
+      },
+      "unsupported_reason": null
+    },
+    {
+      "source_bytes": 23264,
+      "stored_bytes": 18545,
+      "selected": "raw-zstd",
+      "candidates": {
+        "raw": 23264,
+        "raw-zstd": 18545,
+        "native-brotli": 18576
+      },
+      "unsupported_reason": "Heterogeneous JPEG grids"
+    },
+    {
+      "source_bytes": 743,
+      "stored_bytes": 573,
+      "selected": "native-brotli",
+      "candidates": {
+        "raw": 743,
+        "raw-zstd": 615,
+        "native-brotli": 573
+      },
+      "unsupported_reason": null
+    }
+  ],
+  "seconds": 128.5798232499983,
+  "archive": "results/round4-small-adaptive.wjxl"
+}

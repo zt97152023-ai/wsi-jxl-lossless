@@ -1,0 +1,24 @@
+"""Freeze the two smallest pilot configurations before subsequent validation."""
+import hashlib
+import json
+from pathlib import Path
+
+path = Path('results/round4-pilot.json')
+pilot = json.loads(path.read_text())
+selected = sorted((k for k in pilot['summaries'] if k != 'baseline'),
+                  key=lambda k: pilot['summaries'][k]['bytes'])[:2]
+frozen = {
+    'stage': 'before additional holdout and second-slide evaluation',
+    'pilot_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+    'selection': 'two smallest complete-packet aggregate sizes on fixed 48-tile development panel',
+    'candidates': {k: pilot['configs'][k] for k in selected},
+    'settings': {'layout': 'mosaic', 'effort': 10, 'value_map': 'zigzag',
+                 'grouping': 'original JPEG length, 16 tiles'},
+    'model_adaptation': 'Threshold quantiles and color coefficients fitted within each encoded group; all parameters stored. Rules frozen; no encoder-only hidden state.',
+    'optional_adaptive_policy': 'For each fixed group choose the smallest complete packet among baseline, dc2 and dc4. Choice is represented by the packet version and stored model; includes all packet bytes. Also retain fixed-mode comparisons.',
+    'cross_slide_protocol': {'source': 'CMU-2.svs', 'tiles': 192,
+                             'sampling': 'uniform without replacement from all level-0 JPEG tiles',
+                             'seed': 202610295, 'note': 'Same-vendor second slide; not independent-center validation. No balanced class resampling.'},
+}
+Path('results/round4-frozen.json').write_text(json.dumps(frozen, indent=2) + '\n')
+print(json.dumps(frozen['candidates']))

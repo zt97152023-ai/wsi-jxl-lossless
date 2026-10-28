@@ -1,0 +1,83 @@
+{
+  "file": "data/CMU-2.svs",
+  "bytes": 390750635,
+  "sha256": "fb6df83bfd91a252185c9652aebeb00deff84e49329f7ff8f75744f31f475b08",
+  "md5": "4e00a3e05b57d85e37d19a78c4824eca",
+  "original_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-2.svs",
+  "download_url": "https://storage.googleapis.com/imagebox_test/openslide-testdata/Aperio/CMU-2.svs",
+  "license": "CC0-1.0",
+  "license_evidence": "https://qupath.readthedocs.io/en/0.3/docs/intro/acknowledgements.html",
+  "note": "Separate public slide, not a crop of CMU-1. Same source/vendor, not multi-center validation.",
+  "pages": [
+    {
+      "width": 78000,
+      "height": 30462,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": true,
+      "tiles": 36295,
+      "tile_width": 256,
+      "tile_height": 256
+    },
+    {
+      "width": 1024,
+      "height": 399,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": false,
+      "tiles": 25,
+      "tile_width": 0,
+      "tile_height": 0
+    },
+    {
+      "width": 19500,
+      "height": 7615,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": true,
+      "tiles": 2310,
+      "tile_width": 256,
+      "tile_height": 256
+    },
+    {
+      "width": 4875,
+      "height": 1903,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": true,
+      "tiles": 160,
+      "tile_width": 256,
+      "tile_height": 256
+    },
+    {
+      "width": 2437,
+      "height": 951,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": true,
+      "tiles": 40,
+      "tile_width": 256,
+      "tile_height": 256
+    },
+    {
+      "width": 387,
+      "height": 463,
+      "compression": 5,
+      "photometric": 2,
+      "tiled": false,
+      "tiles": 67,
+      "tile_width": 0,
+      "tile_height": 0
+    },
+    {
+      "width": 1280,
+      "height": 431,
+      "compression": 7,
+      "photometric": 2,
+      "tiled": false,
+      "tiles": 27,
+      "tile_width": 0,
+      "tile_height": 0
+    }
+  ]
+}

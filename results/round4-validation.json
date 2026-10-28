@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-29",
+  "tests": {
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest -q -W error",
+    "passed": 69,
+    "failed": 0,
+    "seconds": 0.54,
+    "evidence": "Captured exec output after adding unsupported-grid fallback coverage."
+  },
+  "new_holdout_tiles": 192,
+  "overlap_with_prior_panels": 0,
+  "cross_slide_distinct_tiles": 192,
+  "independent_packet_verification": 126,
+  "old_packet_backward_compatibility": 84,
+  "fullfile_cmp": [
+    "round4-small-native-restored.svs",
+    "round4-small-adaptive-restored.svs"
+  ],
+  "random_byte_reads": 50,
+  "operator_source_sha256": "f8024f569d6bbc58cf1a5585875b5ee1432db2d61132aed72c8db9ef367604f1",
+  "archive_module_sha256": "304b58ff051a37f67ab1c05b3407e146f40f8e0e3467f797fe0721f7fdd87294"
+}

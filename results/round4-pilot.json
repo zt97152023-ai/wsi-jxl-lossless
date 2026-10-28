@@ -1,0 +1,596 @@
+{
+  "selection": "Reused 48 development tiles; exploratory configuration selection.",
+  "configs": {
+    "baseline": {
+      "color_fit": true
+    },
+    "dc2": {
+      "color_context": "dc2"
+    },
+    "dc4": {
+      "color_context": "dc4"
+    },
+    "texture2": {
+      "color_context": "texture2"
+    },
+    "dc_texture4": {
+      "color_context": "dc_texture4"
+    },
+    "dc_med": {
+      "color_fit": true,
+      "spatial": "dc_med"
+    },
+    "low_med": {
+      "color_fit": true,
+      "spatial": "low_med"
+    },
+    "planes": {
+      "color_fit": true,
+      "layout": "planes"
+    },
+    "zigzag": {
+      "color_fit": true,
+      "layout": "zigzag"
+    }
+  },
+  "grouping": "original JPEG length; 16/packet",
+  "note": "Actual complete packets. All methods share the same source offsets/order; common collection index/full-SVS framing excluded.",
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "native_bytes": 434919,
+  "summaries": {
+    "baseline": {
+      "bytes": 420383,
+      "saving_vs_previous_percent": 0.0,
+      "saving_vs_native_percent": 3.3422315419652904
+    },
+    "dc2": {
+      "bytes": 412793,
+      "saving_vs_previous_percent": 1.8054964163631726,
+      "saving_vs_native_percent": 5.087384087611713
+    },
+    "dc4": {
+      "bytes": 412369,
+      "saving_vs_previous_percent": 1.9063568222311589,
+      "saving_vs_native_percent": 5.18487350518142
+    },
+    "texture2": {
+      "bytes": 420982,
+      "saving_vs_previous_percent": -0.1424891111200921,
+      "saving_vs_native_percent": 3.2045047468609145
+    },
+    "dc_texture4": {
+      "bytes": 414531,
+      "saving_vs_previous_percent": 1.3920639036307358,
+      "saving_vs_native_percent": 4.687769446724566
+    },
+    "dc_med": {
+      "bytes": 420764,
+      "saving_vs_previous_percent": -0.09063163829174936,
+      "saving_vs_native_percent": 3.2546290228755215
+    },
+    "low_med": {
+      "bytes": 430958,
+      "saving_vs_previous_percent": -2.515563188806391,
+      "saving_vs_native_percent": 0.9107442995132442
+    },
+    "planes": {
+      "bytes": 420645,
+      "saving_vs_previous_percent": -0.06232411872031385,
+      "saving_vs_native_percent": 3.281990439599103
+    },
+    "zigzag": {
+      "bytes": 417200,
+      "saving_vs_previous_percent": 0.7571666789570441,
+      "saving_vs_native_percent": 4.074091957352977
+    }
+  },
+  "rows": [
+    {
+      "batch": 0,
+      "segments": [
+        2916,
+        0,
+        7788,
+        14893,
+        16525,
+        20998,
+        20149,
+        23219,
+        15025,
+        2542,
+        19004,
+        10502,
+        6015,
+        13329,
+        4595,
+        8618
+      ],
+      "categories": [
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background"
+      ],
+      "raw_lengths": [
+        2353,
+        2383,
+        2389,
+        2394,
+        2418,
+        2457,
+        2472,
+        2472,
+        2475,
+        2481,
+        2501,
+        2512,
+        2534,
+        2563,
+        2575,
+        2762
+      ],
+      "raw_sha256": [
+        "b4bd3dace01ff27cda84b61dec13047febbba0375adeb40b9dc51963f951025f",
+        "b1e9301e7caeeee61603d65b69e4973ca3e590aa3f0695558355863ddb7343fb",
+        "c7b456cf976374c25500196ce157f14ae1d75cfb001c5831848041b453631d2d",
+        "f360587477bd7957980493f353579e6412460ced139e493dc23ae6b1ae362f5b",
+        "aa8a5631b3446a949a75675570437e695b196804f4291af7952a7e551334955b",
+        "7f0962b2bf9693c65cc6823d9edb0914f33fd5f0459581f56f9fe5c81f3e2f74",
+        "c7a6c53318917eb5399f9d559ea3c736fa69dc6877e3c709435d09e403d5d19d",
+        "2be27980a77d6ba0bfafc0cf42497afd920acad1fbe2d897c6dab229130c2854",
+        "973f82f21cb70b03e34be3bd2e22ed58ed764acf6cde8e004b25a84fccafb1a4",
+        "bd0bf3061ec53552dcd4a4c0c81cbd41269146ea0f4e44639538ebc1f81c354d",
+        "7b377ff977efcab4001e506e4d693eb8eef2deaf96a9ae80b3bc39c059dc4bf5",
+        "4ac4d861f1c9e043e0a338336265dc2494cfb9896e1ec2690570d97402012d09",
+        "797bfa9d30f2bdf137965ef90018009d3d73697c34bd918a1680efff1ca2b989",
+        "8c279e5db13bc661112d7b9bd7fad276620231eca00400b0dce1e11f714403e2",
+        "1330bb81b9456d6347c96fc13f467bc61acd78a32c70988e93ae3afa16343158",
+        "f3996ab7b42aca2aace3701790fbed7c4ed84d008658ccd3002c1b38f7371eca"
+      ],
+      "native_bytes": 7134,
+      "native_packet": "results/round4-packets/pilot-0.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 7007,
+          "packet": "results/round4-packets/pilot-0-baseline.cjt",
+          "seconds": 10.849884750001365,
+          "side_bytes": 589,
+          "side_plain_bytes": 11343,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5974,
+          "verified": true
+        },
+        "dc2": {
+          "bytes": 7138,
+          "packet": "results/round4-packets/pilot-0-dc2.cjt",
+          "seconds": 9.837480209000205,
+          "side_bytes": 708,
+          "side_plain_bytes": 12245,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5986,
+          "verified": true
+        },
+        "dc4": {
+          "bytes": 7050,
+          "packet": "results/round4-packets/pilot-0-dc4.cjt",
+          "seconds": 9.877366541997617,
+          "side_bytes": 784,
+          "side_plain_bytes": 13041,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5822,
+          "verified": true
+        },
+        "texture2": {
+          "bytes": 7097,
+          "packet": "results/round4-packets/pilot-0-texture2.cjt",
+          "seconds": 10.34524337500261,
+          "side_bytes": 679,
+          "side_plain_bytes": 12250,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5974,
+          "verified": true
+        },
+        "dc_texture4": {
+          "bytes": 7204,
+          "packet": "results/round4-packets/pilot-0-dc_texture4.cjt",
+          "seconds": 10.757483499997761,
+          "side_bytes": 774,
+          "side_plain_bytes": 13820,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5986,
+          "verified": true
+        },
+        "dc_med": {
+          "bytes": 7788,
+          "packet": "results/round4-packets/pilot-0-dc_med.cjt",
+          "seconds": 9.043876792002266,
+          "side_bytes": 633,
+          "side_plain_bytes": 11397,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 6711,
+          "verified": true
+        },
+        "low_med": {
+          "bytes": 8004,
+          "packet": "results/round4-packets/pilot-0-low_med.cjt",
+          "seconds": 10.174158082998474,
+          "side_bytes": 634,
+          "side_plain_bytes": 11398,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 6926,
+          "verified": true
+        },
+        "planes": {
+          "bytes": 7189,
+          "packet": "results/round4-packets/pilot-0-planes.cjt",
+          "seconds": 9.053049666999868,
+          "side_bytes": 630,
+          "side_plain_bytes": 11393,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 6115,
+          "verified": true
+        },
+        "zigzag": {
+          "bytes": 7256,
+          "packet": "results/round4-packets/pilot-0-zigzag.cjt",
+          "seconds": 8.5883652909979,
+          "side_bytes": 625,
+          "side_plain_bytes": 11393,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 6187,
+          "verified": true
+        }
+      }
+    },
+    {
+      "batch": 1,
+      "segments": [
+        21679,
+        18361,
+        2087,
+        5034,
+        4751,
+        9956,
+        14643,
+        19307,
+        11841,
+        2449,
+        12261,
+        16773,
+        6286,
+        6432,
+        19459,
+        6472
+      ],
+      "categories": [
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "tissue",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "tissue",
+        "tissue"
+      ],
+      "raw_lengths": [
+        3811,
+        4024,
+        4205,
+        5129,
+        5263,
+        6307,
+        7490,
+        7972,
+        12917,
+        14137,
+        14192,
+        14589,
+        16393,
+        16615,
+        18786,
+        19066
+      ],
+      "raw_sha256": [
+        "5d68ba55050492eea3db0c90494ebd02819e619257f1c1cb7f8f3d365f8bd515",
+        "4b32e1a7cfa4b33e4dc05c3f026867bd56fb48e7b59b32abaeacdd79ba9ba07b",
+        "d14b73ee0f691f8e090f82d5e1f9f6205f51d809b99a2ba81b13c3b4e5c19adf",
+        "b84999041f0be6665bcacc239fede15965274b84ad209516568dad550c99bf35",
+        "2368d678d20ee48b216ca35298925836b651f0c325f42ce18fd775c6d73ca175",
+        "9474657d8dcf92f2d28dc29a6d829e3bc12a365b7ddc536b60b2a6cd9c42cae9",
+        "a8713033fda20055683fb0cd59ccf8f95c4b6dca6ca9fae8df7354c4aa7fc937",
+        "718081b6605259423534c952d449708037229499d3d1aa324b58d498f65417bf",
+        "020760b306a40e6499b8fde6c84a3257727acd1834b41f7b5252da4ed769cb7b",
+        "fe59796ac9d21fc62d6c054a224113ff97856bd748998fd08e9274ba7255e0fb",
+        "f46896e5a0ada15af1a6235b9d3bdfeae2fe819ab26eab8bdad97755f550ce5a",
+        "199b2e250acbb793fdcd7ee200bfd9ad2a58403aa6ecec95827296fe4fd34311",
+        "bd5360e36e69dcdcb155455bf53c8434bd49e0598aaa895776a203085502cc97",
+        "158b4e40bb65a1bb9fd2da2ee47ca783483c0566100a6ba693f76857272526b9",
+        "613d6722ddc6de7b8ec84259be29412a2f92f88dde791b8ebd626406644cc5b1",
+        "4e3483ce3cccf7abf11f54e1ba9492f0ac2e327aad9cfa297f8033416ae5ad89"
+      ],
+      "native_bytes": 119613,
+      "native_packet": "results/round4-packets/pilot-1.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 120459,
+          "packet": "results/round4-packets/pilot-1-baseline.cjt",
+          "seconds": 17.163411624998844,
+          "side_bytes": 722,
+          "side_plain_bytes": 11417,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 119293,
+          "verified": true
+        },
+        "dc2": {
+          "bytes": 116767,
+          "packet": "results/round4-packets/pilot-1-dc2.cjt",
+          "seconds": 16.273469749998185,
+          "side_bytes": 898,
+          "side_plain_bytes": 12345,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 115425,
+          "verified": true
+        },
+        "dc4": {
+          "bytes": 116041,
+          "packet": "results/round4-packets/pilot-1-dc4.cjt",
+          "seconds": 17.8858312500015,
+          "side_bytes": 1130,
+          "side_plain_bytes": 13241,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 114467,
+          "verified": true
+        },
+        "texture2": {
+          "bytes": 120550,
+          "packet": "results/round4-packets/pilot-1-texture2.cjt",
+          "seconds": 16.727059000000736,
+          "side_bytes": 813,
+          "side_plain_bytes": 12398,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 119293,
+          "verified": true
+        },
+        "dc_texture4": {
+          "bytes": 116943,
+          "packet": "results/round4-packets/pilot-1-dc_texture4.cjt",
+          "seconds": 16.38428712500172,
+          "side_bytes": 1074,
+          "side_plain_bytes": 14068,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 115425,
+          "verified": true
+        },
+        "dc_med": {
+          "bytes": 120431,
+          "packet": "results/round4-packets/pilot-1-dc_med.cjt",
+          "seconds": 16.12863224999819,
+          "side_bytes": 767,
+          "side_plain_bytes": 11471,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 119220,
+          "verified": true
+        },
+        "low_med": {
+          "bytes": 124347,
+          "packet": "results/round4-packets/pilot-1-low_med.cjt",
+          "seconds": 16.335276750000048,
+          "side_bytes": 768,
+          "side_plain_bytes": 11472,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 123135,
+          "verified": true
+        },
+        "planes": {
+          "bytes": 120500,
+          "packet": "results/round4-packets/pilot-1-planes.cjt",
+          "seconds": 15.233322915999452,
+          "side_bytes": 764,
+          "side_plain_bytes": 11467,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 119292,
+          "verified": true
+        },
+        "zigzag": {
+          "bytes": 119909,
+          "packet": "results/round4-packets/pilot-1-zigzag.cjt",
+          "seconds": 12.739719500001229,
+          "side_bytes": 760,
+          "side_plain_bytes": 11467,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 118705,
+          "verified": true
+        }
+      }
+    },
+    {
+      "batch": 2,
+      "segments": [
+        10573,
+        10385,
+        8042,
+        3900,
+        16210,
+        3577,
+        17666,
+        4435,
+        3398,
+        13722,
+        2670,
+        18592,
+        4646,
+        15900,
+        15188,
+        15513
+      ],
+      "categories": [
+        "tissue",
+        "tissue",
+        "mixed",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "mixed",
+        "tissue",
+        "mixed",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue"
+      ],
+      "raw_lengths": [
+        19758,
+        20597,
+        22361,
+        23167,
+        23329,
+        23770,
+        26582,
+        26765,
+        27089,
+        27144,
+        27283,
+        28078,
+        28406,
+        30398,
+        31262,
+        31408
+      ],
+      "raw_sha256": [
+        "d0bb06a83e183465589255928b5b21699581c4a3e9b431a28afa7e5962179144",
+        "5e1d4f5c2468c7b66f2c68ca3a48bf59b6ee3014baf8cb2e8c1174e0853060f7",
+        "ea1814e288a50948d475b489feea5bef07b072539d1a01df20fe0a07b6f7b8f0",
+        "7d9989f83825e4a63c4a9f90bfa698b87f9485001d904f380509d362bbcf739b",
+        "fca6471cdd1c013e6d09875c1d91314de4e8b4971ba1a1080f33fa7edfaae60e",
+        "e10e707a754e00fa6388e249fb8c99448ffeed6cdd25309716b616d480920395",
+        "9e374f98118c8f7d5c8eace4792f356f6a933bb809d5d584ff4727572238c930",
+        "57972ab4bc3c340108b67499619119d36ab10fa8c8b843a3aefc4edcb55960d7",
+        "29596fa9979335e014690b2241f1ecb965d5029dbcca9c29131570c57440b116",
+        "6d0a8c00f6be42b35eea2c514668035f39ef6bd9c562be93912b7831dd46ed6f",
+        "397cee33231e6bf43c7982795d361ed04fae41b73390eaa2c7b302b9d812e573",
+        "e47f14c00a5398768fb0f07f785935b5fc3a45880f813a8293d62f97cbd0e55a",
+        "b7d5eec9560480a44e387708126907438b36c99d119178c8bdbb36f7c0cf4f97",
+        "044fb6b02e55c1a9988b6b93681e19ca2ae2196a98ff211a1de41cf8efa67ae5",
+        "c4bc87fa188aeeb464becb916f8bdbc4f90831350247fd7a7c9dac8a01d52439",
+        "b49931de08e434b058cdea26a5a3a277ff40aac02dc61fbeb44aebf4e10d078c"
+      ],
+      "native_bytes": 308172,
+      "native_packet": "results/round4-packets/pilot-2.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 292917,
+          "packet": "results/round4-packets/pilot-2-baseline.cjt",
+          "seconds": 17.2671334580009,
+          "side_bytes": 758,
+          "side_plain_bytes": 11447,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 291715,
+          "verified": true
+        },
+        "dc2": {
+          "bytes": 288888,
+          "packet": "results/round4-packets/pilot-2-dc2.cjt",
+          "seconds": 16.081389999999374,
+          "side_bytes": 1093,
+          "side_plain_bytes": 12472,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 287351,
+          "verified": true
+        },
+        "dc4": {
+          "bytes": 289278,
+          "packet": "results/round4-packets/pilot-2-dc4.cjt",
+          "seconds": 17.62923279199822,
+          "side_bytes": 1536,
+          "side_plain_bytes": 14287,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 287298,
+          "verified": true
+        },
+        "texture2": {
+          "bytes": 293335,
+          "packet": "results/round4-packets/pilot-2-texture2.cjt",
+          "seconds": 16.821786208001868,
+          "side_bytes": 1083,
+          "side_plain_bytes": 12465,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 291808,
+          "verified": true
+        },
+        "dc_texture4": {
+          "bytes": 290384,
+          "packet": "results/round4-packets/pilot-2-dc_texture4.cjt",
+          "seconds": 16.501620332997845,
+          "side_bytes": 1531,
+          "side_plain_bytes": 14283,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 288409,
+          "verified": true
+        },
+        "dc_med": {
+          "bytes": 292545,
+          "packet": "results/round4-packets/pilot-2-dc_med.cjt",
+          "seconds": 15.967722249999497,
+          "side_bytes": 801,
+          "side_plain_bytes": 11501,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 291300,
+          "verified": true
+        },
+        "low_med": {
+          "bytes": 298607,
+          "packet": "results/round4-packets/pilot-2-low_med.cjt",
+          "seconds": 16.20667766600309,
+          "side_bytes": 803,
+          "side_plain_bytes": 11502,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 297360,
+          "verified": true
+        },
+        "planes": {
+          "bytes": 292956,
+          "packet": "results/round4-packets/pilot-2-planes.cjt",
+          "seconds": 17.733208500001638,
+          "side_bytes": 799,
+          "side_plain_bytes": 11497,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 291713,
+          "verified": true
+        },
+        "zigzag": {
+          "bytes": 290035,
+          "packet": "results/round4-packets/pilot-2-zigzag.cjt",
+          "seconds": 12.875053084000683,
+          "side_bytes": 795,
+          "side_plain_bytes": 11497,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 288796,
+          "verified": true
+        }
+      }
+    }
+  ]
+}
