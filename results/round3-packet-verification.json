@@ -1,0 +1,680 @@
+{
+  "source_opened": false,
+  "verification": "fresh-process stored-packet decode",
+  "distinct_tiles": 144,
+  "verified_packets": 84,
+  "rows": [
+    {
+      "packet": "results/round3-packets/background-0-delta.cjt",
+      "bytes": 7192,
+      "packet_sha256": "1279afda7e651bc621a48f8df474f038b31eff5cc24574b367b02838c3f00c5e",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.11339770799895632
+    },
+    {
+      "packet": "results/round3-packets/background-0-fit.cjt",
+      "bytes": 7500,
+      "packet_sha256": "7e2c4f3f82a714c15fd7336da638e969389f6f943b85ef5e3d5c9eac0e584516",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.10187154199957149
+    },
+    {
+      "packet": "results/round3-packets/background-0-none.cjt",
+      "bytes": 7010,
+      "packet_sha256": "6b0d6ff49371dc496cb54543d27c9590f35b7c10238f3dc91cf6b2988ab161aa",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1009146670003247
+    },
+    {
+      "packet": "results/round3-packets/background-0.jbr",
+      "bytes": 7155,
+      "packet_sha256": "e545e1fd823ccea8ec8eb8624e9ec43fbc750ff7cea437ae30e6c42d16f4b858",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.009507957998721395
+    },
+    {
+      "packet": "results/round3-packets/background-1-delta.cjt",
+      "bytes": 6197,
+      "packet_sha256": "b592feccacc203e771afca5a282ea0b397ec22cfd70b35df4148b84fe2356152",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.08301970799948322
+    },
+    {
+      "packet": "results/round3-packets/background-1-fit.cjt",
+      "bytes": 6330,
+      "packet_sha256": "2621896dce3f0a2df7ea69cadfad98aa5ac5be933abe099abddb9f9471a24d4b",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.09439533300246694
+    },
+    {
+      "packet": "results/round3-packets/background-1.jbr",
+      "bytes": 6332,
+      "packet_sha256": "729d293aa80ab138ed2ccb3f991a8e8e44defdfa13b32f116c86b072ee1635a1",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.006971833001443883
+    },
+    {
+      "packet": "results/round3-packets/background-2-delta.cjt",
+      "bytes": 10894,
+      "packet_sha256": "d54de2537cd0eed02452b84d0d337cb5b8127b37549d19c8bc02d0c070e07873",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.10865970799932256
+    },
+    {
+      "packet": "results/round3-packets/background-2-fit.cjt",
+      "bytes": 11445,
+      "packet_sha256": "448e7d638744b806c506e7b2595f5fd9eb5bad4d6689dc52ee79579cab967737",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1058885829988867
+    },
+    {
+      "packet": "results/round3-packets/background-2.jbr",
+      "bytes": 9962,
+      "packet_sha256": "01acf8d05f713b25f30e5b06cfa0aee056bfd21c9dbaecf80fc1bd9841318863",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.00754808399869944
+    },
+    {
+      "packet": "results/round3-packets/mixed-0-delta.cjt",
+      "bytes": 161291,
+      "packet_sha256": "2860d5247ab23a02e9d12ba0f0d580501303fa2220b8a24c6d790c9704d06adc",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14757962499788846
+    },
+    {
+      "packet": "results/round3-packets/mixed-0-fit.cjt",
+      "bytes": 158621,
+      "packet_sha256": "fca7e3e52343d31b0073b5b7a8119b12d2999e4d3b185388fecb65ef67dd0ba3",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15518875000270782
+    },
+    {
+      "packet": "results/round3-packets/mixed-0-none.cjt",
+      "bytes": 189938,
+      "packet_sha256": "8a7a688ab652d16783fd0466eaaf41507cee5935fa141fcec295afbf21c2846b",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14280425000106334
+    },
+    {
+      "packet": "results/round3-packets/mixed-0.jbr",
+      "bytes": 159893,
+      "packet_sha256": "a9871614550c6cbd693ebd88fd610036b004bd4d9395a307fc4c6587c9ce236b",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01611758400031249
+    },
+    {
+      "packet": "results/round3-packets/mixed-1-delta.cjt",
+      "bytes": 179421,
+      "packet_sha256": "70793805c3392d72652a0b77f9dc8dc4549d21a0382175da663d39e2d8cf9861",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14366825000251993
+    },
+    {
+      "packet": "results/round3-packets/mixed-1-fit.cjt",
+      "bytes": 173670,
+      "packet_sha256": "95806d9aa49f8012ed4a4255b2838dc967162cd3b053727d74755cdb811efeab",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14773995900031878
+    },
+    {
+      "packet": "results/round3-packets/mixed-1.jbr",
+      "bytes": 175934,
+      "packet_sha256": "bf3bdd322787945395617e57d8e327e4d18b5d302388eba96e1f6bcbb2e68a2c",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.017602166000870056
+    },
+    {
+      "packet": "results/round3-packets/mixed-2-delta.cjt",
+      "bytes": 140295,
+      "packet_sha256": "d2862b53db0991494427635e4be2273e8108141fb9edd35bbea15d79739bb8dd",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1342695419989468
+    },
+    {
+      "packet": "results/round3-packets/mixed-2-fit.cjt",
+      "bytes": 138511,
+      "packet_sha256": "53995581dfa04fed7424eb5ceff3fb9df8ec5798d1b738238519ee20ef34a104",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.13929858400297235
+    },
+    {
+      "packet": "results/round3-packets/mixed-2.jbr",
+      "bytes": 137959,
+      "packet_sha256": "5638af3a1c7945beea24e21f6fc2b72e2cd4d513952c0d829b32b0afac67abd4",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.015183208000962622
+    },
+    {
+      "packet": "results/round3-packets/tissue-0-delta.cjt",
+      "bytes": 274124,
+      "packet_sha256": "82fbd2db7e2ac926249e41ceff658efb3ca8888b8c9aad6c11b2401ab0db80f9",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1520008749976114
+    },
+    {
+      "packet": "results/round3-packets/tissue-0-fit.cjt",
+      "bytes": 270993,
+      "packet_sha256": "ca658d4f3413875fdd2d1f33981cf953d42f9d11e1273605c049b0b904001cb3",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15726999999969848
+    },
+    {
+      "packet": "results/round3-packets/tissue-0-none.cjt",
+      "bytes": 343707,
+      "packet_sha256": "c2f43953ca3eb807117fe79dbee6380c36314901d9e6fb4ef63b71edcdf9130e",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15091324999957578
+    },
+    {
+      "packet": "results/round3-packets/tissue-0.jbr",
+      "bytes": 283975,
+      "packet_sha256": "2b183462eed86e97dd49531b3d87e98169340ae587ff25420bbd43344179404c",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.023703625000052853
+    },
+    {
+      "packet": "results/round3-packets/tissue-1-delta.cjt",
+      "bytes": 287506,
+      "packet_sha256": "d5bbf611277aeec125ed3697f50871efd322798a91aa614b797fdb2c048af1ab",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1522952909981541
+    },
+    {
+      "packet": "results/round3-packets/tissue-1-fit.cjt",
+      "bytes": 276740,
+      "packet_sha256": "8520ae98f6336923b7f5096bf609872ef959dc746d97547ae5459dc6b67d7b7c",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1497907499979192
+    },
+    {
+      "packet": "results/round3-packets/tissue-1.jbr",
+      "bytes": 292862,
+      "packet_sha256": "fc78bfee7f2f56091ce08ccece4d06557e5ed4bd2d20c9164552727db83b2316",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.02444962499794201
+    },
+    {
+      "packet": "results/round3-packets/tissue-2-delta.cjt",
+      "bytes": 271522,
+      "packet_sha256": "21045c5addd111f6b3d56d8bd2e5ff1d5b3e69c89d5f74bcf53d21edbab0c9c3",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15118570800041198
+    },
+    {
+      "packet": "results/round3-packets/tissue-2-fit.cjt",
+      "bytes": 265360,
+      "packet_sha256": "03ec1097b325e912e3a0301ee8e35b296a69ffb8ea3a268c2772ebe027b24bdc",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15713033299834933
+    },
+    {
+      "packet": "results/round3-packets/tissue-2.jbr",
+      "bytes": 277948,
+      "packet_sha256": "9f178d8bb38213939082dccd1f1f7db6a160aefcff42eb968d6c391a0f7c1fad",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.023937916997965658
+    },
+    {
+      "packet": "results/round3-packets/control-length-0.cjt",
+      "bytes": 3252,
+      "packet_sha256": "e6d8f322f2ac123e95b38d7762fa2c5637c160f1535f1c30169f733105d51c6a",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.0874667079988285
+    },
+    {
+      "packet": "results/round3-packets/control-length-0.jbr",
+      "bytes": 4610,
+      "packet_sha256": "26d58ae7c3940e1324ea386d02d66fd1f2b2972b137612b7f353f63d6f96c68d",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.00659579100101837
+    },
+    {
+      "packet": "results/round3-packets/control-length-1.cjt",
+      "bytes": 5795,
+      "packet_sha256": "d9182a81992c6e6f4a0305dc9d04e0527a7509cd0182c2f962b2a9eaa06cc164",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.09482133300116402
+    },
+    {
+      "packet": "results/round3-packets/control-length-1.jbr",
+      "bytes": 5923,
+      "packet_sha256": "5cb8e5e7a45135d895990bf370fc6230bc641b74f0e8d63d0c36d0acba8c4b77",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.006737584000802599
+    },
+    {
+      "packet": "results/round3-packets/control-length-2.cjt",
+      "bytes": 14728,
+      "packet_sha256": "404e0d70048aabac20646e295e9d08da2d7eb5311054fdbfb48bebb33606d3b8",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.11165004199938267
+    },
+    {
+      "packet": "results/round3-packets/control-length-2.jbr",
+      "bytes": 13133,
+      "packet_sha256": "89f0dd2116abccb075d6a87a78b150baf314115738bbb458cb8529df42cf2b1b",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.00736295800015796
+    },
+    {
+      "packet": "results/round3-packets/control-length-3.cjt",
+      "bytes": 61666,
+      "packet_sha256": "b8c49875decdb36afb11e9f1db77ddcc7db306b1f075e5fd7c56614fe727d246",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.12021658400044544
+    },
+    {
+      "packet": "results/round3-packets/control-length-3.jbr",
+      "bytes": 59521,
+      "packet_sha256": "c3457dce0d4d52ccca97d53b6cd3c426f2395a08d2f9b6a3defb4996eb1cc4c0",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01036187499994412
+    },
+    {
+      "packet": "results/round3-packets/control-length-4.cjt",
+      "bytes": 140099,
+      "packet_sha256": "736035b79d64b25fffb06aa2b2b6a054f47eeaac6649ec2112b1cbe5f66e1c66",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.13804170799994608
+    },
+    {
+      "packet": "results/round3-packets/control-length-4.jbr",
+      "bytes": 139648,
+      "packet_sha256": "8755d55602acd2f648f9ecd1055311941aad20a5218fe7ca45f6dd0133ce0c69",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01493924999886076
+    },
+    {
+      "packet": "results/round3-packets/control-length-5.cjt",
+      "bytes": 232637,
+      "packet_sha256": "8ef0410588c07af5270a7f477e2b14f379a7fe9a0e64c756667ca28e91e9fdaa",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15018504199906602
+    },
+    {
+      "packet": "results/round3-packets/control-length-5.jbr",
+      "bytes": 240398,
+      "packet_sha256": "3ed4bc2346701868d0f558d64119059712abff129fea399b5a7434b64da31dcf",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.021799582998937694
+    },
+    {
+      "packet": "results/round3-packets/control-length-6.cjt",
+      "bytes": 260097,
+      "packet_sha256": "68d1fa5a744afded696a25f330d5ec65a6eb354360bf12d636b8d1fcf49cdcd4",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15847075000056066
+    },
+    {
+      "packet": "results/round3-packets/control-length-6.jbr",
+      "bytes": 273390,
+      "packet_sha256": "eae2014244af08ce4962c5599c9e31ceeaac54e7d297c6ac3f668f334cf2d670",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.02341924999927869
+    },
+    {
+      "packet": "results/round3-packets/control-length-7.cjt",
+      "bytes": 277891,
+      "packet_sha256": "938454d20e05389ef6a60c54d2ec0bb8ad6a95686f1ffc867f55331ee785dd27",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15120008300073096
+    },
+    {
+      "packet": "results/round3-packets/control-length-7.jbr",
+      "bytes": 293306,
+      "packet_sha256": "d75de97f82810a3655423031d78d0b571cb6f5b47d91d12085b76cc0ca424b39",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.023705625000729924
+    },
+    {
+      "packet": "results/round3-packets/control-length-8.cjt",
+      "bytes": 305013,
+      "packet_sha256": "5ed29d20edd99be0cfaba9487803858c8572bce725fa0fed434fc8e6248d0276",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15457829200022388
+    },
+    {
+      "packet": "results/round3-packets/control-length-8.jbr",
+      "bytes": 322328,
+      "packet_sha256": "c766307d0a69437a7c75a9d81af094039bc50d2ac0477ae17d7aec2c16b6fe68",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.026324041999032488
+    },
+    {
+      "packet": "results/round3-packets/control-source-0.cjt",
+      "bytes": 111904,
+      "packet_sha256": "ae3e61a6f3773723ea8eff819304ced4bd8c466c094c31599ce0ca105149ec48",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15209108300041407
+    },
+    {
+      "packet": "results/round3-packets/control-source-0.jbr",
+      "bytes": 108346,
+      "packet_sha256": "e6ecf0a0ef9b71e224c4af3fdd6d987e68311537840a31551d4852aa646144e3",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.013540957999794045
+    },
+    {
+      "packet": "results/round3-packets/control-source-1.cjt",
+      "bytes": 187988,
+      "packet_sha256": "dd96762c9e5e20030debc31cb3345d7eac8cb7eccfdbd56e7ed936e48ba33aa1",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15824487499776296
+    },
+    {
+      "packet": "results/round3-packets/control-source-1.jbr",
+      "bytes": 188927,
+      "packet_sha256": "7693a028cd6c809b622f83b87a8031c777f2b8c40257b5e0908d029ee8a35f32",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01766587500242167
+    },
+    {
+      "packet": "results/round3-packets/control-source-2.cjt",
+      "bytes": 149275,
+      "packet_sha256": "2cfe6b120ca52916322c6e02cd721b14fb1f71d2856df849a6ac561f06a5b3e9",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15072916699864436
+    },
+    {
+      "packet": "results/round3-packets/control-source-2.jbr",
+      "bytes": 150182,
+      "packet_sha256": "f679fafbcbd1610b3c7d06286a5ffe57a8ca36e3e1f48c1b148ead771f3d6cab",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.015175791002548067
+    },
+    {
+      "packet": "results/round3-packets/control-source-3.cjt",
+      "bytes": 120884,
+      "packet_sha256": "d8d7917e8d4b0471327d834a5072f956f417b86169cb4fd3e5402846364ca2c0",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14610883299974375
+    },
+    {
+      "packet": "results/round3-packets/control-source-3.jbr",
+      "bytes": 118623,
+      "packet_sha256": "7b59b045c398773dd342ae599c2989a7b65be7ac1a594bf1f038f55279dc13a4",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01350429199737846
+    },
+    {
+      "packet": "results/round3-packets/control-source-4.cjt",
+      "bytes": 166678,
+      "packet_sha256": "f8b29f750dd6f8daec854a2466f808eb489805ce8c249d70b21471eecf8a4c00",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15406425000037416
+    },
+    {
+      "packet": "results/round3-packets/control-source-4.jbr",
+      "bytes": 165893,
+      "packet_sha256": "20a1e3fd5e830e4b82e1e52dfb7b7c594f1b41cbea068cd25b004efd9554306c",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.016930958001466934
+    },
+    {
+      "packet": "results/round3-packets/control-source-5.cjt",
+      "bytes": 165046,
+      "packet_sha256": "359642117bff4a122d0964ab88185aad7e55783cc7c123387f1c42b4d0dc5fe8",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14118420800150489
+    },
+    {
+      "packet": "results/round3-packets/control-source-5.jbr",
+      "bytes": 163071,
+      "packet_sha256": "69efe8b56907baa0033876785b4bb1b1173bd055d8e9062bbc75417384c0686f",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.016299250000884058
+    },
+    {
+      "packet": "results/round3-packets/control-source-6.cjt",
+      "bytes": 191132,
+      "packet_sha256": "abc61666a07717780f6088a1a5310e592ad12e45aa22a832ea87c7ad64658595",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14851179100151057
+    },
+    {
+      "packet": "results/round3-packets/control-source-6.jbr",
+      "bytes": 191919,
+      "packet_sha256": "eab61e0d0b25f4d379afab371a111661b137ec079992ca21f458bfef1fb3948b",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.018135458001779625
+    },
+    {
+      "packet": "results/round3-packets/control-source-7.cjt",
+      "bytes": 199236,
+      "packet_sha256": "429b5acbac9a5d0a2d364b3f0f451a843c17191de0f1304e607bf39970049d18",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15532204199917032
+    },
+    {
+      "packet": "results/round3-packets/control-source-7.jbr",
+      "bytes": 203431,
+      "packet_sha256": "5e9d5334b68b28ff639d442d50e49ee12716f15ac0c42842a0a32a8d2d53088f",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.018637291999766603
+    },
+    {
+      "packet": "results/round3-packets/control-source-8.cjt",
+      "bytes": 64840,
+      "packet_sha256": "191b4f31fd2022edec7a5e323b44b5d28d1099530c02474726a6c450f0005453",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.12118308299977798
+    },
+    {
+      "packet": "results/round3-packets/control-source-8.jbr",
+      "bytes": 63868,
+      "packet_sha256": "67bfab73519d834150ef1f409a0bba864e7f33d68fd6203fb3fbd4c2d811f2aa",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.010328500000468921
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-0.cjt",
+      "bytes": 159577,
+      "packet_sha256": "05ba81972c13266669f39f549bf92c4c3005ee138dbdbb776b1704f49b321346",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15208358399831923
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-0.jbr",
+      "bytes": 162204,
+      "packet_sha256": "7b341007a7744b83c87b198598ec090e913a7e902181108716e88f6f14806bc0",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.016154290999111254
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-1.cjt",
+      "bytes": 134921,
+      "packet_sha256": "ab5bf4d84ca4508e1b1f3bbd8d07d151da8bf9c8f160f2539bba5261e05705e0",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1460026659988216
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-1.jbr",
+      "bytes": 131278,
+      "packet_sha256": "6c596e19057e01f95b0db35fa6a8f88c72e8014b90166111398480fc8a4ff801",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.014339708999614231
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-2.cjt",
+      "bytes": 191310,
+      "packet_sha256": "f51ea7101fd26b3fbc6f0f60a7025c4cd99e6b2d9047d8b9af2ce7eba0d1af97",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15162920799775748
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-2.jbr",
+      "bytes": 193435,
+      "packet_sha256": "005630905e6de40e01f2bcd6b6164d822f714f35aafcd6c6b0dd61c8e04911ad",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01810529100112035
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-3.cjt",
+      "bytes": 136100,
+      "packet_sha256": "64ea79e847392aa857187e9d6d862943ad9c27b270f48e3de58bb990f3c71ad8",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14942370900098467
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-3.jbr",
+      "bytes": 134936,
+      "packet_sha256": "be78f8c430bd40d99175059478308ff000f16fea14096c7f88f05959d09e8343",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.014503791997412918
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-4.cjt",
+      "bytes": 185071,
+      "packet_sha256": "2146f34fee1f24da4c578f96ab5e855f9a5289bd6c2e9ec7bf7f6f4a65b5d9aa",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15788620900275419
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-4.jbr",
+      "bytes": 185192,
+      "packet_sha256": "8f1d2a537770e4df22ffaed40904476e1aa3e3d671457b116d1ed7ff76a936f3",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01807912499862141
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-5.cjt",
+      "bytes": 112393,
+      "packet_sha256": "6e83d580578aaa9cd64f7663b57a00b299cfcc0e27055ae535e3461d1b9edeff",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14775649999864982
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-5.jbr",
+      "bytes": 109431,
+      "packet_sha256": "429cd143ea61b200ecbef8e18e2fd21b5997c0777c172f90d0bc53744098cac4",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.012835207999160048
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-6.cjt",
+      "bytes": 154849,
+      "packet_sha256": "8a029e18b5e3c1d69f4be4a7667daf61cd0fdf265ac7ca977d1a3498656f4a75",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.14334241599863162
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-6.jbr",
+      "bytes": 153366,
+      "packet_sha256": "3a1b5d65a47a5518fd58e9b9eba0e323b77c5d61dab91b067038db8a0793e1e6",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.0164437919993361
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-7.cjt",
+      "bytes": 166123,
+      "packet_sha256": "bc703635c61121a90155643ffc2339da356c99c63cf0386a8f692fc859f81c8a",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.15614845899835927
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-7.jbr",
+      "bytes": 165593,
+      "packet_sha256": "2b3cd76b183015848e4e5c6e3c3a55f3d0f18c523de1602360032070becc506d",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01631120800084318
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-8.cjt",
+      "bytes": 122030,
+      "packet_sha256": "314f9dfa1c413576a8560f6d47bd4e422670f354ad831269f33725cd17e331b4",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.1459283330004837
+    },
+    {
+      "packet": "results/round3-packets/control-shuffle-8.jbr",
+      "bytes": 118626,
+      "packet_sha256": "bb537028536b3553b660705cf84cd4ae26596a1f99b32841f3552f780670a4b0",
+      "jpeg_byte_exact": true,
+      "tiles": 16,
+      "decode_seconds": 0.01374920799935353
+    }
+  ]
+}

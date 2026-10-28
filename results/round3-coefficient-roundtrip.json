@@ -1,0 +1,2694 @@
+{
+  "records": [
+    {
+      "segment": 0,
+      "source_jpeg_bytes": 2383,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0158843994140625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 20701,
+      "source_jpeg_bytes": 2572,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016138712565104168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 18183,
+      "source_jpeg_bytes": 2468,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016270955403645832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 15845,
+      "source_jpeg_bytes": 2481,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0163116455078125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 13327,
+      "source_jpeg_bytes": 2694,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015858968098958332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 10989,
+      "source_jpeg_bytes": 2778,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016270955403645832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 8471,
+      "source_jpeg_bytes": 2801,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016560872395833332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 5953,
+      "source_jpeg_bytes": 2446,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015635172526041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 3615,
+      "source_jpeg_bytes": 2587,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015665690104166668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 1097,
+      "source_jpeg_bytes": 2642,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0160675048828125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 21978,
+      "source_jpeg_bytes": 2522,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016270955403645832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 19460,
+      "source_jpeg_bytes": 16525,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.12453715006510417,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 16942,
+      "source_jpeg_bytes": 25626,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.20050048828125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 14604,
+      "source_jpeg_bytes": 27165,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.21104939778645834,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 12086,
+      "source_jpeg_bytes": 25323,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.199981689453125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 9748,
+      "source_jpeg_bytes": 2721,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015741984049479168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 7230,
+      "source_jpeg_bytes": 2534,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015833536783854168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 4712,
+      "source_jpeg_bytes": 2387,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0158233642578125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 2374,
+      "source_jpeg_bytes": 2375,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015635172526041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 23075,
+      "source_jpeg_bytes": 2570,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016286214192708332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 20737,
+      "source_jpeg_bytes": 2655,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015635172526041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 18219,
+      "source_jpeg_bytes": 2593,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.017003377278645832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 15881,
+      "source_jpeg_bytes": 2528,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016932169596354168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 13363,
+      "source_jpeg_bytes": 28349,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.21660359700520834,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 10845,
+      "source_jpeg_bytes": 26994,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.20744832356770834,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 8507,
+      "source_jpeg_bytes": 2410,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0157012939453125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 5989,
+      "source_jpeg_bytes": 2418,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016082763671875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 3651,
+      "source_jpeg_bytes": 2363,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0157470703125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 1133,
+      "source_jpeg_bytes": 2449,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016215006510416668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 21834,
+      "source_jpeg_bytes": 21218,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.14778645833333334,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 19496,
+      "source_jpeg_bytes": 21701,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.17106119791666666,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 16978,
+      "source_jpeg_bytes": 27988,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.2185821533203125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 14640,
+      "source_jpeg_bytes": 2542,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.017100016276041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 12122,
+      "source_jpeg_bytes": 2586,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0157470703125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 9604,
+      "source_jpeg_bytes": 2412,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015996297200520832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 7266,
+      "source_jpeg_bytes": 2837,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.018732706705729168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 4748,
+      "source_jpeg_bytes": 4238,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.030339558919270832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 2410,
+      "source_jpeg_bytes": 2488,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016138712565104168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 23111,
+      "source_jpeg_bytes": 2541,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016194661458333332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 20773,
+      "source_jpeg_bytes": 2523,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015650431315104168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 18255,
+      "source_jpeg_bytes": 2371,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.01580810546875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 15737,
+      "source_jpeg_bytes": 25823,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.20129903157552084,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 13399,
+      "source_jpeg_bytes": 2631,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015711466471354168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 10881,
+      "source_jpeg_bytes": 3512,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.022501627604166668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 8543,
+      "source_jpeg_bytes": 2556,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0171661376953125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 6025,
+      "source_jpeg_bytes": 3054,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.021016438802083332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 3507,
+      "source_jpeg_bytes": 2432,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016357421875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 1169,
+      "source_jpeg_bytes": 2428,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.01617431640625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 21870,
+      "source_jpeg_bytes": 2553,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015655517578125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 19532,
+      "source_jpeg_bytes": 2453,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015838623046875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 17014,
+      "source_jpeg_bytes": 2594,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015650431315104168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 14496,
+      "source_jpeg_bytes": 2411,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0156707763671875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 12158,
+      "source_jpeg_bytes": 2519,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0156707763671875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 9640,
+      "source_jpeg_bytes": 2352,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015635172526041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 7302,
+      "source_jpeg_bytes": 2765,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016972859700520832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 4784,
+      "source_jpeg_bytes": 3816,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.024871826171875,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 2266,
+      "source_jpeg_bytes": 2439,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015645345052083332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 23147,
+      "source_jpeg_bytes": 2577,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016850789388020832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 20629,
+      "source_jpeg_bytes": 2581,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015757242838541668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 18291,
+      "source_jpeg_bytes": 2634,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015752156575520832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 15773,
+      "source_jpeg_bytes": 2518,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015706380208333332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 13435,
+      "source_jpeg_bytes": 2472,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015752156575520832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 10917,
+      "source_jpeg_bytes": 7098,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.052541097005208336,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 8399,
+      "source_jpeg_bytes": 23077,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.17962137858072916,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 6061,
+      "source_jpeg_bytes": 25752,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.204254150390625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 3543,
+      "source_jpeg_bytes": 27283,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.21178181966145834,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 1205,
+      "source_jpeg_bytes": 2571,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016016642252604168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 21906,
+      "source_jpeg_bytes": 3491,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0229034423828125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 19388,
+      "source_jpeg_bytes": 2605,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015716552734375,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 17050,
+      "source_jpeg_bytes": 2554,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015965779622395832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 14532,
+      "source_jpeg_bytes": 2438,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0157318115234375,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 12194,
+      "source_jpeg_bytes": 4507,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.031560262044270836,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 9676,
+      "source_jpeg_bytes": 26442,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.2026214599609375,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 7158,
+      "source_jpeg_bytes": 2487,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015899658203125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 4820,
+      "source_jpeg_bytes": 2577,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016062418619791668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 2302,
+      "source_jpeg_bytes": 21268,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.1707916259765625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 23183,
+      "source_jpeg_bytes": 2467,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016179402669270832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 20665,
+      "source_jpeg_bytes": 2543,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015635172526041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 18327,
+      "source_jpeg_bytes": 2461,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015655517578125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 15809,
+      "source_jpeg_bytes": 2411,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0156402587890625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 13291,
+      "source_jpeg_bytes": 2409,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015721638997395832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 10953,
+      "source_jpeg_bytes": 2584,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015716552734375,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 8435,
+      "source_jpeg_bytes": 2435,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0160675048828125,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 6097,
+      "source_jpeg_bytes": 26520,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.20016988118489584,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 3579,
+      "source_jpeg_bytes": 19793,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.14992777506510416,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 1061,
+      "source_jpeg_bytes": 2348,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 21942,
+      "source_jpeg_bytes": 2448,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015650431315104168,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 19424,
+      "source_jpeg_bytes": 2501,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015879313151041668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 17086,
+      "source_jpeg_bytes": 2461,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015645345052083332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 14568,
+      "source_jpeg_bytes": 2389,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 12050,
+      "source_jpeg_bytes": 2386,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0156402587890625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 9712,
+      "source_jpeg_bytes": 2411,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015797932942708332,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 7194,
+      "source_jpeg_bytes": 2445,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0156402587890625,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 4856,
+      "source_jpeg_bytes": 2587,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.016026814778645832,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 2338,
+      "source_jpeg_bytes": 2463,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.0164642333984375,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "segment": 23219,
+      "source_jpeg_bytes": 2472,
+      "coefficients": 196608,
+      "nonzero_fraction": 0.015970865885416668,
+      "shared_template_entropy_exact": true,
+      "layout": {
+        "width": 256,
+        "height": 256,
+        "components": [
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ],
+          [
+            32,
+            32,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "exact": 96,
+  "templates": 1
+}

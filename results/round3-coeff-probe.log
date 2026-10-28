@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/zhangtian/.codex/worktrees/wsi-jxl-lossless/空转压缩/scripts/round3_coeff_probe.py", line 19, in <module>
+    selected=[eligible[i] for i in np.linspace(0,len(eligible)-1,16,dtype=int)]
+              ~~~~~~~~^^^
+IndexError: list index out of range

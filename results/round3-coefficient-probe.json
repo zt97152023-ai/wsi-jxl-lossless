@@ -1,0 +1,179 @@
+{
+  "rows": [
+    {
+      "category": "background",
+      "segments": [
+        0,
+        13329,
+        2542,
+        2916,
+        7788,
+        10502,
+        6015,
+        15025,
+        4595,
+        19004,
+        20998,
+        14893,
+        16525,
+        8618,
+        20149,
+        23219
+      ],
+      "source_bytes": 39741,
+      "native_jxl_brotli11_bytes": 7133,
+      "native_jxl_zstd15_bytes": 7166,
+      "candidates": [
+        {
+          "layout": "frequency",
+          "color_delta": false,
+          "packet_bytes": 10407,
+          "bytes_with_prefix_lengths": 10471,
+          "encode_seconds": 0.26812633400186314,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "frequency",
+          "color_delta": true,
+          "packet_bytes": 11996,
+          "bytes_with_prefix_lengths": 12060,
+          "encode_seconds": 0.24787187500260188,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": false,
+          "packet_bytes": 8100,
+          "bytes_with_prefix_lengths": 8164,
+          "encode_seconds": 0.25310533399897395,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": true,
+          "packet_bytes": 7821,
+          "bytes_with_prefix_lengths": 7885,
+          "encode_seconds": 0.25159200000052806,
+          "verified_jpeg_bytes": true
+        }
+      ]
+    },
+    {
+      "category": "mixed",
+      "segments": [
+        18361,
+        12261,
+        16773,
+        19307,
+        9956,
+        14643,
+        4751,
+        21679,
+        2087,
+        8042,
+        6432,
+        11841,
+        2670,
+        3398,
+        6286,
+        5034
+      ],
+      "source_bytes": 195640,
+      "native_jxl_brotli11_bytes": 140264,
+      "native_jxl_zstd15_bytes": 140364,
+      "candidates": [
+        {
+          "layout": "frequency",
+          "color_delta": false,
+          "packet_bytes": 212747,
+          "bytes_with_prefix_lengths": 212811,
+          "encode_seconds": 0.3847541249997448,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "frequency",
+          "color_delta": true,
+          "packet_bytes": 180933,
+          "bytes_with_prefix_lengths": 180997,
+          "encode_seconds": 0.3679863750003278,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": false,
+          "packet_bytes": 194265,
+          "bytes_with_prefix_lengths": 194329,
+          "encode_seconds": 0.37017033400115906,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": true,
+          "packet_bytes": 160894,
+          "bytes_with_prefix_lengths": 160958,
+          "encode_seconds": 0.3544447499989474,
+          "verified_jpeg_bytes": true
+        }
+      ]
+    },
+    {
+      "category": "tissue",
+      "segments": [
+        16210,
+        19459,
+        17666,
+        15513,
+        13722,
+        18592,
+        15900,
+        15188,
+        2449,
+        4435,
+        3900,
+        10385,
+        10573,
+        4646,
+        3577,
+        6472
+      ],
+      "source_bytes": 392653,
+      "native_jxl_brotli11_bytes": 287521,
+      "native_jxl_zstd15_bytes": 290062,
+      "candidates": [
+        {
+          "layout": "frequency",
+          "color_delta": false,
+          "packet_bytes": 432051,
+          "bytes_with_prefix_lengths": 432115,
+          "encode_seconds": 0.5201718329990399,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "frequency",
+          "color_delta": true,
+          "packet_bytes": 360486,
+          "bytes_with_prefix_lengths": 360550,
+          "encode_seconds": 0.48473720900074113,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": false,
+          "packet_bytes": 384221,
+          "bytes_with_prefix_lengths": 384285,
+          "encode_seconds": 0.48456624999744236,
+          "verified_jpeg_bytes": true
+        },
+        {
+          "layout": "mosaic",
+          "color_delta": true,
+          "packet_bytes": 312495,
+          "bytes_with_prefix_lengths": 312559,
+          "encode_seconds": 0.452273458999116,
+          "verified_jpeg_bytes": true
+        }
+      ]
+    }
+  ],
+  "note": "48 distinct tiles, 16 per proxy class. Includes complete template/side information and 4 bytes per tile for SVS-prefix removal; excludes common outer archive framing on both sides. Pilot only, not full-slide size."
+}

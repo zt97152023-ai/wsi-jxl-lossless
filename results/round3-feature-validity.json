@@ -1,0 +1,55 @@
+{
+  "cause": "CMU-1 TIFF Photometric=2 (RGB); standalone JPEG decode defaulted to YCbCr. Feature extraction now honors TIFF metadata.",
+  "impact": "Old full-resolution appearance features and layout screening are invalid. Existing byte-exact archive SHA-256 verification is unaffected. RGB-fixed features match OpenSlide on the checked background tile.",
+  "files": [
+    {
+      "file": "results/round3-features.json",
+      "status": "invalid",
+      "sha256": "de1362236a7f545ef36baffdfbc7ad8c45e6c50a1bd2c86c66fca8dc6f4a804f"
+    },
+    {
+      "file": "results/round3-layout-screen.json",
+      "status": "invalid",
+      "sha256": "7075338dae17dfd42eb67d77c2a47fbfe9e4f6cade3c26979d9f3b71a4f88d7a"
+    },
+    {
+      "file": "results/round3-screen.log",
+      "status": "invalid",
+      "sha256": "e3aa2a0a8214210e4886691f767bc4041d252c29f32f737219f0c86952f9f7c8"
+    },
+    {
+      "file": "results/round3-coeff-probe.log",
+      "status": "invalid",
+      "sha256": "1b8ad1e26eb1b9bed7502c19c784b6be87c153f02354f95c1f968d388bcb3544"
+    },
+    {
+      "file": "results/round3-features-rgb.json",
+      "status": "valid",
+      "sha256": "bcf5dba69b19ea67ced9604eb644222b67099f8bf98786800dc0800fc89d8931"
+    },
+    {
+      "file": "results/round3-layout-screen-rgb.json",
+      "status": "valid",
+      "sha256": "0bd59601ab3032325bd5014d4336fe42c929e0a274705cbdf5a599221d0606b4"
+    },
+    {
+      "file": "results/round3-screen-rgb.log",
+      "status": "valid",
+      "sha256": "b58d7aed3c0110738adcca2b65ceab813bc77c78736333ceb1a9f29add95823d"
+    },
+    {
+      "file": "results/round3-coeff-probe-rgb.log",
+      "status": "valid",
+      "sha256": "77afc94dfd0875dab2197055d8b7c95965fca56b021683eccf81ba1ceb69c4a9"
+    }
+  ],
+  "environment": {
+    "python": "3.13.13",
+    "machine": "arm64",
+    "imagecodecs": "2026.10.10",
+    "libjxl": "libjxl 0.12.0",
+    "numpy": "2.2.6",
+    "tifffile": "2025.3.30",
+    "libjpeg_library": "/opt/homebrew/Cellar/jpeg-turbo/3.1.4.1/lib/libjpeg.8.3.2.dylib"
+  }
+}

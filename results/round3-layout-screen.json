@@ -1,0 +1,416 @@
+{
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "feature_source": "Full decoded RGB of all tiled JPEG pages; fixed color/darkness/gradient proxies, no diagnostic labels",
+  "records": 24892,
+  "rows": [
+    {
+      "method": "original",
+      "archive_bytes": {
+        "zstd15": 99293694,
+        "brotli9": 99240817
+      },
+      "index_bytes": 81898,
+      "groups": 7,
+      "seconds": 5.823432791999949,
+      "group_records": [
+        {
+          "records": 4096,
+          "source_bytes": 27773095,
+          "jxl_record_bytes": 17132363,
+          "zstd15": 15145775,
+          "brotli9": 15147576
+        },
+        {
+          "records": 4013,
+          "source_bytes": 33541299,
+          "jxl_record_bytes": 21977320,
+          "zstd15": 20097910,
+          "brotli9": 20097890
+        },
+        {
+          "records": 4096,
+          "source_bytes": 20573316,
+          "jxl_record_bytes": 11833743,
+          "zstd15": 9800446,
+          "brotli9": 9798230
+        },
+        {
+          "records": 4096,
+          "source_bytes": 31392622,
+          "jxl_record_bytes": 19767062,
+          "zstd15": 17762707,
+          "brotli9": 17764458
+        },
+        {
+          "records": 4096,
+          "source_bytes": 29917980,
+          "jxl_record_bytes": 19042963,
+          "zstd15": 17045806,
+          "brotli9": 17048354
+        },
+        {
+          "records": 4096,
+          "source_bytes": 30771987,
+          "jxl_record_bytes": 19117735,
+          "zstd15": 17126385,
+          "brotli9": 17084319
+        },
+        {
+          "records": 399,
+          "source_bytes": 3582280,
+          "jxl_record_bytes": 2393003,
+          "zstd15": 2232194,
+          "brotli9": 2217519
+        }
+      ]
+    },
+    {
+      "method": "morton",
+      "archive_bytes": {
+        "zstd15": 99317086,
+        "brotli9": 99227497
+      },
+      "index_bytes": 95958,
+      "groups": 7,
+      "seconds": 5.7909078750017215,
+      "group_records": [
+        {
+          "records": 4096,
+          "source_bytes": 15951027,
+          "jxl_record_bytes": 8382061,
+          "zstd15": 6208154,
+          "brotli9": 6193080
+        },
+        {
+          "records": 4096,
+          "source_bytes": 32040966,
+          "jxl_record_bytes": 20423558,
+          "zstd15": 18495058,
+          "brotli9": 18491000
+        },
+        {
+          "records": 2455,
+          "source_bytes": 33528964,
+          "jxl_record_bytes": 23294343,
+          "zstd15": 22243904,
+          "brotli9": 22244936
+        },
+        {
+          "records": 4096,
+          "source_bytes": 29659214,
+          "jxl_record_bytes": 18967947,
+          "zstd15": 16998936,
+          "brotli9": 16990936
+        },
+        {
+          "records": 4096,
+          "source_bytes": 30129550,
+          "jxl_record_bytes": 19309378,
+          "zstd15": 17317413,
+          "brotli9": 17316454
+        },
+        {
+          "records": 4096,
+          "source_bytes": 15849252,
+          "jxl_record_bytes": 7777985,
+          "zstd15": 5634916,
+          "brotli9": 5632267
+        },
+        {
+          "records": 1957,
+          "source_bytes": 20393606,
+          "jxl_record_bytes": 13108917,
+          "zstd15": 12322174,
+          "brotli9": 12262293
+        }
+      ]
+    },
+    {
+      "method": "length",
+      "archive_bytes": {
+        "zstd15": 99174789,
+        "brotli9": 99074784
+      },
+      "index_bytes": 107106,
+      "groups": 9,
+      "seconds": 5.40829841699815,
+      "group_records": [
+        {
+          "records": 4096,
+          "source_bytes": 10528230,
+          "jxl_record_bytes": 3582033,
+          "zstd15": 1290587,
+          "brotli9": 1270627
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10038040,
+          "jxl_record_bytes": 3099680,
+          "zstd15": 884977,
+          "brotli9": 876785
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10300190,
+          "jxl_record_bytes": 3469763,
+          "zstd15": 1265575,
+          "brotli9": 1258836
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10693575,
+          "jxl_record_bytes": 4023290,
+          "zstd15": 1854678,
+          "brotli9": 1848719
+        },
+        {
+          "records": 3739,
+          "source_bytes": 33535957,
+          "jxl_record_bytes": 22965779,
+          "zstd15": 21355054,
+          "brotli9": 21362990
+        },
+        {
+          "records": 1370,
+          "source_bytes": 33550278,
+          "jxl_record_bytes": 24451246,
+          "zstd15": 23944150,
+          "brotli9": 23949702
+        },
+        {
+          "records": 1255,
+          "source_bytes": 33551390,
+          "jxl_record_bytes": 24778250,
+          "zstd15": 24323169,
+          "brotli9": 24326883
+        },
+        {
+          "records": 2033,
+          "source_bytes": 33506784,
+          "jxl_record_bytes": 23601160,
+          "zstd15": 22890443,
+          "brotli9": 22821159
+        },
+        {
+          "records": 111,
+          "source_bytes": 1848135,
+          "jxl_record_bytes": 1292988,
+          "zstd15": 1258363,
+          "brotli9": 1251290
+        }
+      ]
+    },
+    {
+      "method": "appearance",
+      "archive_bytes": {
+        "zstd15": 99254141,
+        "brotli9": 99138613
+      },
+      "index_bytes": 99413,
+      "groups": 9,
+      "seconds": 5.5069901249989925,
+      "group_records": [
+        {
+          "records": 1524,
+          "source_bytes": 33549267,
+          "jxl_record_bytes": 24926392,
+          "zstd15": 24280914,
+          "brotli9": 24275979
+        },
+        {
+          "records": 1351,
+          "source_bytes": 33532267,
+          "jxl_record_bytes": 24696833,
+          "zstd15": 24216719,
+          "brotli9": 24216219
+        },
+        {
+          "records": 1358,
+          "source_bytes": 33537989,
+          "jxl_record_bytes": 24915929,
+          "zstd15": 24436395,
+          "brotli9": 24437653
+        },
+        {
+          "records": 4096,
+          "source_bytes": 19376533,
+          "jxl_record_bytes": 10802992,
+          "zstd15": 8764841,
+          "brotli9": 8765031
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10535245,
+          "jxl_record_bytes": 3796476,
+          "zstd15": 1674168,
+          "brotli9": 1670560
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10428235,
+          "jxl_record_bytes": 3637282,
+          "zstd15": 1475479,
+          "brotli9": 1470687
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10250554,
+          "jxl_record_bytes": 3357115,
+          "zstd15": 1165913,
+          "brotli9": 1161936
+        },
+        {
+          "records": 4096,
+          "source_bytes": 24494872,
+          "jxl_record_bytes": 13909313,
+          "zstd15": 11983483,
+          "brotli9": 11888719
+        },
+        {
+          "records": 179,
+          "source_bytes": 1847617,
+          "jxl_record_bytes": 1221857,
+          "zstd15": 1156129,
+          "brotli9": 1151729
+        }
+      ]
+    },
+    {
+      "method": "appearance_fine",
+      "archive_bytes": {
+        "zstd15": 99252785,
+        "brotli9": 99133832
+      },
+      "index_bytes": 102987,
+      "groups": 9,
+      "seconds": 5.507148000000598,
+      "group_records": [
+        {
+          "records": 1517,
+          "source_bytes": 33544475,
+          "jxl_record_bytes": 24927932,
+          "zstd15": 24284552,
+          "brotli9": 24279881
+        },
+        {
+          "records": 1335,
+          "source_bytes": 33543180,
+          "jxl_record_bytes": 24745017,
+          "zstd15": 24267560,
+          "brotli9": 24268378
+        },
+        {
+          "records": 1381,
+          "source_bytes": 33538845,
+          "jxl_record_bytes": 24871654,
+          "zstd15": 24390916,
+          "brotli9": 24386578
+        },
+        {
+          "records": 4096,
+          "source_bytes": 19313609,
+          "jxl_record_bytes": 10740047,
+          "zstd15": 8696380,
+          "brotli9": 8695965
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10340003,
+          "jxl_record_bytes": 3582707,
+          "zstd15": 1449263,
+          "brotli9": 1443434
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10108449,
+          "jxl_record_bytes": 3206093,
+          "zstd15": 1019065,
+          "brotli9": 1013330
+        },
+        {
+          "records": 4096,
+          "source_bytes": 10731168,
+          "jxl_record_bytes": 3896968,
+          "zstd15": 1737898,
+          "brotli9": 1735735
+        },
+        {
+          "records": 4096,
+          "source_bytes": 24566759,
+          "jxl_record_bytes": 14052945,
+          "zstd15": 12125399,
+          "brotli9": 12034774
+        },
+        {
+          "records": 179,
+          "source_bytes": 1866091,
+          "jxl_record_bytes": 1240826,
+          "zstd15": 1178078,
+          "brotli9": 1172083
+        }
+      ]
+    },
+    {
+      "method": "shuffle",
+      "archive_bytes": {
+        "zstd15": 99416277,
+        "brotli9": 99398370
+      },
+      "index_bytes": 107549,
+      "groups": 7,
+      "seconds": 5.887485041999753,
+      "group_records": [
+        {
+          "records": 4096,
+          "source_bytes": 28823475,
+          "jxl_record_bytes": 18005824,
+          "zstd15": 16049656,
+          "brotli9": 16048706
+        },
+        {
+          "records": 4096,
+          "source_bytes": 29074221,
+          "jxl_record_bytes": 18156947,
+          "zstd15": 16201493,
+          "brotli9": 16200445
+        },
+        {
+          "records": 4096,
+          "source_bytes": 28443524,
+          "jxl_record_bytes": 17683544,
+          "zstd15": 15719944,
+          "brotli9": 15718481
+        },
+        {
+          "records": 4096,
+          "source_bytes": 29387908,
+          "jxl_record_bytes": 18412783,
+          "zstd15": 16461282,
+          "brotli9": 16457457
+        },
+        {
+          "records": 4096,
+          "source_bytes": 29194870,
+          "jxl_record_bytes": 18308089,
+          "zstd15": 16276407,
+          "brotli9": 16270160
+        },
+        {
+          "records": 4096,
+          "source_bytes": 30010410,
+          "jxl_record_bytes": 19001128,
+          "zstd15": 17044654,
+          "brotli9": 17040516
+        },
+        {
+          "records": 316,
+          "source_bytes": 2618171,
+          "jxl_record_bytes": 1695874,
+          "zstd15": 1554719,
+          "brotli9": 1554483
+        }
+      ]
+    }
+  ],
+  "note": "Exact byte accounting for planned indexed container; finalists require actual emission and whole-file recovery."
+}

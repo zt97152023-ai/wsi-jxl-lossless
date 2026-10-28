@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________ test_svs_encoder_rejects_a_prefix_that_cannot_restore_soi ___________
+
+    def test_svs_encoder_rejects_a_prefix_that_cannot_restore_soi():
+        jpeg=(Path(__file__).parent/'fixtures/cmu1-rgb-background.jpg').read_bytes()
+>       with pytest.raises(ValueError,match='prefix'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_coeffpacket.py:30: Failed
+=========================== short test summary info ============================
+FAILED tests/test_coeffpacket.py::test_svs_encoder_rejects_a_prefix_that_cannot_restore_soi
+1 failed in 0.11s

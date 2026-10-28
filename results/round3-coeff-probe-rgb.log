@@ -1,0 +1,12 @@
+{"category": "background", "layout": "frequency", "color_delta": false, "packet_bytes": 10407, "bytes_with_prefix_lengths": 10471, "encode_seconds": 0.26812633400186314, "verified_jpeg_bytes": true}
+{"category": "background", "layout": "frequency", "color_delta": true, "packet_bytes": 11996, "bytes_with_prefix_lengths": 12060, "encode_seconds": 0.24787187500260188, "verified_jpeg_bytes": true}
+{"category": "background", "layout": "mosaic", "color_delta": false, "packet_bytes": 8100, "bytes_with_prefix_lengths": 8164, "encode_seconds": 0.25310533399897395, "verified_jpeg_bytes": true}
+{"category": "background", "layout": "mosaic", "color_delta": true, "packet_bytes": 7821, "bytes_with_prefix_lengths": 7885, "encode_seconds": 0.25159200000052806, "verified_jpeg_bytes": true}
+{"category": "mixed", "layout": "frequency", "color_delta": false, "packet_bytes": 212747, "bytes_with_prefix_lengths": 212811, "encode_seconds": 0.3847541249997448, "verified_jpeg_bytes": true}
+{"category": "mixed", "layout": "frequency", "color_delta": true, "packet_bytes": 180933, "bytes_with_prefix_lengths": 180997, "encode_seconds": 0.3679863750003278, "verified_jpeg_bytes": true}
+{"category": "mixed", "layout": "mosaic", "color_delta": false, "packet_bytes": 194265, "bytes_with_prefix_lengths": 194329, "encode_seconds": 0.37017033400115906, "verified_jpeg_bytes": true}
+{"category": "mixed", "layout": "mosaic", "color_delta": true, "packet_bytes": 160894, "bytes_with_prefix_lengths": 160958, "encode_seconds": 0.3544447499989474, "verified_jpeg_bytes": true}
+{"category": "tissue", "layout": "frequency", "color_delta": false, "packet_bytes": 432051, "bytes_with_prefix_lengths": 432115, "encode_seconds": 0.5201718329990399, "verified_jpeg_bytes": true}
+{"category": "tissue", "layout": "frequency", "color_delta": true, "packet_bytes": 360486, "bytes_with_prefix_lengths": 360550, "encode_seconds": 0.48473720900074113, "verified_jpeg_bytes": true}
+{"category": "tissue", "layout": "mosaic", "color_delta": false, "packet_bytes": 384221, "bytes_with_prefix_lengths": 384285, "encode_seconds": 0.48456624999744236, "verified_jpeg_bytes": true}
+{"category": "tissue", "layout": "mosaic", "color_delta": true, "packet_bytes": 312495, "bytes_with_prefix_lengths": 312559, "encode_seconds": 0.452273458999116, "verified_jpeg_bytes": true}

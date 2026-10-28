@@ -1,0 +1,12 @@
+{"features": 4000}
+{"features": 8000}
+{"features": 12000}
+{"features": 16000}
+{"features": 20000}
+{"features": 24000}
+{"method": "original", "archive_bytes": {"zstd15": 99293694, "brotli9": 99240817}, "index_bytes": 81898, "groups": 7, "seconds": 6.128344084001583}
+{"method": "morton", "archive_bytes": {"zstd15": 99317086, "brotli9": 99227497}, "index_bytes": 95958, "groups": 7, "seconds": 5.991435874999297}
+{"method": "length", "archive_bytes": {"zstd15": 99174789, "brotli9": 99074784}, "index_bytes": 107106, "groups": 9, "seconds": 5.787076208001963}
+{"method": "appearance", "archive_bytes": {"zstd15": 99261710, "brotli9": 99152824}, "index_bytes": 99390, "groups": 9, "seconds": 5.843769209001039}
+{"method": "appearance_fine", "archive_bytes": {"zstd15": 99253531, "brotli9": 99159190}, "index_bytes": 102230, "groups": 9, "seconds": 5.739627165999991}
+{"method": "shuffle", "archive_bytes": {"zstd15": 99416277, "brotli9": 99398370}, "index_bytes": 107549, "groups": 7, "seconds": 6.353245915997832}

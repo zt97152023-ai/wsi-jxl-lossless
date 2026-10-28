@@ -1,0 +1,19 @@
+{
+  "native_build": {
+    "command": ".venv/bin/python scripts/build_coefficients.py",
+    "result": "passed; clang -Wall -Wextra -Werror"
+  },
+  "tests": {
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest -q -W error",
+    "passed": 48,
+    "failed": 0,
+    "seconds": 2.12,
+    "note": "Final suite output captured by exec after the prefix validation fix and added boundary/unsupported-grid tests. tests-round3.log retains the earlier 45-test run."
+  },
+  "cohort_audit": {
+    "distinct_holdout_tiles": 144,
+    "excluded_development_tiles": 48,
+    "overlap": 0
+  },
+  "scope": "Single-slide exploratory research; no new full-SVS archive and no speed claim."
+}

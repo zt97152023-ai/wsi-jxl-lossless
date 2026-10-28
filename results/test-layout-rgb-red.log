@@ -1,0 +1,20 @@
+..F                                                                      [100%]
+=================================== FAILURES ===================================
+________ test_rgb_tiff_declaration_overrides_ambiguous_jpeg_color_space ________
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-12/test_rgb_tiff_declaration_over0')
+
+    def test_rgb_tiff_declaration_overrides_ambiguous_jpeg_color_space(tmp_path):
+        jpeg=(Path(__file__).parent/'fixtures/cmu1-rgb-background.jpg').read_bytes()
+        path=tmp_path/'rgb.tif'
+        tifffile.imwrite(path,iter([jpeg]),shape=(256,256,3),dtype=np.uint8,
+                         photometric='rgb',tile=(256,256),compression='jpeg')
+        features=extract_features(path)
+        feature=next(iter(features.values()))
+>       assert feature['foreground']<.05
+E       assert 1.0 < 0.05
+
+tests/test_layout.py:35: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_layout.py::test_rgb_tiff_declaration_overrides_ambiguous_jpeg_color_space
+1 failed, 2 passed in 0.11s
