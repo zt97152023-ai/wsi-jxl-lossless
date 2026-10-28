@@ -1,0 +1,15 @@
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_joint_archive.py _________________
+ImportError while importing test module '/Users/zhangtian/.codex/worktrees/wsi-jxl-lossless/空转压缩/tests/test_joint_archive.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_joint_archive.py:6: in <module>
+    from wsi_jxl.joint_archive import encode_joint_archive
+E   ModuleNotFoundError: No module named 'wsi_jxl.joint_archive'
+=========================== short test summary info ============================
+ERROR tests/test_joint_archive.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.13s

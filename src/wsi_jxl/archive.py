@@ -151,7 +151,7 @@ def parse_group_header(header):
     if len(header) != GROUP.size:
         raise ValueError('Truncated group header')
     mode, original_size, inner_size, size, checksum = GROUP.unpack(header)
-    if mode not in (0, 1, 2, 3, 4) or max(original_size, inner_size, size) > MAX_BLOCK or original_size == 0:
+    if mode not in (0, 1, 2, 3, 4, 5) or max(original_size, inner_size, size) > MAX_BLOCK or original_size == 0:
         raise ValueError('Invalid group mode or size')
     return mode, original_size, inner_size, size, checksum
 
@@ -171,7 +171,11 @@ def decode_group(stream, header):
             raise ValueError('Invalid Brotli group') from exc
     if len(payload) != inner_size:
         raise ValueError('Inner group size mismatch')
-    raw = _unpack(payload) if mode in (1, 2, 4) else payload
+    if mode == 5:
+        from .coeffpacket import decode_svs_batch
+        raw = b''.join(decode_svs_batch(payload))
+    else:
+        raw = _unpack(payload) if mode in (1, 2, 4) else payload
     if len(raw) != original_size or hashlib.sha256(raw).digest() != checksum:
         raise ValueError('Group reconstruction checksum mismatch')
     return raw
