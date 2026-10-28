@@ -1,4 +1,5 @@
 .venv/
+build/
 __pycache__/
 .pytest_cache/
 *.pyc
@@ -9,3 +10,6 @@ results/*.partial
 results/*.svs
 results/*.npy
 results/payloads/
+results/round3-packets/
+results/round3-features.json
+results/round3-features-rgb.json
