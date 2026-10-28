@@ -13,6 +13,8 @@ enc.add_argument('--baseline')
 enc.add_argument('--policy', choices=['jxl', 'jxl-zstd', 'adaptive'], default='adaptive')
 enc.add_argument('--group-tiles', type=int, default=64)
 enc.add_argument('--workers', type=int, default=4)
+enc.add_argument('--jpeg-effort', type=int)
+enc.add_argument('--zstd-level', type=int, default=9)
 enc.add_argument('--grouping', choices=['fixed', 'tissue', 'tissue-local'], default='fixed')
 enc.add_argument('--report', required=True)
 dec = commands.add_parser('decode')
@@ -24,6 +26,7 @@ if args.command == 'encode':
     report = encode_archive(args.source, args.output, policy=args.policy,
                             group_tiles=args.group_tiles, workers=args.workers,
                             grouping=args.grouping,
+                            jpeg_effort=args.jpeg_effort,zstd_level=args.zstd_level,
                             baseline_path=args.baseline,
                             progress=lambda p: print(json.dumps(p), flush=True))
 else:

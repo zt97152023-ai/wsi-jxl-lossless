@@ -68,3 +68,12 @@ def test_truncation_at_group_boundary_is_rejected(tmp_path):
         end=f.tell()+size
     archive.write_bytes(archive.read_bytes()[:end])
     with pytest.raises(ValueError,match='Whole-source'):decode_archive(archive)
+
+
+def test_stronger_encoder_settings_preserve_original_file(tmp_path):
+    source=tmp_path/'input.tif';make_slide(source);expected=source.read_bytes()
+    archive=tmp_path/'strong.wjxl';restored=tmp_path/'restored.tif'
+    report=encode_archive(source,archive,jpeg_effort=9,zstd_level=15)
+    source.unlink();decode_archive(archive,restored)
+    assert restored.read_bytes()==expected
+    assert report['jpeg_effort']==9 and report['zstd_level']==15

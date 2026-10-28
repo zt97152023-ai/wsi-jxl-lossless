@@ -5,6 +5,7 @@ __pycache__/
 data/*.svs
 data/*.part
 results/*.wjxl
+results/*.partial
 results/*.svs
 results/*.npy
 results/payloads/

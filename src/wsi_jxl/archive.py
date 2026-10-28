@@ -7,6 +7,7 @@ The result is a custom archive, not a standard standalone .jxl image.
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from functools import partial
 import hashlib
 import json
 import os
@@ -87,13 +88,17 @@ def source_spans(source):
         cursor += n
 
 
-def _record(item):
+def _record(item, *, effort=None):
     raw, span = item
     payload, mode, skip, error = raw, 0, 0, None
     if span.prefix is not None and raw.startswith(b'\xff\xd8'):
         complete = span.prefix + raw[2:] if span.prefix else raw
         try:
-            payload = imagecodecs.jpegxl_encode_jpeg(complete, numthreads=1)
+            if effort is None:
+                payload = imagecodecs.jpegxl_encode_jpeg(complete, numthreads=1)
+            else:
+                from .native import encode_jpeg
+                payload = encode_jpeg(complete, effort=effort)
             mode, skip = 1, len(span.prefix)
         except (ValueError, imagecodecs.JpegxlError) as exc:
             error = str(exc)
@@ -146,7 +151,7 @@ def parse_group_header(header):
     if len(header) != GROUP.size:
         raise ValueError('Truncated group header')
     mode, original_size, inner_size, size, checksum = GROUP.unpack(header)
-    if mode not in (0, 1, 2, 3) or max(original_size, inner_size, size) > MAX_BLOCK or original_size == 0:
+    if mode not in (0, 1, 2, 3, 4) or max(original_size, inner_size, size) > MAX_BLOCK or original_size == 0:
         raise ValueError('Invalid group mode or size')
     return mode, original_size, inner_size, size, checksum
 
@@ -159,20 +164,30 @@ def decode_group(stream, header):
             payload = imagecodecs.zstd_decode(payload, out=inner_size)
         except imagecodecs.ZstdError as exc:
             raise ValueError('Invalid compressed group') from exc
+    elif mode == 4:
+        try:
+            payload = imagecodecs.brotli_decode(payload, out=inner_size)
+        except imagecodecs.BrotliError as exc:
+            raise ValueError('Invalid Brotli group') from exc
     if len(payload) != inner_size:
         raise ValueError('Inner group size mismatch')
-    raw = _unpack(payload) if mode in (1, 2) else payload
+    raw = _unpack(payload) if mode in (1, 2, 4) else payload
     if len(raw) != original_size or hashlib.sha256(raw).digest() != checksum:
         raise ValueError('Group reconstruction checksum mismatch')
     return raw
 
 
 def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
-                   workers=4, baseline_path=None, progress=None, grouping='fixed'):
+                   workers=4, baseline_path=None, progress=None, grouping='fixed',
+                   jpeg_effort=None, zstd_level=9):
     if policy not in ('jxl', 'jxl-zstd', 'adaptive'):
         raise ValueError('Unknown encoding policy')
     if group_tiles < 1 or workers < 1:
         raise ValueError('Positive group size and worker count required')
+    if jpeg_effort is not None and jpeg_effort not in range(1,11):
+        raise ValueError('JPEG effort must be 1..10')
+    if zstd_level not in range(1,23):
+        raise ValueError('Zstd level must be 1..22')
     if grouping != 'fixed' and grouping not in TISSUE_LIMITS:
         raise ValueError('Unknown grouping strategy')
     source, output = Path(source), Path(output)
@@ -204,15 +219,16 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
         with ThreadPoolExecutor(max_workers=workers) as pool, source.open('rb') as stream:
             def emit(batch):
                 raw = b''.join(item[0] for item in batch)
-                records = list(pool.map(_record, batch))
+                encode_record = _record if jpeg_effort is None else partial(_record, effort=jpeg_effort)
+                records = list(pool.map(encode_record, batch))
                 for _, error in records:
                     if error:
                         errors[error] += 1
                 packed = b''.join(record for record, _ in records)
                 if max(len(raw), len(packed)) > MAX_BLOCK:
                     raise ValueError('Group exceeds format limit; use smaller source segments')
-                jz = imagecodecs.zstd_encode(packed, level=9)
-                rz = imagecodecs.zstd_encode(raw, level=9)
+                jz = imagecodecs.zstd_encode(packed, level=zstd_level)
+                rz = imagecodecs.zstd_encode(raw, level=zstd_level)
                 candidates = [(1, packed, len(packed)), (2, jz, len(packed)),
                               (3, rz, len(raw)), (0, raw, len(raw))]
                 best = min(candidates, key=lambda x: len(x[1]))
@@ -277,6 +293,7 @@ def encode_archive(source, output, *, policy='adaptive', group_tiles=64,
             p.unlink(missing_ok=True)
         raise
     return {**metadata, 'policy': policy, 'group_tiles': group_tiles, 'workers': workers,
+            'jpeg_effort': jpeg_effort if jpeg_effort is not None else 7, 'zstd_level': zstd_level,
             'grouping': grouping, 'feature_provenance': feature_provenance,
             'tissue_group_limits': TISSUE_LIMITS.get(grouping),
             'archive_bytes': output.stat().st_size, 'candidate_archive_bytes': alternatives,
