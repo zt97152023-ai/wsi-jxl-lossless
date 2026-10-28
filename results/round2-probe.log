@@ -1,0 +1,15 @@
+EFFORT {"7": {"bytes": 537419, "seconds": 0.20276438201290148}, "8": {"bytes": 532466, "seconds": 0.4734308359929855}, "9": {"bytes": 528950, "seconds": 1.4041306219951366}, "10": {"bytes": 530246, "seconds": 1.6116110349958035}}
+BOXES {"JXL ": {"total_bytes": 298632, "unique_bytes": 12, "unique_boxes": 1}, "ftyp": {"total_bytes": 497720, "unique_bytes": 20, "unique_boxes": 1}, "jxlp": {"total_bytes": 105742034, "unique_bytes": 105317638, "unique_boxes": 24886}, "jbrd": {"total_bytes": 6022412, "unique_bytes": 242, "unique_boxes": 1}}
+outer groups 1
+outer groups 2
+outer groups 3
+outer groups 4
+outer groups 5
+outer groups 6
+outer groups 7
+outer groups 8
+outer groups 9
+outer groups 10
+outer groups 11
+outer groups 12
+OUTER {"zstd9": {"bytes": 3044928, "seconds": 0.014874749000227894}, "zstd15": {"bytes": 3044465, "seconds": 0.05087462400297227}, "zstd19": {"bytes": 3045077, "seconds": 0.1659890849969088}, "zstd22": {"bytes": 3044950, "seconds": 0.28344566799569293}, "lzma6": {"bytes": 3078096, "seconds": 0.34181462900232873}, "brotli11": {"bytes": 3035456, "seconds": 10.059747125000285}}

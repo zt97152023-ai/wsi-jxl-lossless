@@ -1,0 +1,16 @@
+.......F                                                                 [100%]
+=================================== FAILURES ===================================
+____________ test_stronger_encoder_settings_preserve_original_file _____________
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-7/test_stronger_encoder_settings0')
+
+    def test_stronger_encoder_settings_preserve_original_file(tmp_path):
+        source=tmp_path/'input.tif';make_slide(source);expected=source.read_bytes()
+        archive=tmp_path/'strong.wjxl';restored=tmp_path/'restored.tif'
+>       report=encode_archive(source,archive,jpeg_effort=9,zstd_level=15)
+E       TypeError: encode_archive() got an unexpected keyword argument 'jpeg_effort'
+
+tests/test_archive.py:76: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_archive.py::test_stronger_encoder_settings_preserve_original_file
+1 failed, 7 passed in 0.24s

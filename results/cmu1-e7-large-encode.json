@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "source_bytes": 177552579,
+  "source_name": "CMU-1.svs",
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "baseline": "results/cmu1-jxl-baseline.wjxl",
+  "archive_bytes": 100516440,
+  "merge_groups": 64,
+  "max_source_group_bytes": 33554432,
+  "outer": "zstd",
+  "zstd_levels": [
+    9
+  ],
+  "groups": 7,
+  "selected_modes": {
+    "jxl-zstd9": 7
+  },
+  "group_records": [
+    {
+      "group": 0,
+      "input_groups": 64,
+      "source_bytes": 27776287,
+      "packed_bytes": 17589099,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 15425859,
+      "candidates": {
+        "jxl-zstd9": 15425859,
+        "raw-zstd9": 21152137,
+        "jxl": 17589099,
+        "raw": 27776287
+      }
+    },
+    {
+      "group": 1,
+      "input_groups": 62,
+      "source_bytes": 32842446,
+      "packed_bytes": 21807186,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 19746406,
+      "candidates": {
+        "jxl-zstd9": 19746406,
+        "raw-zstd9": 26664470,
+        "jxl": 21807186,
+        "raw": 32842446
+      }
+    },
+    {
+      "group": 2,
+      "input_groups": 64,
+      "source_bytes": 21161730,
+      "packed_bytes": 12669834,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 10464074,
+      "candidates": {
+        "jxl-zstd9": 10464074,
+        "raw-zstd9": 13675367,
+        "jxl": 12669834,
+        "raw": 21161730
+      }
+    },
+    {
+      "group": 3,
+      "input_groups": 64,
+      "source_bytes": 30882749,
+      "packed_bytes": 19793899,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 17624023,
+      "candidates": {
+        "jxl-zstd9": 17624023,
+        "raw-zstd9": 24377847,
+        "jxl": 19793899,
+        "raw": 30882749
+      }
+    },
+    {
+      "group": 4,
+      "input_groups": 64,
+      "source_bytes": 30426824,
+      "packed_bytes": 19884992,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 17723162,
+      "candidates": {
+        "jxl-zstd9": 17723162,
+        "raw-zstd9": 23981150,
+        "jxl": 19884992,
+        "raw": 30426824
+      }
+    },
+    {
+      "group": 5,
+      "input_groups": 64,
+      "source_bytes": 30466133,
+      "packed_bytes": 19258553,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 17052493,
+      "candidates": {
+        "jxl-zstd9": 17052493,
+        "raw-zstd9": 23230303,
+        "jxl": 19258553,
+        "raw": 30466133
+      }
+    },
+    {
+      "group": 6,
+      "input_groups": 7,
+      "source_bytes": 3996410,
+      "packed_bytes": 2700338,
+      "winner": "jxl-zstd9",
+      "mode": 2,
+      "stored_bytes": 2479866,
+      "candidates": {
+        "jxl-zstd9": 2479866,
+        "raw-zstd9": 3171982,
+        "jxl": 2700338,
+        "raw": 3996410
+      }
+    }
+  ],
+  "seconds": 1.6855010409999522,
+  "zstd_version": "zstd 1.5.7",
+  "brotli_version": "brotli 1.1.0"
+}

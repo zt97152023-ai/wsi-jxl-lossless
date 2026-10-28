@@ -1,0 +1,165 @@
+{
+  "format": 1,
+  "source_bytes": 177552579,
+  "source_name": "CMU-1.svs",
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "baseline": "results/cmu1-e9-jxl-baseline.wjxl",
+  "archive_bytes": 99009379,
+  "merge_groups": 16,
+  "max_source_group_bytes": 33554432,
+  "outer": "search",
+  "zstd_levels": [
+    9,
+    15,
+    19
+  ],
+  "groups": 7,
+  "selected_modes": {
+    "jxl-brotli11": 7
+  },
+  "group_records": [
+    {
+      "group": 0,
+      "input_groups": 16,
+      "source_bytes": 27776287,
+      "packed_bytes": 17134000,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 15125994,
+      "candidates": {
+        "jxl-zstd9": 15155909,
+        "raw-zstd9": 21152137,
+        "jxl-zstd15": 15146910,
+        "raw-zstd15": 20971315,
+        "jxl-zstd19": 15159986,
+        "raw-zstd19": 20693676,
+        "jxl": 17134000,
+        "raw": 27776287,
+        "jxl-brotli11": 15125994
+      }
+    },
+    {
+      "group": 1,
+      "input_groups": 15,
+      "source_bytes": 31684000,
+      "packed_bytes": 20690434,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 18865206,
+      "candidates": {
+        "jxl-zstd9": 18895157,
+        "raw-zstd9": 25693629,
+        "jxl-zstd15": 18887936,
+        "raw-zstd15": 25625383,
+        "jxl-zstd19": 18903195,
+        "raw-zstd19": 25421727,
+        "jxl": 20690434,
+        "raw": 31684000,
+        "jxl-brotli11": 18865206
+      }
+    },
+    {
+      "group": 2,
+      "input_groups": 16,
+      "source_bytes": 21999538,
+      "packed_bytes": 12980366,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 10941831,
+      "candidates": {
+        "jxl-zstd9": 10974316,
+        "raw-zstd9": 14598177,
+        "jxl-zstd15": 10966294,
+        "raw-zstd15": 14465563,
+        "jxl-zstd19": 10963254,
+        "raw-zstd19": 14275406,
+        "jxl": 12980366,
+        "raw": 21999538,
+        "jxl-brotli11": 10941831
+      }
+    },
+    {
+      "group": 3,
+      "input_groups": 16,
+      "source_bytes": 29962943,
+      "packed_bytes": 18648190,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 16610054,
+      "candidates": {
+        "jxl-zstd9": 16638031,
+        "raw-zstd9": 23348341,
+        "jxl-zstd15": 16630727,
+        "raw-zstd15": 23176078,
+        "jxl-zstd19": 16646103,
+        "raw-zstd19": 22895030,
+        "jxl": 18648190,
+        "raw": 29962943,
+        "jxl-brotli11": 16610054
+      }
+    },
+    {
+      "group": 4,
+      "input_groups": 16,
+      "source_bytes": 30749644,
+      "packed_bytes": 19686763,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 17677080,
+      "candidates": {
+        "jxl-zstd9": 17716324,
+        "raw-zstd9": 24347328,
+        "jxl-zstd15": 17699817,
+        "raw-zstd15": 24177738,
+        "jxl-zstd19": 17713421,
+        "raw-zstd19": 23939877,
+        "jxl": 19686763,
+        "raw": 30749644,
+        "jxl-brotli11": 17677080
+      }
+    },
+    {
+      "group": 5,
+      "input_groups": 16,
+      "source_bytes": 29762418,
+      "packed_bytes": 18407506,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 16328827,
+      "candidates": {
+        "jxl-zstd9": 16408606,
+        "raw-zstd9": 22522069,
+        "jxl-zstd15": 16400786,
+        "raw-zstd15": 22359958,
+        "jxl-zstd19": 16374997,
+        "raw-zstd19": 22094460,
+        "jxl": 18407506,
+        "raw": 29762418,
+        "jxl-brotli11": 16328827
+      }
+    },
+    {
+      "group": 6,
+      "input_groups": 3,
+      "source_bytes": 5617749,
+      "packed_bytes": 3716930,
+      "winner": "jxl-brotli11",
+      "mode": 4,
+      "stored_bytes": 3459830,
+      "candidates": {
+        "jxl-zstd9": 3478332,
+        "raw-zstd9": 4591264,
+        "jxl-zstd15": 3477623,
+        "raw-zstd15": 4571970,
+        "jxl-zstd19": 3475459,
+        "raw-zstd19": 4538508,
+        "jxl": 3716930,
+        "raw": 5617749,
+        "jxl-brotli11": 3459830
+      }
+    }
+  ],
+  "seconds": 276.9140628749992,
+  "zstd_version": "zstd 1.5.7",
+  "brotli_version": "brotli 1.1.0"
+}

@@ -1,0 +1,48 @@
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+_________________ test_concurrent_partial_file_is_not_removed __________________
+
+tmp_path = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-10/test_concurrent_partial_file_i0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10927afd0>
+
+    def test_concurrent_partial_file_is_not_removed(tmp_path,monkeypatch):
+        from pathlib import Path
+        source=tmp_path/'in.tif'
+        tifffile.imwrite(source,np.zeros((16,16,3),dtype=np.uint8),photometric='rgb')
+        baseline=tmp_path/'base.wjxl';out=tmp_path/'new.wjxl'
+        encode_archive(source,baseline,policy='jxl')
+        partial=out.with_name(out.name+'.partial');original_open=Path.open
+        def race(path,*args,**kwargs):
+            if path==partial and args and args[0]=='xb':
+                with original_open(path,'wb') as f:f.write(b'owned by another process')
+            return original_open(path,*args,**kwargs)
+        monkeypatch.setattr(Path,'open',race)
+        with pytest.raises(FileExistsError):repack_archive(source,baseline,out)
+>       assert partial.read_bytes()==b'owned by another process'
+
+tests/test_repack.py:46:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py:625: in read_bytes
+    with self.open(mode='rb') as f:
+tests/test_repack.py:43: in race
+    return original_open(path,*args,**kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = PosixPath('/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-10/test_concurrent_partial_file_i0/new.wjxl.partial')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/26/x034hlrd0z5bp29ynkw_zndm0000gn/T/pytest-of-zhangtian/pytest-10/test_concurrent_partial_file_i0/new.wjxl.partial'
+
+/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_repack.py::test_concurrent_partial_file_is_not_removed - Fi...
+1 failed, 4 passed in 0.28s
