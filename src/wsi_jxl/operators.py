@@ -51,11 +51,51 @@ def _labels(cube, model):
     return d + (len(model['dc_thresholds']) + 1) * e
 
 
-def fit_context_color(cube, mode):
+def _rate_refine(cube, params):
+    """Finite encoder-only search using zero-order entropy plus a model proxy.
+
+    This is not JXL's contextual bit cost. Only complete encoded packet sizes
+    can establish improvement. Stored fixed-point models keep decode unchanged.
+    """
+    r, g, b = [cube[:, i].reshape(-1, 64).astype(np.int64) for i in range(3)]
+    result = params.copy()
+
+    def score(residual, model):
+        residual = ((residual + 32768) & 65535) - 32768
+        _, counts = np.unique(residual, return_counts=True)
+        n = len(residual)
+        bits = n * np.log2(n) - np.sum(counts * np.log2(counts))
+        return bits + 2 * np.log2(1 + np.abs(np.asarray(model))).sum()
+
+    scales = (0, .5, .75, 1, 1.25, 1.5, 2)
+    for k in range(64):
+        target = r[:, k]; green = g[:, k]
+        a, intercept, beta, gamma, offset = params[k].tolist()
+        candidates = [(a, intercept)]
+        slopes = {int(np.clip(round(a * s), -2048, 2048)) for s in scales} | {256}
+        for slope in sorted(slopes):
+            bias = int(np.rint(np.median(target * 256 - slope * green)))
+            candidates.append((slope, bias))
+        result[k, :2] = min(candidates, key=lambda p: score(target - (green * p[0] + p[1] + 128) // 256, p))
+        blue = b[:, k]
+        candidates = [(beta, gamma, offset)]
+        pairs = {(int(np.clip(round(beta * s), -2048, 2048)),
+                  int(np.clip(round(gamma * s), -2048, 2048))) for s in scales}
+        pairs |= {(256, 0), (0, 256), (0, 0), (beta, 0), (0, gamma)}
+        for slope_g, slope_r in sorted(pairs):
+            bias = int(np.rint(np.median(blue * 256 - slope_g * green - slope_r * target)))
+            candidates.append((slope_g, slope_r, bias))
+        result[k, 2:] = min(candidates, key=lambda p: score(blue - (green * p[0] + target * p[1] + p[2] + 128) // 256, p))
+    return result
+
+
+def fit_context_color(cube, mode, *, objective='variance'):
     """Fit fixed-point color models, including every model in the packet."""
     dc, energy = _signals(cube)
     if mode not in ('dc2', 'dc4', 'texture2', 'dc_texture4'):
         raise ValueError('Unknown context color operator')
+    if objective not in ('variance', 'entropy'):
+        raise ValueError('Unknown color fitting objective')
     def thresholds(values, quantiles):
         return np.unique(np.floor(np.quantile(values, quantiles)).astype(np.int64)).tolist()
     model = {'mode': mode, 'dc_thresholds': [], 'energy_thresholds': []}
@@ -70,7 +110,15 @@ def fit_context_color(cube, mode):
     count = (len(model['dc_thresholds']) + 1) * (len(model['energy_thresholds']) + 1)
     for label in range(count):
         selected = blocks[labels == label]
-        model['params'].append(_fit_color(selected).tolist() if len(selected) >= 32 else fallback)
+        if len(selected) >= 32:
+            params = _fit_color(selected)
+            if objective == 'entropy':
+                params = _rate_refine(selected, params)
+            model['params'].append(params.tolist())
+        else:
+            model['params'].append(fallback)
+    if objective == 'entropy':
+        model['fit_objective'] = 'entropy_proxy'
     return model
 
 

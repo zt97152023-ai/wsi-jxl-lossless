@@ -54,6 +54,7 @@ def test_fixed_point_prediction_is_reversible_at_int16_boundaries():
     {'color_context': 'dc2', 'spatial': 'low_med'},
     {'color_fit': True, 'layout': 'planes'},
     {'color_fit': True, 'layout': 'zigzag'},
+    {'color_context': 'dc4', 'color_objective': 'entropy'},
 ])
 def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
     rng = np.random.default_rng(102)
@@ -69,3 +70,14 @@ def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
 def test_zigzag_layout_follows_jpeg_diagonal_frequency_order():
     from wsi_jxl.coeffpacket import ZIGZAG
     assert ZIGZAG[:10].tolist() == [0, 1, 8, 16, 9, 2, 3, 10, 17, 24]
+
+
+@pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+@pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+    rng = np.random.default_rng(182)
+    jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                    level=45, subsampling='444') for _ in range(2)]
+    packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+    assert packet[:4] == b'CJT2'
+    assert decode_batch(packet) == jpegs

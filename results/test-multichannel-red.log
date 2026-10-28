@@ -1,0 +1,148 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+______ test_three_channel_coefficients_preserve_jpeg_bytes[color0-zigzag] ______
+
+mapping = 'zigzag', color = {}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+_______ test_three_channel_coefficients_preserve_jpeg_bytes[color0-bias] _______
+
+mapping = 'bias', color = {}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+______ test_three_channel_coefficients_preserve_jpeg_bytes[color1-zigzag] ______
+
+mapping = 'zigzag', color = {'color_fit': True}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+_______ test_three_channel_coefficients_preserve_jpeg_bytes[color1-bias] _______
+
+mapping = 'bias', color = {'color_fit': True}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+______ test_three_channel_coefficients_preserve_jpeg_bytes[color2-zigzag] ______
+
+mapping = 'zigzag', color = {'color_context': 'dc4'}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+_______ test_three_channel_coefficients_preserve_jpeg_bytes[color2-bias] _______
+
+mapping = 'bias', color = {'color_context': 'dc4'}
+
+    @pytest.mark.parametrize('mapping', ['zigzag', 'bias'])
+    @pytest.mark.parametrize('color', [{}, {'color_fit': True}, {'color_context': 'dc4'}])
+    def test_three_channel_coefficients_preserve_jpeg_bytes(mapping, color):
+        rng = np.random.default_rng(182)
+        jpegs = [imagecodecs.jpeg_encode(rng.integers(0, 256, (40, 56, 3), dtype=np.uint8),
+                                        level=45, subsampling='444') for _ in range(2)]
+>       packet = encode_batch(jpegs, layout='mosaic3', value_map=mapping, effort=3, **color)
+
+tests/test_coeffpacket.py:80:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+jpegs = [b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x12\x0c\r\x10\r\x0b\x12\x10\x...ag\xb6p\x7f\x1d\xdf\xbdt\xf5\xb6\xb7{\x7f\xc3\xabZ\xeb\xbe\x85O\x995Q\xebe~\x97\xedm\x95\xd3o\xb7\xdc\xde\xbf\xff\xd9']
+
+    def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
+                     color_context=None,spatial=None):
+>       if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+E       ValueError: Invalid batch/layout
+
+src/wsi_jxl/coeffpacket.py:23: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color0-zigzag]
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color0-bias]
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color1-zigzag]
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color1-bias]
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color2-zigzag]
+FAILED tests/test_coeffpacket.py::test_three_channel_coefficients_preserve_jpeg_bytes[color2-bias]
+6 failed, 14 deselected in 0.20s

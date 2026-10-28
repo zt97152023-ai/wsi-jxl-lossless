@@ -32,3 +32,11 @@ def test_spatial_operator_preserves_extremes_and_odd_grids(mode, shape):
     residual = spatial_predict(cube, mode)
     assert np.array_equal(spatial_predict(residual, mode, inverse=True), cube)
     assert np.array_equal(cube, copy)
+
+
+def test_entropy_proxy_fitted_model_remains_byte_reversible():
+    cube = np.random.default_rng(251).integers(-512, 513, (1, 3, 8, 9, 64), dtype=np.int16)
+    model = fit_context_color(cube, 'dc4', objective='entropy')
+    assert model['fit_objective'] == 'entropy_proxy'
+    residual = context_color(cube, model)
+    assert np.array_equal(context_color(residual, model, inverse=True), cube)

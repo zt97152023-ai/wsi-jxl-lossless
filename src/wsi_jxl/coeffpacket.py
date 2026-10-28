@@ -19,10 +19,12 @@ ZIGZAG = np.array(sorted(range(64), key=lambda k: (k//8+k%8, k//8 if (k//8+k%8)%
 
 
 def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit=False,value_map='zigzag',
-                 color_context=None,spatial=None):
-    if not jpegs or layout not in ('frequency','mosaic','planes','zigzag'):raise ValueError('Invalid batch/layout')
+                 color_context=None,spatial=None,color_objective='variance'):
+    if not jpegs or layout not in ('frequency','mosaic','planes','zigzag','mosaic3'):raise ValueError('Invalid batch/layout')
     if value_map not in ('zigzag','bias') or sum(map(bool,(color_delta,color_fit,color_context)))>1:
         raise ValueError('Invalid coefficient transform')
+    if color_objective not in ('variance','entropy') or (color_objective!='variance' and not color_context):
+        raise ValueError('Color objective requires a context model')
     arrays=[];heads=[];tails=[];reference=None
     for jpeg in jpegs:
         coefficients,shape=read_coefficients(jpeg)
@@ -32,6 +34,7 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
     grids=reference['components']
     if len({(x[0],x[1]) for x in grids})!=1:raise ValueError('Subsampled grids are not supported by this experiment')
     width,height=grids[0][:2];channels=len(grids);n=len(jpegs)
+    if layout=='mosaic3' and channels!=3:raise ValueError('Three-channel layout requires three components')
     cube=np.stack(arrays).reshape(n,channels,height,width,64)
     template=write_coefficients(jpegs[0],np.zeros_like(arrays[0]))
     for jpeg,coef in zip(jpegs,arrays):
@@ -39,7 +42,7 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
             raise ValueError('JPEG entropy bytes are not reproducible from shared template')
     params=None;context=None
     if color_context:
-        context=fit_context_color(cube,color_context);cube=context_color(cube,context)
+        context=fit_context_color(cube,color_context,objective=color_objective);cube=context_color(cube,context)
     elif color_fit:
         if channels!=3:raise ValueError('Color prediction requires three channels')
         params=_fit_color(cube);cube=_color_prediction(cube,params)
@@ -53,6 +56,8 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
     values=(((integers<<1)^(integers>>15)) if value_map=='zigzag' else integers+32768).astype(np.uint16)
     if layout=='frequency':matrix=values.transpose(1,4,0,2,3).reshape(channels*64,n*height*width)
     elif layout=='planes':matrix=values.transpose(1,4,2,0,3).reshape(channels*64*height,n*width)
+    elif layout=='mosaic3':
+        matrix=values.reshape(n,channels,height,width,8,8).transpose(4,2,5,0,3,1).reshape(8*height,8*n*width,channels)
     else:
         if layout=='zigzag':values=values[...,ZIGZAG]
         matrix=values.reshape(n,channels,height,width,8,8).transpose(1,4,2,5,0,3).reshape(channels*8*height,8*n*width)
@@ -61,7 +66,7 @@ def encode_batch(jpegs,*,layout='frequency',effort=7,color_delta=False,color_fit
                      'color_delta':color_delta,'color_params':params.tolist() if params is not None else None,
                      'value_map':value_map,'heads':heads,'tails':tails,
                      'template_bytes':len(template)}
-    extended=bool(context or spatial or layout in ('planes','zigzag'))
+    extended=bool(context or spatial or layout in ('planes','zigzag','mosaic3'))
     if extended:info['operators']={'context_color':context,'spatial':spatial}
     info=json.dumps(info,separators=(',',':')).encode()
     side=imagecodecs.zstd_encode(info,level=9)
@@ -84,6 +89,9 @@ def decode_batch(packet):
     if matrix.dtype!=np.uint16 or matrix.size!=n*channels*h*w*64:raise ValueError('Coefficient JXL shape mismatch')
     if info['layout']=='frequency':values=matrix.reshape(channels,64,n,h,w).transpose(2,0,3,4,1)
     elif info['layout']=='planes':values=matrix.reshape(channels,64,h,n,w).transpose(3,0,2,4,1)
+    elif info['layout']=='mosaic3':
+        if channels!=3 or matrix.shape!=(8*h,8*n*w,3):raise ValueError('Three-channel coefficient shape mismatch')
+        values=matrix.reshape(8,h,8,n,w,3).transpose(3,5,1,4,0,2).reshape(n,channels,h,w,64)
     elif info['layout'] in ('mosaic','zigzag'):
         values=matrix.reshape(channels,8,h,8,n,w).transpose(4,0,2,5,1,3).reshape(n,channels,h,w,64)
         if info['layout']=='zigzag':values=values[...,np.argsort(ZIGZAG)]
