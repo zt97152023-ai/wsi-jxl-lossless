@@ -1,0 +1,551 @@
+{
+  "source_opened": false,
+  "verified_packets": 54,
+  "manifests": [
+    "results/round5-ridge-control.json",
+    "results/round5-ridge-control-holdout.json",
+    "results/round5-ridge-control-cross-slide.json"
+  ],
+  "rows": [
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 0,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/pilot-0-weak_ridge.cjt",
+      "packet_sha256": "7af6f4665cd4a0bf6b883d23912b740ec9043dde46f786bea8a7f198b8ab7685",
+      "tiles": 16,
+      "bytes": 6941,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 0,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-0.jbr",
+      "packet_sha256": "b0d5459e01611f6c83ce6248b161d5fe494e81f52ce0a6fabf71bcbe76481082",
+      "tiles": 16,
+      "bytes": 7134,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 1,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/pilot-1-weak_ridge.cjt",
+      "packet_sha256": "2cf043cfda4b2f8890abced04bf712dd4ec4fcea78193e07a3797766aa1bbc75",
+      "tiles": 16,
+      "bytes": 110385,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 1,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-1.jbr",
+      "packet_sha256": "f8979cfa4763a3bde1f91246aeb5ad0fb3433ae5c7985238dd1745d88848fbc9",
+      "tiles": 16,
+      "bytes": 119613,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 2,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/pilot-2-weak_ridge.cjt",
+      "packet_sha256": "ba8fe41d2ef118e0ef805307e631ac114495fe0d065921b6711bb1c28fe4088f",
+      "tiles": 16,
+      "bytes": 272513,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control.json",
+      "batch": 2,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-2.jbr",
+      "packet_sha256": "e4adb01d44b22aaaa24895129fbc1c3abbc2328711ad2af8f9552f505c7a0a93",
+      "tiles": 16,
+      "bytes": 308172,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 0,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-0-weak_ridge.cjt",
+      "packet_sha256": "6923bb7b6f1be261bc5e422966c8ea7d25b1370d2fb9b4405be55aa50576c97b",
+      "tiles": 16,
+      "bytes": 3886,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 0,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-0.jbr",
+      "packet_sha256": "643a9bdada1b7787136979ffd7363d834c8ee84070821c224db84161e9d85145",
+      "tiles": 16,
+      "bytes": 4348,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 1,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-1-weak_ridge.cjt",
+      "packet_sha256": "bc0ac340eabd123cfff307a67f1306effe1f08f33c9b29b6eb1166d3830ec8b2",
+      "tiles": 16,
+      "bytes": 5534,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 1,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-1.jbr",
+      "packet_sha256": "0beea30b76232b252faca0e70fb2889a8e10ef9ec3a9c690607cbe8d9f4d92c4",
+      "tiles": 16,
+      "bytes": 6224,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 2,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-2-weak_ridge.cjt",
+      "packet_sha256": "fe85ebed555fe64966598961a61ca3638b675c6ae5164258dceaafdc7fbf5b8e",
+      "tiles": 16,
+      "bytes": 7533,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 2,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-2.jbr",
+      "packet_sha256": "8b43a9d4978af8ded3fe6bee2f843e51a45d1d163eacedeacd1afca56105cf24",
+      "tiles": 16,
+      "bytes": 7529,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 3,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-3-weak_ridge.cjt",
+      "packet_sha256": "96755b82012fce749949a69818b88916d646a4ea1f76f5f1bce596347b88bef1",
+      "tiles": 16,
+      "bytes": 15265,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 3,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-3.jbr",
+      "packet_sha256": "d7ebb8dc918d54a20b8adea338764f2415a29253849f263df422411f3c25fa9d",
+      "tiles": 16,
+      "bytes": 15246,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 4,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-4-weak_ridge.cjt",
+      "packet_sha256": "823faeee3af8aecfb9ffd2c8942c7818cfb77416fda5c98cebaa90126848f7d4",
+      "tiles": 16,
+      "bytes": 48145,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 4,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-4.jbr",
+      "packet_sha256": "5d89415a2d6038445a2a20ab9576b5f4ba026eedd6775f9663d7140cc252ef78",
+      "tiles": 16,
+      "bytes": 47976,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 5,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-5-weak_ridge.cjt",
+      "packet_sha256": "c6d9e0a58f152345902c2da9dfabda1b8c24bfa82dc009db5f5a36b494c51da6",
+      "tiles": 16,
+      "bytes": 98222,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 5,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-5.jbr",
+      "packet_sha256": "ff0293b09aa178327bdd3dd7c21bef938c336694e0271ed5e0d726a5d7e7e4f4",
+      "tiles": 16,
+      "bytes": 106931,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 6,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-6-weak_ridge.cjt",
+      "packet_sha256": "9dc9334e41e783e99298a9dbbf033c81d07416382c7d60c99a822ce7a45f2d57",
+      "tiles": 16,
+      "bytes": 195272,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 6,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-6.jbr",
+      "packet_sha256": "afc8e53554cf30cb4c4651ec324fc3d090c90429aec431271050da85436156e5",
+      "tiles": 16,
+      "bytes": 214887,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 7,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-7-weak_ridge.cjt",
+      "packet_sha256": "518ba6f64bd6f85d5e36741aac583b56c908f929cf9873a0cdf6a8bc0f1f1d7d",
+      "tiles": 16,
+      "bytes": 226234,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 7,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-7.jbr",
+      "packet_sha256": "a8716a1a0f47c6ba90e98bfd11efafa6851de31734e6e35d8a302517c7c24067",
+      "tiles": 16,
+      "bytes": 255167,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 8,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-8-weak_ridge.cjt",
+      "packet_sha256": "5f892ec842c78173ece5a8e9b5d6409054ffd3960982af3a63ddf959e52f3fa2",
+      "tiles": 16,
+      "bytes": 244230,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 8,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-8.jbr",
+      "packet_sha256": "234441b5024431824ed893310c277286b04f10ceaf64259f8b50779cb153a26e",
+      "tiles": 16,
+      "bytes": 276451,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 9,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-9-weak_ridge.cjt",
+      "packet_sha256": "a60190ad284a342b2804ac0461d9593b91acf951c784747b2ead0497d146ae87",
+      "tiles": 16,
+      "bytes": 256338,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 9,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-9.jbr",
+      "packet_sha256": "810496f639d6abad4f63d0ab8c83223d869f5deb0559832458989bcc94ec1b86",
+      "tiles": 16,
+      "bytes": 292376,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 10,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-10-weak_ridge.cjt",
+      "packet_sha256": "29264753a8a60347fc6e936e7145f93a28092bd7fe6a476833793ff048918fc4",
+      "tiles": 16,
+      "bytes": 270921,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 10,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-10.jbr",
+      "packet_sha256": "e53f788541da972eb4f4c5ed3992e6e26761af6e5c86f1295163417675fb2c42",
+      "tiles": 16,
+      "bytes": 306190,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 11,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/holdout-11-weak_ridge.cjt",
+      "packet_sha256": "6140f80bb5fd77979ee04f57575eab0dbe8143503bd72dfe9363f1c19fcf5e8a",
+      "tiles": 16,
+      "bytes": 300378,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-holdout.json",
+      "batch": 11,
+      "variant": "native",
+      "packet": "results/round5-packets/holdout-11.jbr",
+      "packet_sha256": "1ab34afb6f8f29447c3d72e9438452dcea8365aaec460a5787d7f19c24a35512",
+      "tiles": 16,
+      "bytes": 345099,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 0,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-0-weak_ridge.cjt",
+      "packet_sha256": "085832f09df920001285736a3c40c9d5dcd2dbd216b2d5700159846df84e2667",
+      "tiles": 16,
+      "bytes": 2380,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 0,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-0.jbr",
+      "packet_sha256": "e86c696c979891b669cbcc23e458152d0174c098e4b966b2f54bd6f1ef910f0a",
+      "tiles": 16,
+      "bytes": 2328,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 1,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-1-weak_ridge.cjt",
+      "packet_sha256": "0e56e1d20f9c235ff9a864b7bcf61f02d3a5438d66745a6f99a4e1a0f0403fe9",
+      "tiles": 16,
+      "bytes": 3002,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 1,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-1.jbr",
+      "packet_sha256": "5676025774436779fa8cf49a882499185cd77d8cf2d671dd201687cfcbf3b89a",
+      "tiles": 16,
+      "bytes": 4301,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 2,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-2-weak_ridge.cjt",
+      "packet_sha256": "78fb1136d712fd1d5e84079a1f61bfdcba724b0db6ae41eda92d9a5dc390d31e",
+      "tiles": 16,
+      "bytes": 4596,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 2,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-2.jbr",
+      "packet_sha256": "5f9db0d8c37da23ba9a5440786f686193b57d121b624997be8f4cd6dbaddc13c",
+      "tiles": 16,
+      "bytes": 5032,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 3,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-3-weak_ridge.cjt",
+      "packet_sha256": "de56bf6997319c7c6432ccb707bd93f82e061b6bf89d063e994bd52521bf2dba",
+      "tiles": 16,
+      "bytes": 6043,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 3,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-3.jbr",
+      "packet_sha256": "68213b542ffb6a0787f3027b8443446014ff23ea64aa2bb073dc614ad1000cf0",
+      "tiles": 16,
+      "bytes": 6014,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 4,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-4-weak_ridge.cjt",
+      "packet_sha256": "07d943cfe7b2f0f17d6570496303c1e922cfe81073c769200c1ab10c3d7094b3",
+      "tiles": 16,
+      "bytes": 7657,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 4,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-4.jbr",
+      "packet_sha256": "c4d684739a720f161087e3da10f84f9817208d0b84b7157a2893b512a959889a",
+      "tiles": 16,
+      "bytes": 7370,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 5,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-5-weak_ridge.cjt",
+      "packet_sha256": "2eeb4a32e1f57d1b04642cdcf56684aab4348ce13bad9758c8fe1ed7d999a266",
+      "tiles": 16,
+      "bytes": 8297,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 5,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-5.jbr",
+      "packet_sha256": "7922213091c60a35fbf209c24e13d6e4e5c07d40df45d4bc82329e4d1484d978",
+      "tiles": 16,
+      "bytes": 7678,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 6,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-6-weak_ridge.cjt",
+      "packet_sha256": "f8e502d022fce93b53a403af87fb27b7b8c98b87aae849232a14f569272b513b",
+      "tiles": 16,
+      "bytes": 9758,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 6,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-6.jbr",
+      "packet_sha256": "3993e46dcb6373b6fe201743f6ef1a962c69e4da5c74ae1fd5d6ab7cf85ffd97",
+      "tiles": 16,
+      "bytes": 8356,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 7,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-7-weak_ridge.cjt",
+      "packet_sha256": "6d1c403fda1b56707fd054ce317962b41936c634668a309eb189bab81f1a9ce1",
+      "tiles": 16,
+      "bytes": 9861,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 7,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-7.jbr",
+      "packet_sha256": "d1b59527ba53bdf97952150659bcd8187c08b2b7d052a3ceb8edcadf383c0d69",
+      "tiles": 16,
+      "bytes": 9226,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 8,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-8-weak_ridge.cjt",
+      "packet_sha256": "61b757286484dcb82734ff2aadf050a0bae8cb80784e4aa55c8349744abdae42",
+      "tiles": 16,
+      "bytes": 41177,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 8,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-8.jbr",
+      "packet_sha256": "8708fdc4d4955c221923e33dec633f0c1c3660ac33b06e2ee5ee443b0a4cdac2",
+      "tiles": 16,
+      "bytes": 39036,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 9,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-9-weak_ridge.cjt",
+      "packet_sha256": "472a491fd2967b38bdb0c9ded311a481fcf5459785a3064a393589cbebc8e59c",
+      "tiles": 16,
+      "bytes": 210379,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 9,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-9.jbr",
+      "packet_sha256": "98f1464bd9787245cdcb1aa845f458e0f3f8695b592c2c9ce22b0abf924c08b5",
+      "tiles": 16,
+      "bytes": 222990,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 10,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-10-weak_ridge.cjt",
+      "packet_sha256": "adf3eecbf8ae2c018b6a40f1e90ff2c1588f8fa34c7634a9b7a77465588f8392",
+      "tiles": 16,
+      "bytes": 266624,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 10,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-10.jbr",
+      "packet_sha256": "815afb060e6de24cea3ff962497b7cb438ee7b53012f3e37ac078f14efe041df",
+      "tiles": 16,
+      "bytes": 300062,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 11,
+      "variant": "weak_ridge",
+      "packet": "results/round5-packets/cross-slide-11-weak_ridge.cjt",
+      "packet_sha256": "407c208e6642c47bb00f46a46f6d27556508de801e39ebafaef66d65654bbd9f",
+      "tiles": 16,
+      "bytes": 300006,
+      "exact": true
+    },
+    {
+      "manifest": "results/round5-ridge-control-cross-slide.json",
+      "batch": 11,
+      "variant": "native",
+      "packet": "results/round5-packets/cross-slide-11.jbr",
+      "packet_sha256": "0fa05bd7eabfc71c141813d98fafb0e8b7d1532b4df43ecfa13fbee92c2672db",
+      "tiles": 16,
+      "bytes": 335989,
+      "exact": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"batch": 0, "packet": "results/round5-packets/pilot-0-weak_ridge.cjt", "bytes": 6941, "seconds": 9.24564958299743, "verified": true}
+{"batch": 1, "packet": "results/round5-packets/pilot-1-weak_ridge.cjt", "bytes": 110385, "seconds": 17.291402374998142, "verified": true}
+{"batch": 2, "packet": "results/round5-packets/pilot-2-weak_ridge.cjt", "bytes": 272513, "seconds": 17.43483479099814, "verified": true}
+{"note": "Post-hoc pilot mechanism control after observing entropy results. Not a newly held-out panel.", "config": {"color_context": "dc4", "regularizer": 1e-06, "layout": "mosaic", "effort": 10}, "bytes": 389839, "saving_vs_baseline_percent": 5.463553273888189, "saving_vs_entropy_percent": 0.4751085014041312}

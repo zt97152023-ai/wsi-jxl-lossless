@@ -1,0 +1,31 @@
+{
+  "stage": "before additional holdout and second-slide evaluation",
+  "pilot_sha256": "fdc11f70ae0c06175f982e935d00caf81a49e0d5bd6cfece4fd5e61993ddc587",
+  "selection": "two smallest complete-packet aggregate sizes on fixed 48-tile development panel",
+  "candidates": {
+    "entropy": {
+      "color_context": "dc4",
+      "color_objective": "entropy"
+    },
+    "mc_none_bias": {
+      "layout": "mosaic3",
+      "value_map": "bias"
+    }
+  },
+  "settings": {
+    "layout": "mosaic",
+    "effort": 10,
+    "value_map": "zigzag",
+    "grouping": "original JPEG length, 16 tiles",
+    "note": "Candidate options override these defaults; CMU-1 seed 202610296; exclude prior panels on both slides."
+  },
+  "model_adaptation": "Threshold quantiles and color coefficients fitted within each encoded group; all parameters stored. Rules frozen; no encoder-only hidden state.",
+  "optional_adaptive_policy": "For each fixed group choose the smallest complete packet among baseline and the frozen candidates. Choice is represented by the packet layout and stored model; includes all packet bytes. Also retain fixed-mode comparisons.",
+  "cross_slide_protocol": {
+    "source": "CMU-2.svs",
+    "tiles": 192,
+    "sampling": "uniform without replacement from all level-0 JPEG tiles",
+    "seed": 202610297,
+    "note": "Same-vendor previously studied slide; not independent-center validation. No balanced class resampling."
+  }
+}

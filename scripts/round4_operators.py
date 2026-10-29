@@ -15,7 +15,6 @@ from wsi_jxl.layout import load_records, appearance_features
 from wsi_jxl.native import encode_jpeg
 
 ROOT = Path('results')
-OUT = ROOT / 'round4-packets'
 CONFIGS = {
     'baseline': {'color_fit': True},
     'dc2': {'color_context': 'dc2'},
@@ -27,13 +26,25 @@ CONFIGS = {
     'planes': {'color_fit': True, 'layout': 'planes'},
     'zigzag': {'color_fit': True, 'layout': 'zigzag'},
 }
+CONFIGS5 = {
+    'baseline': {'color_context': 'dc4'},
+    'gray_bias': {'color_context': 'dc4', 'value_map': 'bias'},
+    'entropy': {'color_context': 'dc4', 'color_objective': 'entropy'},
+    **{f'mc_{predictor}_{mapping}': {'layout': 'mosaic3', 'value_map': mapping, **options}
+       for predictor, options in [('none', {}), ('fit', {'color_fit': True}), ('dc4', {'color_context': 'dc4'})]
+       for mapping in ('zigzag', 'bias')},
+}
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('stage', choices=('pilot', 'holdout', 'cross-slide'))
+    parser.add_argument('--round', dest='round_number', type=int, choices=(4, 5), default=4)
     args = parser.parse_args()
-    OUT.mkdir(exist_ok=True)
+    prefix = f'round{args.round_number}'
+    output_directory = ROOT / f'{prefix}-packets'
+    output_directory.mkdir(exist_ok=True)
+    configurations = CONFIGS5 if args.round_number == 5 else CONFIGS
     cross_slide = args.stage == 'cross-slide'
     source = 'data/CMU-2.svs' if cross_slide else 'data/CMU-1.svs'
     source_sha256 = (json.loads((ROOT / 'round4-source-cmu2.json').read_text())['sha256'] if cross_slide
@@ -44,25 +55,34 @@ def main():
     spans = [s for s in source_spans(source) if s.page == 0]
     if args.stage == 'pilot':
         chosen = [s for s in spans if s.segment in dev_ids]
-        configs = CONFIGS
+        configs = configurations
         selection_note = 'Reused 48 development tiles; exploratory configuration selection.'
     elif not cross_slide:
-        protocol = json.loads((ROOT / 'round4-frozen.json').read_text())
-        configs = {'baseline': CONFIGS['baseline'], **protocol['candidates']}
+        protocol = json.loads((ROOT / f'{prefix}-frozen.json').read_text())
+        configs = {'baseline': configurations['baseline'], **protocol['candidates']}
         prior = json.loads((ROOT / 'round3-holdout.json').read_text())
         excluded = dev_ids | {i for row in prior['rows'] for i in row['segments']}
-        rng = np.random.default_rng(202610294)
+        seed = 202610294 if args.round_number == 4 else 202610296
+        if args.round_number == 5:
+            round4 = json.loads((ROOT / 'round4-holdout.json').read_text())
+            excluded |= {i for row in round4['rows'] for i in row['segments']}
+        rng = np.random.default_rng(seed)
         chosen = []
         for category in ('background', 'mixed', 'tissue'):
             eligible = [s for s in spans if s.segment not in excluded and label(features[s.offset]) == category]
             chosen.extend(eligible[int(i)] for i in rng.choice(len(eligible), 64, replace=False))
-        selection_note = '192 same-slide tiles excluded from both round-3 panels; 64 per proxy stratum; seed 202610294.'
+        selection_note = f'192 same-slide tiles excluded from prior panels; 64 per proxy stratum; seed {seed}.'
     else:
-        protocol = json.loads((ROOT / 'round4-frozen.json').read_text())
-        configs = {'baseline': CONFIGS['baseline'], **protocol['candidates']}
-        rng = np.random.default_rng(202610295)
+        protocol = json.loads((ROOT / f'{prefix}-frozen.json').read_text())
+        configs = {'baseline': configurations['baseline'], **protocol['candidates']}
+        seed = 202610295 if args.round_number == 4 else 202610297
+        if args.round_number == 5:
+            round4 = json.loads((ROOT / 'round4-cross-slide.json').read_text())
+            excluded = {i for row in round4['rows'] for i in row['segments']}
+            spans = [s for s in spans if s.segment not in excluded]
+        rng = np.random.default_rng(seed)
         chosen = [spans[int(i)] for i in rng.choice(len(spans), 192, replace=False)]
-        selection_note = 'CMU-2: 192 uniformly sampled level-0 tiles, seed 202610295; frozen configs from CMU-1. Same vendor/source.'
+        selection_note = f'CMU-2: 192 uniformly sampled level-0 tiles, seed {seed}; frozen configs from CMU-1. Previously studied slide; same vendor/source.'
     chosen.sort(key=lambda s: (s.length, s.segment))
     by_offset = {}
     if not cross_slide:
@@ -91,7 +111,7 @@ def main():
             native = imagecodecs.brotli_encode(b''.join(native_records), level=11)
         else:
             native = imagecodecs.brotli_encode(b''.join(by_offset[s.offset].data for s in group), level=11)
-        native_path = OUT / f'{name}.jbr'; native_path.write_bytes(native)
+        native_path = output_directory / f'{name}.jbr'; native_path.write_bytes(native)
         row = {'batch': batch, 'segments': [s.segment for s in group],
                'categories': [label(features[s.offset]) for s in group],
                'raw_lengths': list(map(len, raws)),
@@ -103,7 +123,7 @@ def main():
             packet = encode_svs_batch(jpegs, [len(s.prefix) for s in group], **options)
             elapsed = time.perf_counter() - start
             assert decode_svs_batch(packet) == raws
-            path = OUT / f'{name}-{method}.cjt'; path.write_bytes(packet)
+            path = output_directory / f'{name}-{method}.cjt'; path.write_bytes(packet)
             _, side, plain, template, payload = HEADER.unpack_from(packet, 8 + 4 * len(group))
             row['variants'][method] = {'bytes': len(packet), 'packet': str(path),
                                        'seconds': elapsed, 'side_bytes': side, 'side_plain_bytes': plain,
@@ -122,7 +142,7 @@ def main():
               'note': 'Actual complete packets. All methods share the same source offsets/order; common collection index/full-SVS framing excluded.',
               'source_sha256': source_sha256,
               'native_bytes': native, 'summaries': summaries, 'rows': rows}
-    (ROOT / f'round4-{args.stage}.json').write_text(json.dumps(result, indent=2) + '\n')
+    (ROOT / f'{prefix}-{args.stage}.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(summaries), flush=True)
 
 

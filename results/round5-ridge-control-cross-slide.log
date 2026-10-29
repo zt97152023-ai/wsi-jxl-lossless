@@ -1,0 +1,13 @@
+{"batch": 0, "packet": "results/round5-packets/cross-slide-0-weak_ridge.cjt", "bytes": 2380, "seconds": 8.147109040997748, "verified": true}
+{"batch": 1, "packet": "results/round5-packets/cross-slide-1-weak_ridge.cjt", "bytes": 3002, "seconds": 10.884404208001797, "verified": true}
+{"batch": 2, "packet": "results/round5-packets/cross-slide-2-weak_ridge.cjt", "bytes": 4596, "seconds": 14.848837124998681, "verified": true}
+{"batch": 3, "packet": "results/round5-packets/cross-slide-3-weak_ridge.cjt", "bytes": 6043, "seconds": 13.528021583006193, "verified": true}
+{"batch": 4, "packet": "results/round5-packets/cross-slide-4-weak_ridge.cjt", "bytes": 7657, "seconds": 12.436071208001522, "verified": true}
+{"batch": 5, "packet": "results/round5-packets/cross-slide-5-weak_ridge.cjt", "bytes": 8297, "seconds": 12.10982320799667, "verified": true}
+{"batch": 6, "packet": "results/round5-packets/cross-slide-6-weak_ridge.cjt", "bytes": 9758, "seconds": 11.4635169999965, "verified": true}
+{"batch": 7, "packet": "results/round5-packets/cross-slide-7-weak_ridge.cjt", "bytes": 9861, "seconds": 11.462133916997118, "verified": true}
+{"batch": 8, "packet": "results/round5-packets/cross-slide-8-weak_ridge.cjt", "bytes": 41177, "seconds": 18.7762817920011, "verified": true}
+{"batch": 9, "packet": "results/round5-packets/cross-slide-9-weak_ridge.cjt", "bytes": 210379, "seconds": 20.198347500001546, "verified": true}
+{"batch": 10, "packet": "results/round5-packets/cross-slide-10-weak_ridge.cjt", "bytes": 266624, "seconds": 17.816291583003476, "verified": true}
+{"batch": 11, "packet": "results/round5-packets/cross-slide-11-weak_ridge.cjt", "bytes": 300006, "seconds": 17.76587445900077, "verified": true}
+{"note": "Post-hoc mechanism control on existing cross-slide panel after observing entropy results. Not a newly held-out panel.", "config": {"color_context": "dc4", "regularizer": 1e-06, "layout": "mosaic", "effort": 10}, "bytes": 869780, "saving_vs_baseline_percent": 5.253032942158143, "saving_vs_entropy_percent": 0.23113231895113273}

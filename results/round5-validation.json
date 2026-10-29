@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-29",
+  "tests": {
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest -q -W error",
+    "passed": 83,
+    "failed": 0,
+    "seconds": 2.19,
+    "evidence": "Captured exec output in this turn after weak-ridge and four-mode full-file test coverage; core unchanged since that run."
+  },
+  "primary_candidates": [
+    "entropy",
+    "mc_none_bias"
+  ],
+  "post_hoc_control": "weak_ridge; evaluated on already-used panels, not a new independent holdout",
+  "new_cmu1_tiles": 192,
+  "cmu1_prior_overlap": 0,
+  "new_cmu2_tiles": 192,
+  "cmu2_prior_overlap": 0,
+  "cmu1_proxy_counts": {
+    "background": 64,
+    "mixed": 64,
+    "tissue": 64
+  },
+  "cmu2_proxy_counts": {
+    "background": 140,
+    "mixed": 30,
+    "tissue": 22
+  },
+  "primary_packet_verifications": 126,
+  "posthoc_packet_verifications_including_reused_native": 54,
+  "unique_current_packets_verified": 153,
+  "old_packets_compatible": 126,
+  "independently_verified_full_files": 4,
+  "random_byte_reads": 80,
+  "full_cmu1_best_bytes_unchanged": 99009379,
+  "code_sha256": {
+    "src/wsi_jxl/operators.py": "503603afcf2b4b7d1967b9145b4adf6efcb0a5766e25f70d76bd6cb2b98e4755",
+    "src/wsi_jxl/coeffpacket.py": "db08e1abdcbff24b758a5dafcf58d1a12b6b1cb7032e70f0ac36cd53e4998b49",
+    "src/wsi_jxl/joint_archive.py": "d60993c7cd5edfb66b3e13c45891087b909fe715d336a69c752753e81d70fb9c"
+  }
+}

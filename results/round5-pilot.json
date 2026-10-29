@@ -1,0 +1,604 @@
+{
+  "selection": "Reused 48 development tiles; exploratory configuration selection.",
+  "configs": {
+    "baseline": {
+      "color_context": "dc4"
+    },
+    "gray_bias": {
+      "color_context": "dc4",
+      "value_map": "bias"
+    },
+    "entropy": {
+      "color_context": "dc4",
+      "color_objective": "entropy"
+    },
+    "mc_none_zigzag": {
+      "layout": "mosaic3",
+      "value_map": "zigzag"
+    },
+    "mc_none_bias": {
+      "layout": "mosaic3",
+      "value_map": "bias"
+    },
+    "mc_fit_zigzag": {
+      "layout": "mosaic3",
+      "value_map": "zigzag",
+      "color_fit": true
+    },
+    "mc_fit_bias": {
+      "layout": "mosaic3",
+      "value_map": "bias",
+      "color_fit": true
+    },
+    "mc_dc4_zigzag": {
+      "layout": "mosaic3",
+      "value_map": "zigzag",
+      "color_context": "dc4"
+    },
+    "mc_dc4_bias": {
+      "layout": "mosaic3",
+      "value_map": "bias",
+      "color_context": "dc4"
+    }
+  },
+  "grouping": "original JPEG length; 16/packet",
+  "note": "Actual complete packets. All methods share the same source offsets/order; common collection index/full-SVS framing excluded.",
+  "source_sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+  "native_bytes": 434919,
+  "summaries": {
+    "baseline": {
+      "bytes": 412369,
+      "saving_vs_previous_percent": 0.0,
+      "saving_vs_native_percent": 5.18487350518142
+    },
+    "gray_bias": {
+      "bytes": 437523,
+      "saving_vs_previous_percent": -6.09987656686124,
+      "saving_vs_native_percent": -0.5987321777158439
+    },
+    "entropy": {
+      "bytes": 391700,
+      "saving_vs_previous_percent": 5.0122584384374225,
+      "saving_vs_native_percent": 9.937252683833087
+    },
+    "mc_none_zigzag": {
+      "bytes": 429190,
+      "saving_vs_previous_percent": -4.079113609412932,
+      "saving_vs_native_percent": 1.3172567765491916
+    },
+    "mc_none_bias": {
+      "bytes": 408416,
+      "saving_vs_previous_percent": 0.9586074607936146,
+      "saving_vs_native_percent": 6.093778381721648
+    },
+    "mc_fit_zigzag": {
+      "bytes": 413384,
+      "saving_vs_previous_percent": -0.2461387737681564,
+      "saving_vs_native_percent": 4.951496715480353
+    },
+    "mc_fit_bias": {
+      "bytes": 412554,
+      "saving_vs_previous_percent": -0.044862732164641095,
+      "saving_vs_native_percent": 5.142336848930496
+    },
+    "mc_dc4_zigzag": {
+      "bytes": 408974,
+      "saving_vs_previous_percent": 0.8232917605348611,
+      "saving_vs_native_percent": 5.965478629353971
+    },
+    "mc_dc4_bias": {
+      "bytes": 409926,
+      "saving_vs_previous_percent": 0.5924305658281837,
+      "saving_vs_native_percent": 5.746587295565386
+    }
+  },
+  "rows": [
+    {
+      "batch": 0,
+      "segments": [
+        2916,
+        0,
+        7788,
+        14893,
+        16525,
+        20998,
+        20149,
+        23219,
+        15025,
+        2542,
+        19004,
+        10502,
+        6015,
+        13329,
+        4595,
+        8618
+      ],
+      "categories": [
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background",
+        "background"
+      ],
+      "raw_lengths": [
+        2353,
+        2383,
+        2389,
+        2394,
+        2418,
+        2457,
+        2472,
+        2472,
+        2475,
+        2481,
+        2501,
+        2512,
+        2534,
+        2563,
+        2575,
+        2762
+      ],
+      "raw_sha256": [
+        "b4bd3dace01ff27cda84b61dec13047febbba0375adeb40b9dc51963f951025f",
+        "b1e9301e7caeeee61603d65b69e4973ca3e590aa3f0695558355863ddb7343fb",
+        "c7b456cf976374c25500196ce157f14ae1d75cfb001c5831848041b453631d2d",
+        "f360587477bd7957980493f353579e6412460ced139e493dc23ae6b1ae362f5b",
+        "aa8a5631b3446a949a75675570437e695b196804f4291af7952a7e551334955b",
+        "7f0962b2bf9693c65cc6823d9edb0914f33fd5f0459581f56f9fe5c81f3e2f74",
+        "c7a6c53318917eb5399f9d559ea3c736fa69dc6877e3c709435d09e403d5d19d",
+        "2be27980a77d6ba0bfafc0cf42497afd920acad1fbe2d897c6dab229130c2854",
+        "973f82f21cb70b03e34be3bd2e22ed58ed764acf6cde8e004b25a84fccafb1a4",
+        "bd0bf3061ec53552dcd4a4c0c81cbd41269146ea0f4e44639538ebc1f81c354d",
+        "7b377ff977efcab4001e506e4d693eb8eef2deaf96a9ae80b3bc39c059dc4bf5",
+        "4ac4d861f1c9e043e0a338336265dc2494cfb9896e1ec2690570d97402012d09",
+        "797bfa9d30f2bdf137965ef90018009d3d73697c34bd918a1680efff1ca2b989",
+        "8c279e5db13bc661112d7b9bd7fad276620231eca00400b0dce1e11f714403e2",
+        "1330bb81b9456d6347c96fc13f467bc61acd78a32c70988e93ae3afa16343158",
+        "f3996ab7b42aca2aace3701790fbed7c4ed84d008658ccd3002c1b38f7371eca"
+      ],
+      "native_bytes": 7134,
+      "native_packet": "results/round5-packets/pilot-0.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 7050,
+          "packet": "results/round5-packets/pilot-0-baseline.cjt",
+          "seconds": 12.049817833001725,
+          "side_bytes": 784,
+          "side_plain_bytes": 13041,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5822,
+          "verified": true
+        },
+        "gray_bias": {
+          "bytes": 7547,
+          "packet": "results/round5-packets/pilot-0-gray_bias.cjt",
+          "seconds": 9.994081584001833,
+          "side_bytes": 781,
+          "side_plain_bytes": 13039,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 6322,
+          "verified": true
+        },
+        "entropy": {
+          "bytes": 6703,
+          "packet": "results/round5-packets/pilot-0-entropy.cjt",
+          "seconds": 10.011344083002768,
+          "side_bytes": 706,
+          "side_plain_bytes": 13121,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 5553,
+          "verified": true
+        },
+        "mc_none_zigzag": {
+          "bytes": 5322,
+          "packet": "results/round5-packets/pilot-0-mc_none_zigzag.cjt",
+          "seconds": 3.5268657079941477,
+          "side_bytes": 552,
+          "side_plain_bytes": 10616,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4326,
+          "verified": true
+        },
+        "mc_none_bias": {
+          "bytes": 5148,
+          "packet": "results/round5-packets/pilot-0-mc_none_bias.cjt",
+          "seconds": 2.9554004169986,
+          "side_bytes": 548,
+          "side_plain_bytes": 10614,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4156,
+          "verified": true
+        },
+        "mc_fit_zigzag": {
+          "bytes": 5603,
+          "packet": "results/round5-packets/pilot-0-mc_fit_zigzag.cjt",
+          "seconds": 3.6072966659994563,
+          "side_bytes": 632,
+          "side_plain_bytes": 11394,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4527,
+          "verified": true
+        },
+        "mc_fit_bias": {
+          "bytes": 5267,
+          "packet": "results/round5-packets/pilot-0-mc_fit_bias.cjt",
+          "seconds": 2.707754916002159,
+          "side_bytes": 629,
+          "side_plain_bytes": 11392,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4194,
+          "verified": true
+        },
+        "mc_dc4_zigzag": {
+          "bytes": 5794,
+          "packet": "results/round5-packets/pilot-0-mc_dc4_zigzag.cjt",
+          "seconds": 4.019162958000379,
+          "side_bytes": 785,
+          "side_plain_bytes": 13042,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4565,
+          "verified": true
+        },
+        "mc_dc4_bias": {
+          "bytes": 5403,
+          "packet": "results/round5-packets/pilot-0-mc_dc4_bias.cjt",
+          "seconds": 4.6210046659980435,
+          "side_bytes": 781,
+          "side_plain_bytes": 13040,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 4178,
+          "verified": true
+        }
+      }
+    },
+    {
+      "batch": 1,
+      "segments": [
+        21679,
+        18361,
+        2087,
+        5034,
+        4751,
+        9956,
+        14643,
+        19307,
+        11841,
+        2449,
+        12261,
+        16773,
+        6286,
+        6432,
+        19459,
+        6472
+      ],
+      "categories": [
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "tissue",
+        "mixed",
+        "mixed",
+        "mixed",
+        "mixed",
+        "tissue",
+        "tissue"
+      ],
+      "raw_lengths": [
+        3811,
+        4024,
+        4205,
+        5129,
+        5263,
+        6307,
+        7490,
+        7972,
+        12917,
+        14137,
+        14192,
+        14589,
+        16393,
+        16615,
+        18786,
+        19066
+      ],
+      "raw_sha256": [
+        "5d68ba55050492eea3db0c90494ebd02819e619257f1c1cb7f8f3d365f8bd515",
+        "4b32e1a7cfa4b33e4dc05c3f026867bd56fb48e7b59b32abaeacdd79ba9ba07b",
+        "d14b73ee0f691f8e090f82d5e1f9f6205f51d809b99a2ba81b13c3b4e5c19adf",
+        "b84999041f0be6665bcacc239fede15965274b84ad209516568dad550c99bf35",
+        "2368d678d20ee48b216ca35298925836b651f0c325f42ce18fd775c6d73ca175",
+        "9474657d8dcf92f2d28dc29a6d829e3bc12a365b7ddc536b60b2a6cd9c42cae9",
+        "a8713033fda20055683fb0cd59ccf8f95c4b6dca6ca9fae8df7354c4aa7fc937",
+        "718081b6605259423534c952d449708037229499d3d1aa324b58d498f65417bf",
+        "020760b306a40e6499b8fde6c84a3257727acd1834b41f7b5252da4ed769cb7b",
+        "fe59796ac9d21fc62d6c054a224113ff97856bd748998fd08e9274ba7255e0fb",
+        "f46896e5a0ada15af1a6235b9d3bdfeae2fe819ab26eab8bdad97755f550ce5a",
+        "199b2e250acbb793fdcd7ee200bfd9ad2a58403aa6ecec95827296fe4fd34311",
+        "bd5360e36e69dcdcb155455bf53c8434bd49e0598aaa895776a203085502cc97",
+        "158b4e40bb65a1bb9fd2da2ee47ca783483c0566100a6ba693f76857272526b9",
+        "613d6722ddc6de7b8ec84259be29412a2f92f88dde791b8ebd626406644cc5b1",
+        "4e3483ce3cccf7abf11f54e1ba9492f0ac2e327aad9cfa297f8033416ae5ad89"
+      ],
+      "native_bytes": 119613,
+      "native_packet": "results/round5-packets/pilot-1.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 116041,
+          "packet": "results/round5-packets/pilot-1-baseline.cjt",
+          "seconds": 18.35857387499709,
+          "side_bytes": 1130,
+          "side_plain_bytes": 13241,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 114467,
+          "verified": true
+        },
+        "gray_bias": {
+          "bytes": 123030,
+          "packet": "results/round5-packets/pilot-1-gray_bias.cjt",
+          "seconds": 15.2903728329984,
+          "side_bytes": 1126,
+          "side_plain_bytes": 13239,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 121460,
+          "verified": true
+        },
+        "entropy": {
+          "bytes": 110776,
+          "packet": "results/round5-packets/pilot-1-entropy.cjt",
+          "seconds": 18.202595082999323,
+          "side_bytes": 922,
+          "side_plain_bytes": 13307,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 109410,
+          "verified": true
+        },
+        "mc_none_zigzag": {
+          "bytes": 123381,
+          "packet": "results/round5-packets/pilot-1-mc_none_zigzag.cjt",
+          "seconds": 10.315690082999936,
+          "side_bytes": 552,
+          "side_plain_bytes": 10616,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 122385,
+          "verified": true
+        },
+        "mc_none_bias": {
+          "bytes": 116244,
+          "packet": "results/round5-packets/pilot-1-mc_none_bias.cjt",
+          "seconds": 8.815215999995416,
+          "side_bytes": 548,
+          "side_plain_bytes": 10614,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 115252,
+          "verified": true
+        },
+        "mc_fit_zigzag": {
+          "bytes": 119429,
+          "packet": "results/round5-packets/pilot-1-mc_fit_zigzag.cjt",
+          "seconds": 9.752367582994339,
+          "side_bytes": 765,
+          "side_plain_bytes": 11468,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 118220,
+          "verified": true
+        },
+        "mc_fit_bias": {
+          "bytes": 119767,
+          "packet": "results/round5-packets/pilot-1-mc_fit_bias.cjt",
+          "seconds": 9.662988916999893,
+          "side_bytes": 761,
+          "side_plain_bytes": 11466,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 118562,
+          "verified": true
+        },
+        "mc_dc4_zigzag": {
+          "bytes": 116500,
+          "packet": "results/round5-packets/pilot-1-mc_dc4_zigzag.cjt",
+          "seconds": 9.147399333000067,
+          "side_bytes": 1130,
+          "side_plain_bytes": 13242,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 114926,
+          "verified": true
+        },
+        "mc_dc4_bias": {
+          "bytes": 117559,
+          "packet": "results/round5-packets/pilot-1-mc_dc4_bias.cjt",
+          "seconds": 9.525504583005386,
+          "side_bytes": 1127,
+          "side_plain_bytes": 13240,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 115988,
+          "verified": true
+        }
+      }
+    },
+    {
+      "batch": 2,
+      "segments": [
+        10573,
+        10385,
+        8042,
+        3900,
+        16210,
+        3577,
+        17666,
+        4435,
+        3398,
+        13722,
+        2670,
+        18592,
+        4646,
+        15900,
+        15188,
+        15513
+      ],
+      "categories": [
+        "tissue",
+        "tissue",
+        "mixed",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "mixed",
+        "tissue",
+        "mixed",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue",
+        "tissue"
+      ],
+      "raw_lengths": [
+        19758,
+        20597,
+        22361,
+        23167,
+        23329,
+        23770,
+        26582,
+        26765,
+        27089,
+        27144,
+        27283,
+        28078,
+        28406,
+        30398,
+        31262,
+        31408
+      ],
+      "raw_sha256": [
+        "d0bb06a83e183465589255928b5b21699581c4a3e9b431a28afa7e5962179144",
+        "5e1d4f5c2468c7b66f2c68ca3a48bf59b6ee3014baf8cb2e8c1174e0853060f7",
+        "ea1814e288a50948d475b489feea5bef07b072539d1a01df20fe0a07b6f7b8f0",
+        "7d9989f83825e4a63c4a9f90bfa698b87f9485001d904f380509d362bbcf739b",
+        "fca6471cdd1c013e6d09875c1d91314de4e8b4971ba1a1080f33fa7edfaae60e",
+        "e10e707a754e00fa6388e249fb8c99448ffeed6cdd25309716b616d480920395",
+        "9e374f98118c8f7d5c8eace4792f356f6a933bb809d5d584ff4727572238c930",
+        "57972ab4bc3c340108b67499619119d36ab10fa8c8b843a3aefc4edcb55960d7",
+        "29596fa9979335e014690b2241f1ecb965d5029dbcca9c29131570c57440b116",
+        "6d0a8c00f6be42b35eea2c514668035f39ef6bd9c562be93912b7831dd46ed6f",
+        "397cee33231e6bf43c7982795d361ed04fae41b73390eaa2c7b302b9d812e573",
+        "e47f14c00a5398768fb0f07f785935b5fc3a45880f813a8293d62f97cbd0e55a",
+        "b7d5eec9560480a44e387708126907438b36c99d119178c8bdbb36f7c0cf4f97",
+        "044fb6b02e55c1a9988b6b93681e19ca2ae2196a98ff211a1de41cf8efa67ae5",
+        "c4bc87fa188aeeb464becb916f8bdbc4f90831350247fd7a7c9dac8a01d52439",
+        "b49931de08e434b058cdea26a5a3a277ff40aac02dc61fbeb44aebf4e10d078c"
+      ],
+      "native_bytes": 308172,
+      "native_packet": "results/round5-packets/pilot-2.jbr",
+      "variants": {
+        "baseline": {
+          "bytes": 289278,
+          "packet": "results/round5-packets/pilot-2-baseline.cjt",
+          "seconds": 18.203298082997208,
+          "side_bytes": 1536,
+          "side_plain_bytes": 14287,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 287298,
+          "verified": true
+        },
+        "gray_bias": {
+          "bytes": 306946,
+          "packet": "results/round5-packets/pilot-2-gray_bias.cjt",
+          "seconds": 16.077106917000492,
+          "side_bytes": 1532,
+          "side_plain_bytes": 14285,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 304970,
+          "verified": true
+        },
+        "entropy": {
+          "bytes": 274221,
+          "packet": "results/round5-packets/pilot-2-entropy.cjt",
+          "seconds": 18.597896041996137,
+          "side_bytes": 1247,
+          "side_plain_bytes": 14318,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 272530,
+          "verified": true
+        },
+        "mc_none_zigzag": {
+          "bytes": 300487,
+          "packet": "results/round5-packets/pilot-2-mc_none_zigzag.cjt",
+          "seconds": 8.860192041000118,
+          "side_bytes": 552,
+          "side_plain_bytes": 10616,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 299491,
+          "verified": true
+        },
+        "mc_none_bias": {
+          "bytes": 287024,
+          "packet": "results/round5-packets/pilot-2-mc_none_bias.cjt",
+          "seconds": 9.046741833000851,
+          "side_bytes": 548,
+          "side_plain_bytes": 10614,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 286032,
+          "verified": true
+        },
+        "mc_fit_zigzag": {
+          "bytes": 288352,
+          "packet": "results/round5-packets/pilot-2-mc_fit_zigzag.cjt",
+          "seconds": 9.558536791999359,
+          "side_bytes": 801,
+          "side_plain_bytes": 11498,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 287107,
+          "verified": true
+        },
+        "mc_fit_bias": {
+          "bytes": 287520,
+          "packet": "results/round5-packets/pilot-2-mc_fit_bias.cjt",
+          "seconds": 10.27571508300025,
+          "side_bytes": 796,
+          "side_plain_bytes": 11496,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 286280,
+          "verified": true
+        },
+        "mc_dc4_zigzag": {
+          "bytes": 286680,
+          "packet": "results/round5-packets/pilot-2-mc_dc4_zigzag.cjt",
+          "seconds": 9.346802041000046,
+          "side_bytes": 1536,
+          "side_plain_bytes": 14288,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 284700,
+          "verified": true
+        },
+        "mc_dc4_bias": {
+          "bytes": 286964,
+          "packet": "results/round5-packets/pilot-2-mc_dc4_bias.cjt",
+          "seconds": 9.843522708004457,
+          "side_bytes": 1533,
+          "side_plain_bytes": 14286,
+          "template_bytes": 352,
+          "jxl_payload_bytes": 284987,
+          "verified": true
+        }
+      }
+    }
+  ]
+}

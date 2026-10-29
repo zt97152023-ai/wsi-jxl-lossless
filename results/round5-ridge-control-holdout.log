@@ -1,0 +1,13 @@
+{"batch": 0, "packet": "results/round5-packets/holdout-0-weak_ridge.cjt", "bytes": 3886, "seconds": 11.152508624996699, "verified": true}
+{"batch": 1, "packet": "results/round5-packets/holdout-1-weak_ridge.cjt", "bytes": 5534, "seconds": 11.234596041998884, "verified": true}
+{"batch": 2, "packet": "results/round5-packets/holdout-2-weak_ridge.cjt", "bytes": 7533, "seconds": 14.485924250002427, "verified": true}
+{"batch": 3, "packet": "results/round5-packets/holdout-3-weak_ridge.cjt", "bytes": 15265, "seconds": 21.005958875000942, "verified": true}
+{"batch": 4, "packet": "results/round5-packets/holdout-4-weak_ridge.cjt", "bytes": 48145, "seconds": 22.73647995799547, "verified": true}
+{"batch": 5, "packet": "results/round5-packets/holdout-5-weak_ridge.cjt", "bytes": 98222, "seconds": 22.265184750001936, "verified": true}
+{"batch": 6, "packet": "results/round5-packets/holdout-6-weak_ridge.cjt", "bytes": 195272, "seconds": 19.781069499993464, "verified": true}
+{"batch": 7, "packet": "results/round5-packets/holdout-7-weak_ridge.cjt", "bytes": 226234, "seconds": 20.428198124995106, "verified": true}
+{"batch": 8, "packet": "results/round5-packets/holdout-8-weak_ridge.cjt", "bytes": 244230, "seconds": 19.70839791600156, "verified": true}
+{"batch": 9, "packet": "results/round5-packets/holdout-9-weak_ridge.cjt", "bytes": 256338, "seconds": 20.161295833000622, "verified": true}
+{"batch": 10, "packet": "results/round5-packets/holdout-10-weak_ridge.cjt", "bytes": 270921, "seconds": 19.88772995799809, "verified": true}
+{"batch": 11, "packet": "results/round5-packets/holdout-11-weak_ridge.cjt", "bytes": 300378, "seconds": 20.055833792001067, "verified": true}
+{"note": "Post-hoc mechanism control on existing holdout panel after observing entropy results. Not a newly held-out panel.", "config": {"color_context": "dc4", "regularizer": 1e-06, "layout": "mosaic", "effort": 10}, "bytes": 1671958, "saving_vs_baseline_percent": 6.162453037954652, "saving_vs_entropy_percent": 0.3851236459007312}

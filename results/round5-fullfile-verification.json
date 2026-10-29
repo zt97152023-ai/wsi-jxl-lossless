@@ -1,0 +1,46 @@
+{
+  "fresh_decoder_process_per_archive": true,
+  "source_access_required_by_decoder": false,
+  "rows": [
+    {
+      "mode": "dc4",
+      "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+      "bytes": 1938955,
+      "groups": 18,
+      "seconds": 1.084699790997547,
+      "verified": true,
+      "saved_output": null,
+      "cmp_exit_code": 0
+    },
+    {
+      "mode": "entropy",
+      "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+      "bytes": 1938955,
+      "groups": 18,
+      "seconds": 1.205346084003395,
+      "verified": true,
+      "saved_output": null,
+      "cmp_exit_code": 0
+    },
+    {
+      "mode": "mc_none_bias",
+      "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+      "bytes": 1938955,
+      "groups": 18,
+      "seconds": 0.6288132089975988,
+      "verified": true,
+      "saved_output": null,
+      "cmp_exit_code": 0
+    },
+    {
+      "mode": "weak_ridge",
+      "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+      "bytes": 1938955,
+      "groups": 18,
+      "seconds": 1.1523618749997695,
+      "verified": true,
+      "saved_output": null,
+      "cmp_exit_code": 0
+    }
+  ]
+}

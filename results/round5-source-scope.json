@@ -1,0 +1,32 @@
+{
+  "note": "Two previously studied slides, both Aperio RGB Q=30; Small-Region is a same-slide crop. Does not establish cross-scanner, JPEG-quality or pathology-specific generalization.",
+  "rows": [
+    {
+      "file": "CMU-1.svs",
+      "level0_dimensions": [
+        46000,
+        32914
+      ],
+      "photometric": 2,
+      "description_prefix": "Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30"
+    },
+    {
+      "file": "CMU-2.svs",
+      "level0_dimensions": [
+        78000,
+        30462
+      ],
+      "photometric": 2,
+      "description_prefix": "Aperio Image Library v10.0.51\r\n79560x30562 [0,100 78000x30462] (256x256) JPEG/RGB Q=30"
+    },
+    {
+      "file": "CMU-1-Small-Region.svs",
+      "level0_dimensions": [
+        2220,
+        2967
+      ],
+      "photometric": 2,
+      "description_prefix": "Aperio Image Library v11.2.1 \r\n46000x32914 [42673,5576 2220x2967] (240x240) JPEG/RGB Q=30;Aperio Image Library v10.0.51\r\n46920x33014 [0,100 46000x32914] (256x256) JPEG/RGB Q=30"
+    }
+  ]
+}
