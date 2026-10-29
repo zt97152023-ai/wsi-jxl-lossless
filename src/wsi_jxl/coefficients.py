@@ -3,11 +3,14 @@ import ctypes as c
 from functools import lru_cache
 from pathlib import Path
 import numpy as np
+from .platform_support import adapter_path
 
 
 @lru_cache(maxsize=1)
 def _library():
-    path=Path(__file__).resolve().parents[2]/'build/jpeg_coefficients.dylib'
+    path=adapter_path(Path(__file__).resolve().parents[2])
+    if not path.is_file():
+        raise RuntimeError('Build the coefficient adapter first: python scripts/build_coefficients.py')
     lib=c.CDLL(str(path))
     p16=c.POINTER(c.c_int16)
     lib.wsi_coefficients.argtypes=[c.c_void_p,c.c_ulong,p16,c.c_size_t,c.POINTER(c.c_uint32)]
