@@ -6,11 +6,17 @@
 
 ## 在另一台机器上
 
+GitHub 仓库：[zt97152023-ai/wsi-jxl-lossless](https://github.com/zt97152023-ai/wsi-jxl-lossless)，私有仓库。另一台机器的 Git 需要有该账号或获授权协作者的访问凭证。
+
 从 GitHub 克隆本仓库，进入根目录后执行：
 
 ```bash
+git clone https://github.com/zt97152023-ai/wsi-jxl-lossless.git
+cd wsi-jxl-lossless
 python3 scripts/check_handoff.py
 ```
+
+如使用 GitHub CLI，可先执行 `gh auth login` 和 `gh auth setup-git`。不要把本机登录凭证、虚拟环境或编译库复制到仓库。
 
 该检查仅需 Python 3.9+ 标准库，不依赖 NumPy、JPEG XL 或原始切片。先读：
 
