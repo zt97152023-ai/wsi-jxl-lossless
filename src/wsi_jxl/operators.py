@@ -94,7 +94,7 @@ def fit_context_color(cube, mode, *, objective='variance'):
     dc, energy = _signals(cube)
     if mode not in ('dc2', 'dc4', 'texture2', 'dc_texture4'):
         raise ValueError('Unknown context color operator')
-    if objective not in ('variance', 'entropy', 'weak_ridge'):
+    if objective not in ('variance', 'entropy', 'weak_ridge', 'weak_entropy'):
         raise ValueError('Unknown color fitting objective')
     def thresholds(values, quantiles):
         return np.unique(np.floor(np.quantile(values, quantiles)).astype(np.int64)).tolist()
@@ -105,7 +105,7 @@ def fit_context_color(cube, mode, *, objective='variance'):
         model['energy_thresholds'] = thresholds(energy, [.5])
     labels = _labels(cube, model)
     blocks = cube.transpose(0, 2, 3, 1, 4).reshape(-1, 3, 1, 1, 64)
-    regularizer = 1e-6 if objective == 'weak_ridge' else 1.0
+    regularizer = 1e-6 if objective in ('weak_ridge', 'weak_entropy') else 1.0
     fallback = _fit_color(cube, regularizer=regularizer).tolist()
     model['params'] = []
     count = (len(model['dc_thresholds']) + 1) * (len(model['energy_thresholds']) + 1)
@@ -113,13 +113,13 @@ def fit_context_color(cube, mode, *, objective='variance'):
         selected = blocks[labels == label]
         if len(selected) >= 32:
             params = _fit_color(selected, regularizer=regularizer)
-            if objective == 'entropy':
+            if objective in ('entropy', 'weak_entropy'):
                 params = _rate_refine(selected, params)
             model['params'].append(params.tolist())
         else:
             model['params'].append(fallback)
-    if objective == 'entropy':
-        model['fit_objective'] = 'entropy_proxy'
+    if objective in ('entropy', 'weak_entropy'):
+        model['fit_objective'] = objective + '_proxy'
     elif objective == 'weak_ridge':
         model['fit_objective'] = 'weak_ridge_1e-6'
     return model

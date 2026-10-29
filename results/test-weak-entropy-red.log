@@ -1,0 +1,34 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____ test_entropy_proxy_fitted_model_remains_byte_reversible[weak_entropy] _____
+
+objective = 'weak_entropy'
+
+    @pytest.mark.parametrize('objective', ['entropy', 'weak_entropy'])
+    def test_entropy_proxy_fitted_model_remains_byte_reversible(objective):
+        cube = np.random.default_rng(251).integers(-512, 513, (2, 3, 16, 17, 64), dtype=np.int16)
+>       model = fit_context_color(cube, 'dc4', objective=objective)
+
+tests/test_operators.py:40:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cube = array([[[[[ 365, -413,  173, ...,  486,   74, -506],
+          [ 437, -461,  339, ..., -243, -165,  341],
+          [-...394,  152, -293],
+          [-227, -279,   97, ..., -323,  427,  424]]]]],
+      shape=(2, 3, 16, 17, 64), dtype=int16)
+mode = 'dc4'
+
+    def fit_context_color(cube, mode, *, objective='variance'):
+        """Fit fixed-point color models, including every model in the packet."""
+        dc, energy = _signals(cube)
+        if mode not in ('dc2', 'dc4', 'texture2', 'dc_texture4'):
+            raise ValueError('Unknown context color operator')
+        if objective not in ('variance', 'entropy', 'weak_ridge'):
+>           raise ValueError('Unknown color fitting objective')
+E           ValueError: Unknown color fitting objective
+
+src/wsi_jxl/operators.py:98: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_operators.py::test_entropy_proxy_fitted_model_remains_byte_reversible[weak_entropy]
+1 failed, 35 deselected in 0.13s

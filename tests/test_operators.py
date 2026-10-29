@@ -34,10 +34,11 @@ def test_spatial_operator_preserves_extremes_and_odd_grids(mode, shape):
     assert np.array_equal(cube, copy)
 
 
-def test_entropy_proxy_fitted_model_remains_byte_reversible():
+@pytest.mark.parametrize('objective', ['entropy', 'weak_entropy'])
+def test_entropy_proxy_fitted_model_remains_byte_reversible(objective):
     cube = np.random.default_rng(251).integers(-512, 513, (2, 3, 16, 17, 64), dtype=np.int16)
-    model = fit_context_color(cube, 'dc4', objective='entropy')
-    assert model['fit_objective'] == 'entropy_proxy'
+    model = fit_context_color(cube, 'dc4', objective=objective)
+    assert model['fit_objective'] == objective + '_proxy'
     residual = context_color(cube, model)
     assert np.array_equal(context_color(residual, model, inverse=True), cube)
 

@@ -56,6 +56,7 @@ def test_fixed_point_prediction_is_reversible_at_int16_boundaries():
     {'color_fit': True, 'layout': 'zigzag'},
     {'color_context': 'dc4', 'color_objective': 'entropy'},
     {'color_context': 'dc4', 'color_objective': 'weak_ridge'},
+    {'color_context': 'dc4', 'color_objective': 'weak_entropy'},
 ])
 def test_new_operators_restore_jpeg_bytes_and_use_versioned_packets(options):
     rng = np.random.default_rng(102)
