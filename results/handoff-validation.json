@@ -1,0 +1,12 @@
+{
+  "exported_commit": "fb180fb52a5e5db0869b873cdb0dfff3fed47e34",
+  "export_method": "git archive HEAD into a fresh temporary directory",
+  "source_wsi_present": false,
+  "writing_check": "Verified 25 evidence files and 10 scoped numerical claims.",
+  "adapter_rebuilt": true,
+  "test_exit_code": 0,
+  "test_summary": "88 passed in 3.01s",
+  "platform_scope": "Fresh path on the same macOS arm64 host and Python environment; not Linux or another physical machine.",
+  "intentional_corruption_detection": "Checked separately: modified evidence bytes rejected.",
+  "algorithm_changes": false
+}

@@ -42,7 +42,7 @@ git push -u origin codex/manuscript-draft
 - 第五轮两张切片各 192 个图块的熵代理包，比匹配 JXL+Brotli 对照分别小 **10.65% / 8.08%**。这是抽样包结果，不是整片比例。
 - 弱正则对照与第六轮开发探查的限定语见主张表；不要把二元概率模型评分的下降写成文件压缩率。
 
-完整数据、负结果、测试和独立恢复记录均在 `results/`，其写作关键文件由 [evidence_manifest.json](writing/evidence_manifest.json) 记录 SHA-256。历史测试数量随轮次不同；交接阶段的测试另记在 `results/tests-handoff.log`。
+完整数据、负结果、测试和独立恢复记录均在 `results/`，其写作关键文件由 [evidence_manifest.json](writing/evidence_manifest.json) 记录 SHA-256。历史测试数量随轮次不同；交接阶段的测试另记在 `results/tests-handoff.log`。纯 Git 导出到无 WSI 的全新目录后，证据检查、原生库重建和 88 项测试均通过，见 [交接验证](results/handoff-validation.json)；这是同一台 macOS 的干净路径验证，不是 Linux 实机验证。
 
 ## GitHub 中有什么、没有什么
 
