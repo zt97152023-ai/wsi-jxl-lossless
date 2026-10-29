@@ -1,0 +1,10 @@
+# Keep hashed writing evidence byte-identical when cloning across platforms.
+*.json text eol=lf
+writing/claims.csv text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.c text eol=lf
+*.txt text eol=lf
+*.log text eol=lf
+*.jpg -text
+*.png -text
