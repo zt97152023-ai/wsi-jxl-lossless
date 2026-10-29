@@ -1,0 +1,131 @@
+{
+  "research_commit": "b22d5086da90a1654520cc9071e79a6361c32224",
+  "scope": "Frozen writing evidence for rounds 1\u20136; checks do not rerun compression or independently recover missing binary artifacts.",
+  "files": [
+    {
+      "path": "data/sources.json",
+      "bytes": 1141,
+      "sha256": "42c81b5937c56f4b8af2a0d2bafbb1528ad9db2ee2d9a94e87f33d8f4e8161c0"
+    },
+    {
+      "path": "results/cmu1-e9-g256-encode.json",
+      "bytes": 29143,
+      "sha256": "44e5004794c6550eac49da3d1b5b4849d7e74089c7430aeeb3180f24cb1344b1"
+    },
+    {
+      "path": "results/round2-verification.json",
+      "bytes": 1824,
+      "sha256": "318d18d841b208e977d62066ca8571babae3fb7cfd95e798c65af319214555ba"
+    },
+    {
+      "path": "results/round3-feature-validity.json",
+      "bytes": 2019,
+      "sha256": "69da744b8f1de1eba2b165f8504e4fa12e1655b0b57278016f9a162c2308bb39"
+    },
+    {
+      "path": "results/round4-small-adaptive.json",
+      "bytes": 5201,
+      "sha256": "126a2300e46c5c4578cbbf218429514c273bf19e55618489b66978c26462c62f"
+    },
+    {
+      "path": "results/round4-small-native.json",
+      "bytes": 4971,
+      "sha256": "035f19c30f7493a715bbd7f5bbb78bf223367bc09b398c3637c1e4347e96e500"
+    },
+    {
+      "path": "results/round5-cross-slide.json",
+      "bytes": 40757,
+      "sha256": "8954c4218ccb4c1cfe5d2854cae33d00177578b6cc471dd4f8592c968f93262d"
+    },
+    {
+      "path": "results/round5-frozen.json",
+      "bytes": 1422,
+      "sha256": "7309c45d94f4a3a6ab13e84e9a45aee842f146bc631bfced1b3ae7f0c980320a"
+    },
+    {
+      "path": "results/round5-fullfile-verification.json",
+      "bytes": 1232,
+      "sha256": "c871b24df8429bb4b5262ec12cf96495af5784dacf1126911fbff351da44f662"
+    },
+    {
+      "path": "results/round5-holdout.json",
+      "bytes": 40287,
+      "sha256": "92e6ddfe98f76692daa0ee2920f5a4d83d8b142895cd5ae23aca388d51f59b4b"
+    },
+    {
+      "path": "results/round5-ridge-control-cross-slide.json",
+      "bytes": 30233,
+      "sha256": "c0111f5264684db385df9d5bab13777b09181066b5c87f7f0990f20f84aeb83e"
+    },
+    {
+      "path": "results/round5-ridge-control-holdout.json",
+      "bytes": 29840,
+      "sha256": "5b3fb7bb951baf9e201e9bd2a9139efc67fd13c847568fa7f57d2002108ba52d"
+    },
+    {
+      "path": "results/round5-ridge-control.json",
+      "bytes": 7706,
+      "sha256": "980e7068f0dbb5398eae8f41bef6dc12600b10f4bdcdbcef861dc9ee37030d2a"
+    },
+    {
+      "path": "results/round5-ridge-verification.json",
+      "bytes": 18553,
+      "sha256": "0827da972da34b18451b9ced91f8e0c3fb069aec2296b29e47cb8b02435aed15"
+    },
+    {
+      "path": "results/round5-small-entropy.json",
+      "bytes": 6082,
+      "sha256": "afdf0cb4e7bd779a5212875b8acacca73d685d171b5b61ca81583827909dc3c6"
+    },
+    {
+      "path": "results/round5-source-scope.json",
+      "bytes": 1058,
+      "sha256": "46b83cbabe37706e56d68ff7d99079812423aed06d105de16fd280d00d29e216"
+    },
+    {
+      "path": "results/round5-verification.json",
+      "bytes": 41580,
+      "sha256": "43df653fa5c1b7ed28509ea23deb551cc2d3b90e1325fe47f39841bdeb2515d2"
+    },
+    {
+      "path": "results/round6-diagnostics.json",
+      "bytes": 4367,
+      "sha256": "0b025820a479c26b126c945496d817bc7d79433bd258d31bc45867a56e419371"
+    },
+    {
+      "path": "results/round6-group-selection.json",
+      "bytes": 3709,
+      "sha256": "a8acda971860d86a53b55a67a64db5e5fc05c205d2a5915af431bd7db4fc859c"
+    },
+    {
+      "path": "results/round6-packet-verification.json",
+      "bytes": 2098,
+      "sha256": "a45b4fa01e235fda96ccb9bcd5dd5ef89eb372ab687956652443b4fe445d2ecd"
+    },
+    {
+      "path": "results/round6-page-budgets.json",
+      "bytes": 5170,
+      "sha256": "ac46c238c844ee4e2997b6030df630037a4ea9f9b8bd1ce1e5b9f97ccace834b"
+    },
+    {
+      "path": "results/round6-selected-decode.json",
+      "bytes": 236,
+      "sha256": "5617b0122214dd9ac41de27568a5c714d078f0686728dd3678feba20693f9359"
+    },
+    {
+      "path": "results/round6-validation.json",
+      "bytes": 777,
+      "sha256": "018b1b5447222cf6a12d8c94aa91e9f37ecbd2479fd7cc98f57971e55fae15bb"
+    },
+    {
+      "path": "results/round6-weak-entropy.json",
+      "bytes": 7870,
+      "sha256": "bef741a86de8c5093525957bc0d9e1c41133e0ebb2b2c1ef4c42af67f8aaf2c6"
+    },
+    {
+      "path": "writing/claims.csv",
+      "bytes": 4270,
+      "sha256": "ed54e369129aa52f44db61819bbce2f8445ce6300910d51190b33dc6f60059f9"
+    }
+  ]
+}

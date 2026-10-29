@@ -1,5 +1,7 @@
 # WSI × JPEG XL 严格无损实验
 
+**跨机器继续写作请先读 [HANDOFF.md](HANDOFF.md)。** 当前研究冻结至第六轮；[主张与数字表](writing/claims.csv)、[代码地图](docs/CODE_MAP.md) 和 [运行环境](docs/REPRODUCIBILITY.md) 已集中整理。仅核对写作证据可运行 `python3 scripts/check_handoff.py`，无需安装实验依赖或下载切片。
+
 这是针对病理全切片的可运行研究原型：利用 JPEG XL 精确重压缩 SVS 中的 JPEG 图块，再利用跨图块重复信息和组织空间分布，比较归档大小与局部读取成本。表达矩阵继续使用用户原有的 [Shared count codec](https://github.com/zt97152023-ai/shared-st-count-codec)，本项目没有改动该方法。
 
 实验结果见 [RESULTS.md](RESULTS.md)，原始测量与逐图块查询记录保存在 `results/`。完整归档实验以 CMU-1 为主，第四轮另在 CMU-2 抽样验证算子；尚无多中心泛化或新颖性结论。
@@ -42,7 +44,7 @@ CMU-1 原文件已经使用 JPEG Q30；本项目保证相对于该输入文件�
 ```bash
 python3.13 -m venv .venv
 .venv/bin/python -m pip install -r requirements.lock.txt
-# 新增系数实验测试需要本机已安装 Homebrew jpeg-turbo
+# 系数测试需本机 C 编译器及 libjpeg 开发头文件，跨平台说明见 docs/REPRODUCIBILITY.md
 .venv/bin/python scripts/build_coefficients.py
 .venv/bin/python -m pytest -q -W error
 ```

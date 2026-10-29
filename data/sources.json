@@ -1,0 +1,26 @@
+[
+  {
+    "name": "CMU-1-Small-Region.svs",
+    "bytes": 1938955,
+    "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+    "download_url": "https://raw.githubusercontent.com/libvips/libvips/master/test/test-suite/images/CMU-1-Small-Region.svs",
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-Small-Region.svs",
+    "license": "CC0-1.0"
+  },
+  {
+    "name": "CMU-1.svs",
+    "bytes": 177552579,
+    "sha256": "00a3d54482cd707abf254fe69dccc8d06b8ff757a1663f1290c23418c480eb30",
+    "download_url": "https://storage.googleapis.com/imagebox_test/openslide-testdata/Aperio/CMU-1.svs",
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1.svs",
+    "license": "CC0-1.0"
+  },
+  {
+    "name": "CMU-2.svs",
+    "bytes": 390750635,
+    "sha256": "fb6df83bfd91a252185c9652aebeb00deff84e49329f7ff8f75744f31f475b08",
+    "download_url": "https://storage.googleapis.com/imagebox_test/openslide-testdata/Aperio/CMU-2.svs",
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-2.svs",
+    "license": "CC0-1.0"
+  }
+]

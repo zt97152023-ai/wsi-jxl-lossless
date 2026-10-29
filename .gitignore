@@ -16,3 +16,8 @@ results/round3-features-rgb.json
 results/round4-packets/
 results/round5-packets/
 results/round6-packets/
+dist/
+runs/
+.DS_Store
+.env
+.env.*
