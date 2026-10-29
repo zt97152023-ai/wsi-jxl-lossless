@@ -1,0 +1,149 @@
+{
+  "note": "Post-hoc complete-payload selection among four existing archives with identical source partitions. Reuses stored model/mode headers. Does not measure candidate encoding cost.",
+  "sources": [
+    {
+      "mode": "entropy",
+      "path": "results/round5-small-entropy.wjxl",
+      "sha256": "3c1e91d75dd796d09561549ac21b4bb2a7edafe7a853bc18a82464e05d40c409"
+    },
+    {
+      "mode": "weak_ridge",
+      "path": "results/round5-small-weak_ridge.wjxl",
+      "sha256": "532b198c41c96b8067b8595c23538d7b7b1698c6aa82ff495c78a1e9d828a181"
+    },
+    {
+      "mode": "dc4",
+      "path": "results/round5-small-dc4.wjxl",
+      "sha256": "9a92406ca823b661473e10da9d96993d882aa89affcc2133f5729336aaec2ad1"
+    },
+    {
+      "mode": "mc_none_bias",
+      "path": "results/round5-small-mc_none_bias.wjxl",
+      "sha256": "22803f95e2ed8e8ea5b2a230303df6c56a4e9f26fddbbb44209ea0bd96187d01"
+    }
+  ],
+  "output": "results/round6-small-selected.wjxl",
+  "archive_bytes": 1410920,
+  "archive_sha256": "d319fcd34ed646db5e9d1815de8c79bfa1f289cf9d4dbc8cdddd62b5b6db55f6",
+  "baseline_bytes": 1411900,
+  "saved_bytes": 980,
+  "saved_percent": 0.06941001487357212,
+  "verification": {
+    "sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+    "bytes": 1938955,
+    "groups": 18,
+    "seconds": 1.2856850000025588,
+    "verified": true,
+    "saved_output": null
+  },
+  "groups": [
+    {
+      "source_mode": "entropy",
+      "archive_kind": 0,
+      "stored_bytes": 16,
+      "source_bytes": 16
+    },
+    {
+      "source_mode": "weak_ridge",
+      "archive_kind": 5,
+      "stored_bytes": 62043,
+      "source_bytes": 99101
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 49451,
+      "source_bytes": 84334
+    },
+    {
+      "source_mode": "weak_ridge",
+      "archive_kind": 5,
+      "stored_bytes": 132967,
+      "source_bytes": 192086
+    },
+    {
+      "source_mode": "weak_ridge",
+      "archive_kind": 5,
+      "stored_bytes": 90180,
+      "source_bytes": 138538
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 117028,
+      "source_bytes": 177322
+    },
+    {
+      "source_mode": "weak_ridge",
+      "archive_kind": 5,
+      "stored_bytes": 134139,
+      "source_bytes": 201336
+    },
+    {
+      "source_mode": "weak_ridge",
+      "archive_kind": 5,
+      "stored_bytes": 126676,
+      "source_bytes": 190480
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 124174,
+      "source_bytes": 188264
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 3,
+      "stored_bytes": 509,
+      "source_bytes": 4473
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 4,
+      "stored_bytes": 1517,
+      "source_bytes": 2155
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 31806,
+      "source_bytes": 41975
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 51265,
+      "source_bytes": 73068
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 57400,
+      "source_bytes": 81214
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 4,
+      "stored_bytes": 364705,
+      "source_bytes": 376592
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 5,
+      "stored_bytes": 46699,
+      "source_bytes": 63994
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 3,
+      "stored_bytes": 18545,
+      "source_bytes": 23264
+    },
+    {
+      "source_mode": "entropy",
+      "archive_kind": 4,
+      "stored_bytes": 573,
+      "source_bytes": 743
+    }
+  ]
+}

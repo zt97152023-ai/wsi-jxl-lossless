@@ -1,0 +1,227 @@
+{
+  "note": "Original encoded image bytecounts, not current WJXL compressed sizes. Associated images are not interchangeable pyramid levels. No layers can be dropped under original-file losslessness.",
+  "rows": [
+    {
+      "file": "CMU-1.svs",
+      "source_bytes": 177552579,
+      "pages": [
+        {
+          "page": 0,
+          "shape": [
+            32914,
+            46000,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 157121023,
+          "share_of_source_percent": 88.4926729225375
+        },
+        {
+          "page": 1,
+          "shape": [
+            732,
+            1024,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 143874,
+          "share_of_source_percent": 0.0810317714393774
+        },
+        {
+          "page": 2,
+          "shape": [
+            8228,
+            11500,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 17819091,
+          "share_of_source_percent": 10.035951660268477
+        },
+        {
+          "page": 3,
+          "shape": [
+            2057,
+            2875,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 1661307,
+          "share_of_source_percent": 0.9356704415991615
+        },
+        {
+          "page": 4,
+          "shape": [
+            463,
+            387,
+            3
+          ],
+          "compression": "LZW",
+          "tiled": false,
+          "image_bytes": 374381,
+          "share_of_source_percent": 0.21085641341205189
+        },
+        {
+          "page": 5,
+          "shape": [
+            431,
+            1280,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 87345,
+          "share_of_source_percent": 0.04919387850739132
+        }
+      ]
+    },
+    {
+      "file": "CMU-2.svs",
+      "source_bytes": 390750635,
+      "pages": [
+        {
+          "page": 0,
+          "shape": [
+            30462,
+            78000,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 341084994,
+          "share_of_source_percent": 87.28968386705245
+        },
+        {
+          "page": 1,
+          "shape": [
+            399,
+            1024,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 119988,
+          "share_of_source_percent": 0.03070705182603222
+        },
+        {
+          "page": 2,
+          "shape": [
+            7615,
+            19500,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 43303652,
+          "share_of_source_percent": 11.082170602230756
+        },
+        {
+          "page": 3,
+          "shape": [
+            1903,
+            4875,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 3927126,
+          "share_of_source_percent": 1.0050210155128732
+        },
+        {
+          "page": 4,
+          "shape": [
+            951,
+            2437,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 1381383,
+          "share_of_source_percent": 0.3535203468063462
+        },
+        {
+          "page": 5,
+          "shape": [
+            463,
+            387,
+            3
+          ],
+          "compression": "LZW",
+          "tiled": false,
+          "image_bytes": 377173,
+          "share_of_source_percent": 0.09652524301080151
+        },
+        {
+          "page": 6,
+          "shape": [
+            431,
+            1280,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 98400,
+          "share_of_source_percent": 0.025182300727419164
+        }
+      ]
+    },
+    {
+      "file": "CMU-1-Small-Region.svs",
+      "source_bytes": 1938955,
+      "pages": [
+        {
+          "page": 0,
+          "shape": [
+            2967,
+            2220,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": true,
+          "image_bytes": 1275934,
+          "share_of_source_percent": 65.8052404516866
+        },
+        {
+          "page": 1,
+          "shape": [
+            768,
+            574,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 196257,
+          "share_of_source_percent": 10.121792408797523
+        },
+        {
+          "page": 2,
+          "shape": [
+            463,
+            387,
+            3
+          ],
+          "compression": "LZW",
+          "tiled": false,
+          "image_bytes": 374381,
+          "share_of_source_percent": 19.30839034428339
+        },
+        {
+          "page": 3,
+          "shape": [
+            431,
+            1280,
+            3
+          ],
+          "compression": "JPEG",
+          "tiled": false,
+          "image_bytes": 87258,
+          "share_of_source_percent": 4.500259160217746
+        }
+      ]
+    }
+  ]
+}

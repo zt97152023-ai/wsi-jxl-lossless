@@ -1,0 +1,69 @@
+{
+  "source_opened": false,
+  "verified_packets": 6,
+  "manifests": [
+    "results/round6-weak-entropy.json"
+  ],
+  "rows": [
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 0,
+      "variant": "weak_entropy",
+      "packet": "results/round6-packets/pilot-0-weak_entropy.cjt",
+      "packet_sha256": "8905d553e8768e8b5dbcc7c3d7e3b7b3a045a9e7842d6e6940133825de523047",
+      "tiles": 16,
+      "bytes": 6751,
+      "exact": true
+    },
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 0,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-0.jbr",
+      "packet_sha256": "b0d5459e01611f6c83ce6248b161d5fe494e81f52ce0a6fabf71bcbe76481082",
+      "tiles": 16,
+      "bytes": 7134,
+      "exact": true
+    },
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 1,
+      "variant": "weak_entropy",
+      "packet": "results/round6-packets/pilot-1-weak_entropy.cjt",
+      "packet_sha256": "d50d7c31c7a855db6639e7805d36869b5e116875c66e70f6596c9841d68bc132",
+      "tiles": 16,
+      "bytes": 110386,
+      "exact": true
+    },
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 1,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-1.jbr",
+      "packet_sha256": "f8979cfa4763a3bde1f91246aeb5ad0fb3433ae5c7985238dd1745d88848fbc9",
+      "tiles": 16,
+      "bytes": 119613,
+      "exact": true
+    },
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 2,
+      "variant": "weak_entropy",
+      "packet": "results/round6-packets/pilot-2-weak_entropy.cjt",
+      "packet_sha256": "4f5d9fca06d1440b20819ad6a82feed68c8cf61c70b3a7583a2a48739fd877a6",
+      "tiles": 16,
+      "bytes": 272147,
+      "exact": true
+    },
+    {
+      "manifest": "results/round6-weak-entropy.json",
+      "batch": 2,
+      "variant": "native",
+      "packet": "results/round5-packets/pilot-2.jbr",
+      "packet_sha256": "e4adb01d44b22aaaa24895129fbc1c3abbc2328711ad2af8f9552f505c7a0a93",
+      "tiles": 16,
+      "bytes": 308172,
+      "exact": true
+    }
+  ]
+}

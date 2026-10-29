@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest -q -W error",
+    "passed": 85,
+    "seconds": 1.36,
+    "log": "results/tests-round6.log"
+  },
+  "new_packets_verified": 3,
+  "reused_native_packets_verified": 3,
+  "packet_verification": "results/round6-packet-verification.json",
+  "full_archive_fresh_process": "results/round6-selected-decode.json",
+  "full_archive_cmp_exit_code": 0,
+  "full_archive_direct_byte_equality": true,
+  "restored_sha256": "ed92d5a9f2e86df67640d6f92ce3e231419ce127131697fbbce42ad5e002c8a7",
+  "random_byte_ranges": 20,
+  "full_cmu1_best_bytes_unchanged": 99009379,
+  "default_coefficient_mode_unchanged": "dc4",
+  "new_encoder_objective": "weak_entropy; optional development probe, not integrated into full-file encoder"
+}

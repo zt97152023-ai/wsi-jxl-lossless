@@ -1,0 +1,4 @@
+{"batch": 0, "packet": "results/round6-packets/pilot-0-weak_entropy.cjt", "bytes": 6751, "seconds": 10.779756667005131, "verified": true}
+{"batch": 1, "packet": "results/round6-packets/pilot-1-weak_entropy.cjt", "bytes": 110386, "seconds": 17.07204541700048, "verified": true}
+{"batch": 2, "packet": "results/round6-packets/pilot-2-weak_entropy.cjt", "bytes": 272147, "seconds": 17.27220566700271, "verified": true}
+{"note": "Exploratory development-only probe. Same 48 previously used tiles. No independent validation or full-file integration of this operator. Timing includes concurrent encoding.", "config": {"layout": "mosaic", "color_context": "dc4", "color_objective": "weak_entropy", "effort": 10}, "bytes": 389284, "weak_ridge_bytes": 389839, "entropy_bytes": 391700, "saved_vs_weak_ridge_percent": 0.14236646410441534, "saved_vs_entropy_percent": 0.6167985703344425}
